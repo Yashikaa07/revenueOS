@@ -1,11 +1,9 @@
 fastapi
 uvicorn
-pydantic[email]
+pydantic
+email-validator
 python-dotenv
 requests
 anthropic
 streamlit
 plotly
-git add .
-git commit -m "Add plotly to requirements"
-git push
