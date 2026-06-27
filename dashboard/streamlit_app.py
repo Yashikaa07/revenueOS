@@ -161,6 +161,49 @@ with tab3:
         csv = filtered.to_csv(index=False)
         st.download_button("Export CSV", csv, file_name="filtered_leads.csv", mime="text/csv")
 
+
+        st.divider()
+        st.subheader("Lead Score Explainer")
+        st.caption("Select a lead to understand why it scored the way it did.")
+
+        lead_index = st.selectbox(
+            "Select a lead by index",
+            df.index,
+            format_func=lambda x: f"Lead #{x} — {df.loc[x, 'source']} | {df.loc[x, 'status']} | Score: {df.loc[x, 'icp_score']}"
+        )
+
+        if st.button("Explain This Score"):
+            selected = df.loc[lead_index]
+
+            prompt = f"""
+You are a B2B sales analyst. Explain in plain English why this lead received an ICP score of {selected['icp_score']} out of 100.
+
+Lead details:
+- Status: {selected['status']}
+- Source: {selected['source']}
+- Company size (employees): {selected['employees']}
+- Revenue range: {selected['revenue']}
+- Days in pipeline: {selected['days_inactive']}
+- ICP Score: {selected['icp_score']}
+
+Give a 3-5 sentence explanation. Be specific and direct. Mention what's working in their favor and what's holding the score back. No emojis. No fluff.
+"""
+
+            import anthropic
+            client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+
+            with st.spinner("Analyzing lead..."):
+                message = client.messages.create(
+                    model="claude-sonnet-4-6",
+                    max_tokens=512,
+               messages=[{"role": "user", "content": prompt}]
+                )
+
+            explanation = message.content[0].text
+            st.markdown(f"**Score: {selected['icp_score']}/100**")
+            st.markdown(explanation)
+
+     
 with tab4:
     st.subheader("Lead Trend Analytics")
     st.caption("Conversion rates, pipeline value, and source performance")
