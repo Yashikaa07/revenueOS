@@ -10,20 +10,6 @@ from app.modules.enrichment import enrich_company
 from app.modules.icp_scoring import score_lead
 from app.modules.email_gen import generate_email
 from app.modules.chat_assistant import ask_pipeline
-from
-cat > ~/revenueOS/dashboard/streamlit_app.py << 'PYEOF'
-import streamlit as st
-import plotly.express as px
-import pandas as pd
-import sys
-import os
-
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-
-from app.modules.enrichment import enrich_company
-from app.modules.icp_scoring import score_lead
-from app.modules.email_gen import generate_email
-from app.modules.chat_assistant import ask_pipeline
 from app.modules.gmail_sender import send_email
 
 st.set_page_config(page_title="RevenueOS", page_icon="🚀", layout="wide")
@@ -40,7 +26,6 @@ def load_data():
 
 df = load_data()
 
-# Sidebar
 with st.sidebar:
     st.header("➕ Add New Lead")
     first_name = st.text_input("First Name", "Alex")
@@ -51,8 +36,6 @@ with st.sidebar:
     source = st.selectbox("Source", ["linkedin", "website", "referral", "cold_email", "webinar", "conference", "inbound"])
     analyze = st.button("🔍 Analyze Lead", use_container_width=True)
 
-# Run analysis BEFORE tabs
-analysis_result = None
 if analyze:
     with st.spinner("Running AI analysis..."):
         lead_data = {
@@ -65,18 +48,15 @@ if analyze:
         grade = scoring['grade']
         score = scoring['score']
         email_content = generate_email(lead_data, company_data, scoring) if grade == "HOT" else None
-        analysis_result = {
+        st.session_state['analysis'] = {
             "lead_data": lead_data, "company_data": company_data,
             "scoring": scoring, "grade": grade, "score": score,
             "email_content": email_content
         }
-        st.session_state['analysis'] = analysis_result
 
-# Tabs
 tab1, tab2, tab3 = st.tabs(["📊 Pipeline Dashboard", "🤖 AI Assistant", "📋 All Leads"])
 
 with tab1:
-    # Show analysis result if exists
     if 'analysis' in st.session_state:
         r = st.session_state['analysis']
         st.subheader(f"Lead Analysis: {r['lead_data']['first_name']} {r['lead_data']['last_name']}")
@@ -121,7 +101,6 @@ with tab1:
 
         st.divider()
 
-    # Pipeline charts
     if not df.empty:
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Total Leads", len(df))
@@ -222,3 +201,4 @@ with tab3:
         st.dataframe(filtered.sort_values('icp_score', ascending=False), use_container_width=True)
         csv = filtered.to_csv(index=False)
         st.download_button("📥 Export CSV", csv, file_name="filtered_leads.csv", mime="text/csv")
+        
