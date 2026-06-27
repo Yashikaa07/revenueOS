@@ -317,7 +317,7 @@ with tab_decay:
         use_container_width=True
     )
     st.caption(f" ${revenue_at_risk:,.0f} in pipeline at risk from {len(at_risk)} decaying leads.")
-  with tab_brief:
+with tab_brief:
     st.header("Daily GTM Brief")
     st.caption("AI-generated action plan based on your live pipeline.")
 
