@@ -45,7 +45,7 @@ if analyze:
         email_content = generate_email(lead_data, company_data, scoring) if grade == "HOT" else None
         st.session_state["analysis"] = {"lead_data": lead_data, "company_data": company_data, "scoring": scoring, "grade": grade, "score": score, "email_content": email_content}
 
-tab1, tab2, tab3 = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads"])
+tab1, tab2, tab3, tab4 = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics"])
 
 with tab1:
     if "analysis" in st.session_state:
@@ -160,3 +160,89 @@ with tab3:
         st.dataframe(filtered.sort_values("icp_score", ascending=False), use_container_width=True)
         csv = filtered.to_csv(index=False)
         st.download_button("Export CSV", csv, file_name="filtered_leads.csv", mime="text/csv")
+
+with tab4:
+    st.subheader("Lead Trend Analytics")
+    st.caption("Conversion rates, pipeline value, and source performance")
+
+    if df.empty:
+        st.warning("No dataset loaded.")
+    else:
+        # KPI row
+        hot_rate = round(len(df[df["status"]=="hot"]) / len(df) * 100, 1)
+        warm_rate = round(len(df[df["status"]=="warm"]) / len(df) * 100, 1)
+        avg_score = round(df["icp_score"].mean(), 1)
+        top_source = df["source"].value_counts().index[0]
+
+        k1, k2, k3, k4 = st.columns(4)
+        k1.metric("Hot Conversion Rate", f"{hot_rate}%")
+        k2.metric("Warm Rate", f"{warm_rate}%")
+        k3.metric("Avg ICP Score", avg_score)
+        k4.metric("Top Source", top_source.title())
+
+        st.divider()
+
+        c1, c2 = st.columns(2)
+
+        with c1:
+            # Conversion rate by source
+            source_conv = df.groupby("source").apply(
+                lambda x: round(len(x[x["status"]=="hot"]) / len(x) * 100, 1)
+            ).reset_index()
+            source_conv.columns = ["source", "hot_rate"]
+            source_conv = source_conv.sort_values("hot_rate", ascending=False)
+            fig1 = px.bar(source_conv, x="source", y="hot_rate",
+                title="Hot Lead Rate by Source (%)",
+                color="hot_rate",
+                color_continuous_scale=["#1A1D2E", "#00C48C"])
+            fig1.update_layout(paper_bgcolor="rgba(0,0,0,0)", font={"color":"white"})
+            st.plotly_chart(fig1, use_container_width=True)
+
+        with c2:
+            # Avg ICP score by industry
+            industry_score = df.groupby("industry")["icp_score"].mean().reset_index()
+            industry_score.columns = ["industry", "avg_score"]
+            industry_score = industry_score.sort_values("avg_score", ascending=False)
+            fig2 = px.bar(industry_score, x="industry", y="avg_score",
+                title="Avg ICP Score by Industry",
+                color="avg_score",
+                color_continuous_scale=["#1A1D2E", "#00C48C"])
+            fig2.update_layout(paper_bgcolor="rgba(0,0,0,0)", font={"color":"white"})
+            st.plotly_chart(fig2, use_container_width=True)
+
+        c3, c4 = st.columns(2)
+
+        with c3:
+            # Lead volume by month
+            df["month"] = pd.to_datetime(df["date_added"]).dt.to_period("M").astype(str)
+            monthly = df.groupby("month").size().reset_index(name="leads")
+            fig3 = px.line(monthly, x="month", y="leads",
+                title="Lead Volume by Month",
+                color_discrete_sequence=["#00C48C"])
+            fig3.update_layout(paper_bgcolor="rgba(0,0,0,0)", font={"color":"white"})
+            st.plotly_chart(fig3, use_container_width=True)
+
+        with c4:
+            # Hot leads by title
+            title_hot = df[df["status"]=="hot"].groupby("title").size().reset_index(name="hot_leads")
+            title_hot = title_hot.sort_values("hot_leads", ascending=False).head(8)
+            fig4 = px.bar(title_hot, x="hot_leads", y="title",
+                orientation="h",
+                title="Hot Leads by Job Title",
+                color_discrete_sequence=["#00C48C"])
+            fig4.update_layout(paper_bgcolor="rgba(0,0,0,0)", font={"color":"white"})
+            st.plotly_chart(fig4, use_container_width=True)
+
+        st.divider()
+        st.subheader("Source Performance Breakdown")
+        source_perf = df.groupby("source").agg(
+            total=("status", "count"),
+            hot=("status", lambda x: (x=="hot").sum()),
+            warm=("status", lambda x: (x=="warm").sum()),
+            cold=("status", lambda x: (x=="cold").sum()),
+            avg_score=("icp_score", "mean")
+        ).reset_index()
+        source_perf["hot_rate"] = (source_perf["hot"] / source_perf["total"] * 100).round(1)
+        source_perf["avg_score"] = source_perf["avg_score"].round(1)
+        source_perf = source_perf.sort_values("hot_rate", ascending=False)
+        st.dataframe(source_perf, use_container_width=True)
