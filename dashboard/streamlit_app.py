@@ -317,4 +317,52 @@ with tab_decay:
         use_container_width=True
     )
     st.caption(f" ${revenue_at_risk:,.0f} in pipeline at risk from {len(at_risk)} decaying leads.")
-    
+  with tab_brief:
+    st.header("Daily GTM Brief")
+    st.caption("AI-generated action plan based on your live pipeline.")
+
+    from datetime import datetime
+    import anthropic
+
+    if st.button("Generate Today's Brief"):
+        with st.spinner("Analyzing pipeline..."):
+
+            total = len(df)
+            hot = len(df[df["status"] == "hot"])
+            warm = len(df[df["status"] == "warm"])
+            cold = len(df[df["status"] == "cold"])
+
+            df["date_added"] = pd.to_datetime(df["date_added"])
+            df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
+            critical = len(df[(df["days_inactive"] > 90) & (df["status"] != "cold")])
+            high_risk = len(df[(df["days_inactive"] > 60) & (df["status"] != "cold")])
+
+            top_source = df[df["status"] == "hot"]["source"].value_counts().idxmax()
+            avg_icp = round(df["icp_score"].mean(), 1)
+
+            summary = f"""
+Pipeline snapshot as of today:
+- Total leads: {total}
+- Hot leads: {hot}
+- Warm leads: {warm}
+- Cold leads: {cold}
+- Critical decay (90+ days inactive): {critical}
+- High risk decay (60+ days inactive): {high_risk}
+- Top source for hot leads: {top_source}
+- Average ICP score: {avg_icp}
+
+You are a senior GTM strategist. Based on this pipeline data, generate a concise daily sales brief with exactly 5 prioritized action items the sales team should take today. Be specific, direct, and data-driven. No fluff. No emojis. Format as a numbered list.
+"""
+
+            client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+            message = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=1024,
+                messages=[{"role": "user", "content": summary}]
+            )
+
+            brief = message.content[0].text
+            st.subheader("Today's Action Plan")
+            st.markdown(brief)
+            st.caption(f"Generated on {datetime.today().strftime('%B %d, %Y')}")
+              
