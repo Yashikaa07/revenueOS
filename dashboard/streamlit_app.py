@@ -24,6 +24,9 @@ def load_data():
     return pd.DataFrame()
 
 df = load_data()
+df["date_added"] = pd.to_datetime(df["date_added"])
+df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
+
 
 with st.sidebar:
     st.header("Add New Lead")
@@ -185,7 +188,6 @@ Lead details:
 - Revenue range: {selected['revenue']}
 - Days in pipeline: {selected['days_inactive']}
 - ICP Score: {selected['icp_score']}
-
 Give a 3-5 sentence explanation. Be specific and direct. Mention what's working in their favor and what's holding the score back. No emojis. No fluff.
 """
 
@@ -195,7 +197,7 @@ Give a 3-5 sentence explanation. Be specific and direct. Mention what's working 
             with st.spinner("Analyzing lead..."):
                 message = client.messages.create(
                     model="claude-sonnet-4-6",
-                    max_tokens=512,
+                  max_tokens=512,
                messages=[{"role": "user", "content": prompt}]
                 )
 
@@ -203,7 +205,7 @@ Give a 3-5 sentence explanation. Be specific and direct. Mention what's working 
             st.markdown(f"**Score: {selected['icp_score']}/100**")
             st.markdown(explanation)
 
-     
+
 with tab4:
     st.subheader("Lead Trend Analytics")
     st.caption("Conversion rates, pipeline value, and source performance")
