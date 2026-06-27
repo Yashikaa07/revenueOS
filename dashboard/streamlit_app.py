@@ -1,3 +1,27 @@
+@st.cache_data
+def load_data():
+    try:
+        import requests
+        api_key = st.secrets.get("HUBSPOT_API_KEY", None)
+        if api_key:
+            headers = {"Authorization": f"Bearer {api_key}"}
+            url = "https://api.hubapi.com/crm/v3/objects/contacts"
+            params = {"limit": 100, "properties": "firstname,email,hs_lead_status,createdate,num_employees,annualrevenue,hs_analytics_source"}
+            response = requests.get(url, headers=headers, params=params)
+            data = response.json()
+            if "results" in data and len(data["results"]) > 0:
+                contacts = []
+                for result in data["results"]:
+                    props = result.get("properties", {})
+                    contacts.append({"employees": props.get("num_employees") or "10-50", "revenue": props.get("annualrevenue") or "1-10M", "source": props.get("hs_analytics_source") or "website", "icp_score": min(100, max(40, len(props.get("email","x") or "x") * 3 + 40)), "status": (props.get("hs_lead_status") or "warm").lower(), "date_added": (props.get("createdate") or "2024-01-01")[:10]})
+                return pd.DataFrame(contacts)
+    except Exception as e:
+        st.warning(f"HubSpot failed: {e}")
+    import os
+    path = "data/leads.csv"
+    if os.path.exists(path):
+        return pd.read_csv(path)
+    return pd.DataFrame()
 import streamlit as st
 import plotly.express as px
 import pandas as pd
@@ -16,17 +40,11 @@ st.set_page_config(page_title="RevenueOS", layout="wide")
 st.title("RevenueOS")
 st.caption("AI-powered lead enrichment, scoring, and outreach automation")
 
-@st.cache_data
-def load_data():
-    path = os.path.join(os.path.dirname(__file__), '..', 'data', 'leads_dataset.csv')
-    if os.path.exists(path):
-        return pd.read_csv(path)
-    return pd.DataFrame()
+_data
 
 df = load_data()
 df["date_added"] = pd.to_datetime(df["date_added"])
 df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
-
 
 with st.sidebar:
     st.header("Add New Lead")
@@ -48,7 +66,8 @@ if analyze:
         email_content = generate_email(lead_data, company_data, scoring) if grade == "HOT" else None
         st.session_state["analysis"] = {"lead_data": lead_data, "company_data": company_data, "scoring": scoring, "grade": grade, "score": score, "email_content": email_content}
 
-tab1, tab2, tab3, tab4, tab_decay, tab_brief = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics", "Decay Alerts", "GTM Brief"])
+tab1, tab2, tab3, tab4, tab_decay, tab_brief, tab_intel = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics", "Decay Alerts", "GTM Brief", "Account Intel"])
+
 
 with tab1:
     if "analysis" in st.session_state:
@@ -410,3 +429,80 @@ You are a senior GTM strategist. Based on this pipeline data, generate a concise
             st.subheader("Today's Action Plan")
             st.markdown(brief)
             st.caption(f"Generated on {datetime.today().strftime('%B %d, %Y')}")
+with tab_intel:
+    st.header("Account Intelligence")
+    st.caption("AI-generated research on any company in your pipeline.")
+
+    import anthropic
+
+    companies = df["source"].unique().tolist()
+
+    col_a, col_b = st.columns(2)
+    with col_a:
+        selected_status = st.selectbox("Filter by status", ["All", "hot", "warm", "cold"], key="intel_status")
+
+    if selected_status != "All":
+        filtered_intel = df[df["status"] == selected_status]
+    else:
+        filtered_intel = df
+
+    company_options = filtered_intel.index.tolist()
+    selected_lead = st.selectbox(
+        "Select a lead to research",
+        company_options,
+        format_func=lambda x: f"Lead #{x} | {df.loc[x, 'source']} | {df.loc[x, 'status']} | Score: {df.loc[x, 'icp_score']}",
+        key="intel_lead"
+    )
+
+    if st.button("Generate Account Intelligence"):
+        lead = df.loc[selected_lead]
+
+        prompt = f"""
+You are a senior B2B sales strategist preparing a rep for a sales call.
+
+Here is what we know about this account:
+- Lead source: {lead['source']}
+- Company size: {lead['employees']} employees
+- Revenue range: {lead['revenue']}
+- Current status: {lead['status']}
+- ICP Score: {lead['icp_score']}
+- Days in pipeline: {lead['days_inactive']}
+
+Generate a structured account intelligence brief with these exact sections:
+
+1. COMPANY PROFILE
+What type of company this likely is based on size and revenue.
+
+2. BUDGET ESTIMATE
+What budget range they likely have for solutions like ours.
+
+3. DECISION MAKER
+Who the likely decision maker is by title and what they care about.
+
+4. BEST PITCH ANGLE
+The single strongest angle to open with on a call.
+
+5. RISK FACTORS
+Top 2 reasons this deal might not close.
+
+6. RECOMMENDED NEXT ACTION
+One specific action to take in the next 48 hours.
+
+Be specific, direct, and concise. No emojis. No fluff.
+"""
+
+        client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+
+        with st.spinner("Generating account intelligence..."):
+            message = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=800,
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+        intel = message.content[0].text
+
+        st.divider()
+        st.subheader(f"Account Brief — Lead #{selected_lead}")
+        st.markdown(intel)
+        st.caption(f"ICP Score: {lead['icp_score']} | Status: {lead['status']} | Source: {lead['source']}")
