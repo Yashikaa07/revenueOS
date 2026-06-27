@@ -316,8 +316,9 @@ with tab_decay:
     st.header(" Lead Decay Alerts")
     st.caption("Leads going cold = revenue at risk. Act before they die.")
 
-    df["date_added"] = pd.to_datetime(df["date_added"])
-    df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
+    if "date_added" in df.columns:
+        df["date_added"] = pd.to_datetime(df["date_added"])
+        df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
 
     def decay_label(row):
         if row["status"] == "cold":
@@ -397,8 +398,9 @@ with tab_brief:
             warm = len(df[df["status"] == "warm"])
             cold = len(df[df["status"] == "cold"])
 
-            df["date_added"] = pd.to_datetime(df["date_added"])
-            df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
+            if "date_added" in df.columns:
+                df["date_added"] = pd.to_datetime(df["date_added"])
+                df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
             critical = len(df[(df["days_inactive"] > 90) & (df["status"] != "cold")])
             high_risk = len(df[(df["days_inactive"] > 60) & (df["status"] != "cold")])
 
