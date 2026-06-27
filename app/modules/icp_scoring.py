@@ -45,7 +45,7 @@ def score_lead(lead_data: dict, company_data: dict) -> dict:
         reasons.append("Website lead")
 
     # Grade
-    if score >= 70:
+    if score >= 40:
         grade = "HOT"
     elif score >= 40:
         grade = "WARM"
