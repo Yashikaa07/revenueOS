@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def generate_email(lead_data: dict, company_data: dict, scoring: dict) -> str:
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
     prompt = f"""You are an expert B2B sales copywriter. Write a short, personalized cold email for this lead.
 
