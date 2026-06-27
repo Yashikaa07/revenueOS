@@ -332,7 +332,8 @@ with tab_decay:
         else:
             return " Active"
 
-    df["decay_status"] = df.apply(decay_label, axis=1)
+    df = df.copy()
+df["decay_status"] = df.apply(decay_label, axis=1)
 
     avg_deal_d = st.sidebar.number_input("Avg Deal Size ($)", value=5000, key="decay_deal")
     hot_conv_d = st.sidebar.number_input("Hot Close Rate (%)", value=40, key="decay_hot") / 100
