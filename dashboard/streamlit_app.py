@@ -20,14 +20,14 @@ st.caption("AI-powered lead enrichment, scoring, and outreach automation")
 @st.cache_data
 def load_data():
     path = os.path.join(os.path.dirname(__file__), '..', 'data', 'leads_dataset.csv')
-    if os.path.exists(path):
+if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
 
 df = load_data()
 
 with st.sidebar:
-    st.header("➕ Add New Lead")
+st.header("➕ Add New Lead")
     first_name = st.text_input("First Name", "Sarah")
     last_name = st.text_input("Last Name", "Johnson")
     email = st.text_input("Email", "sarah@example.com")
@@ -37,7 +37,7 @@ with st.sidebar:
     analyze = st.button("🔍 Analyze Lead", use_container_width=True)
 
 if analyze:
-    with st.spinner("Running AI analysis..."):
+with st.spinner("Running AI analysis..."):
         lead_data = {"first_name": first_name, "last_name": last_name, "email": email, "company": company, "job_title": job_title, "source": source}
         company_data = enrich_company(company)
         scoring = score_lead(lead_data, company_data)
@@ -49,7 +49,7 @@ if analyze:
 tab1, tab2, tab3 = st.tabs(["📊 Pipeline Dashboard", "🤖 AI Assistant", "📋 All Leads"])
 
 with tab1:
-    if "analysis" in st.session_state:
+if "analysis" in st.session_state:
         r = st.session_state["analysis"]
         st.subheader(f"Lead Analysis: {r['lead_data']['first_name']} {r['lead_data']['last_name']}")
         col1, col2, col3, col4, col5 = st.columns(5)
@@ -85,7 +85,7 @@ with tab1:
                 st.info(f"Score is {r['score']}/100 — AI email triggers at 40+")
         st.divider()
 
-    if not df.empty:
+if not df.empty:
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Total Leads", len(df))
         col2.metric("🔥 Hot", len(df[df["status"]=="hot"]))
@@ -112,9 +112,9 @@ with tab1:
             st.plotly_chart(fig4, use_container_width=True)
 
 with tab2:
-    st.subheader("🤖 Ask Anything About Your Pipeline")
-    st.caption("Powered by Claude AI")
-    if df.empty:
+st.subheader("🤖 Ask Anything About Your Pipeline")
+st.caption("Powered by Claude AI")
+if df.empty:
         st.warning("No dataset loaded.")
     else:
         if "chat_history" not in st.session_state:
@@ -144,8 +144,8 @@ with tab2:
             st.rerun()
 
 with tab3:
-    st.subheader("📋 Full Lead Database")
-    if df.empty:
+st.subheader("📋 Full Lead Database")
+if df.empty:
         st.warning("No leads found.")
     else:
         col1, col2, col3 = st.columns(3)
