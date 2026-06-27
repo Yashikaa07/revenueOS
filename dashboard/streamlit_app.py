@@ -365,4 +365,3 @@ You are a senior GTM strategist. Based on this pipeline data, generate a concise
             st.subheader("Today's Action Plan")
             st.markdown(brief)
             st.caption(f"Generated on {datetime.today().strftime('%B %d, %Y')}")
-              
