@@ -45,7 +45,7 @@ if analyze:
         email_content = generate_email(lead_data, company_data, scoring) if grade == "HOT" else None
         st.session_state["analysis"] = {"lead_data": lead_data, "company_data": company_data, "scoring": scoring, "grade": grade, "score": score, "email_content": email_content}
 
-tab1, tab2, tab3, tab4, tab_decay = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics", " Decay Alerts"])
+tab1, tab2, tab3, tab4, tab_decay, tab_brief = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics", "Decay Alerts", "GTM Brief"])
 
 with tab1:
     if "analysis" in st.session_state:
