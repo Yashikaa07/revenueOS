@@ -45,7 +45,7 @@ if analyze:
         email_content = generate_email(lead_data, company_data, scoring) if grade == "HOT" else None
         st.session_state["analysis"] = {"lead_data": lead_data, "company_data": company_data, "scoring": scoring, "grade": grade, "score": score, "email_content": email_content}
 
-tab1, tab2, tab3, tab4, tab_decay = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics", "🔴 Decay Alerts"])
+tab1, tab2, tab3, tab4, tab_decay = st.tabs(["Pipeline Dashboard", "AI Assistant", "All Leads", "Analytics", " Decay Alerts"])
 
 with tab1:
     if "analysis" in st.session_state:
@@ -80,7 +80,7 @@ with tab1:
                     else:
                         st.error(f"Failed: {msg}")
             else:
-                st.info(f"Score is {r['score']}/100 — AI email triggers at 40+")
+                st.info(f"Score is {r['score']}/100  AI email triggers at 40+")
         st.divider()
 
     if not df.empty:
@@ -248,7 +248,7 @@ with tab4:
         st.dataframe(source_perf, use_container_width=True)
 with tab_decay:
     from datetime import datetime
-    st.header("🔴 Lead Decay Alerts")
+    st.header(" Lead Decay Alerts")
     st.caption("Leads going cold = revenue at risk. Act before they die.")
 
     df["date_added"] = pd.to_datetime(df["date_added"])
@@ -258,13 +258,13 @@ with tab_decay:
         if row["status"] == "cold":
             return "Already Cold"
         elif row["days_inactive"] > 90:
-            return "🔴 Critical"
+            return " Critical"
         elif row["days_inactive"] > 60:
-            return "🟠 High Risk"
+            return " High Risk"
         elif row["days_inactive"] > 30:
-            return "🟡 Watch"
+            return " Watch"
         else:
-            return "🟢 Active"
+            return " Active"
 
     df["decay_status"] = df.apply(decay_label, axis=1)
 
@@ -272,16 +272,16 @@ with tab_decay:
     hot_conv_d = st.sidebar.number_input("Hot Close Rate (%)", value=40, key="decay_hot") / 100
     warm_conv_d = st.sidebar.number_input("Warm Close Rate (%)", value=20, key="decay_warm") / 100
 
-    at_risk = df[df["decay_status"].isin(["🔴 Critical", "🟠 High Risk"])]
+    at_risk = df[df["decay_status"].isin([" Critical", " High Risk"])]
     hot_risk = len(at_risk[at_risk["status"] == "hot"])
     warm_risk = len(at_risk[at_risk["status"] == "warm"])
     revenue_at_risk = (hot_risk * hot_conv_d + warm_risk * warm_conv_d) * avg_deal_d
 
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("🔴 Critical", len(df[df["decay_status"] == "🔴 Critical"]))
-    col2.metric("🟠 High Risk", len(df[df["decay_status"] == "🟠 High Risk"]))
-    col3.metric("🟡 Watch", len(df[df["decay_status"] == "🟡 Watch"]))
-    col4.metric("💸 Revenue at Risk", f"${revenue_at_risk:,.0f}")
+    col1.metric(" Critical", len(df[df["decay_status"] == " Critical"]))
+    col2.metric(" High Risk", len(df[df["decay_status"] == " High Risk"]))
+    col3.metric(" Watch", len(df[df["decay_status"] == " Watch"]))
+    col4.metric(" Revenue at Risk", f"${revenue_at_risk:,.0f}")
 
     st.divider()
 
@@ -290,10 +290,10 @@ with tab_decay:
     fig_decay = px.bar(
         decay_counts, x="Decay Status", y="Count", color="Decay Status",
         color_discrete_map={
-            "🔴 Critical": "#FF4444",
-            "🟠 High Risk": "#FF8C00",
-            "🟡 Watch": "#FFD700",
-            "🟢 Active": "#00C48C",
+            " Critical": "#FF4444",
+            " High Risk": "#FF8C00",
+            " Watch": "#FFD700",
+            " Active": "#00C48C",
             "Already Cold": "#555555"
         },
         title="Lead Decay Distribution"
@@ -301,13 +301,13 @@ with tab_decay:
     fig_decay.update_layout(paper_bgcolor="rgba(0,0,0,0)", font={"color": "white"})
     st.plotly_chart(fig_decay, use_container_width=True)
 
-    st.subheader("🚨 Leads Needing Immediate Action")
-    urgency_filter = st.selectbox("Filter by urgency", ["All At-Risk", "🔴 Critical Only", "🟠 High Risk Only"])
+    st.subheader(" Leads Needing Immediate Action")
+    urgency_filter = st.selectbox("Filter by urgency", ["All At-Risk", " Critical Only", " High Risk Only"])
 
-    if urgency_filter == "🔴 Critical Only":
-        show_df = df[df["decay_status"] == "🔴 Critical"]
-    elif urgency_filter == "🟠 High Risk Only":
-        show_df = df[df["decay_status"] == "🟠 High Risk"]
+    if urgency_filter == " Critical Only":
+        show_df = df[df["decay_status"] == " Critical"]
+    elif urgency_filter == " High Risk Only":
+        show_df = df[df["decay_status"] == " High Risk"]
     else:
         show_df = at_risk
 
@@ -316,5 +316,5 @@ with tab_decay:
         .sort_values("days_inactive", ascending=False),
         use_container_width=True
     )
-    st.caption(f"💸 ${revenue_at_risk:,.0f} in pipeline at risk from {len(at_risk)} decaying leads.")
+    st.caption(f" ${revenue_at_risk:,.0f} in pipeline at risk from {len(at_risk)} decaying leads.")
     
