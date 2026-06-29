@@ -120,7 +120,8 @@ with tab1:
             fig1.update_layout(paper_bgcolor="rgba(0,0,0,0)")
             st.plotly_chart(fig1, use_container_width=True)
         with c2:
-            fig2 = px.bar(df["industry"].value_counts().reset_index(), x="industry", y="count", title="Leads by Industry", color_discrete_sequence=["#7c83fd"])
+            if "industry" in df.columns:
+                fig2 = px.bar(df["industry"].value_counts().reset_index(), x="industry", y="count", title="Leads by Industry", color_discrete_sequence=["#7c83fd"])
             fig2.update_layout(paper_bgcolor="rgba(0,0,0,0)")
             st.plotly_chart(fig2, use_container_width=True)
         c3, c4 = st.columns(2)
@@ -172,7 +173,8 @@ with tab3:
     else:
         col1, col2, col3 = st.columns(3)
         status_filter = col1.selectbox("Filter by Status", ["All", "hot", "warm", "cold"])
-        industry_filter = col2.selectbox("Filter by Industry", ["All"] + sorted(df["industry"].unique().tolist()))
+        if "industry" in df.columns:
+            industry_filter = col2.selectbox("Filter by Industry", ["All"] + sorted(df["industry"].unique().tolist()))
         source_filter = col3.selectbox("Filter by Source", ["All"] + sorted(df["source"].unique().tolist()))
         filtered = df.copy()
         if status_filter != "All":
