@@ -1,501 +1,901 @@
-id,first_name,last_name,company,title,industry,employees,revenue,source,icp_score,status,date_added
-1,Ryan,Williams,Mixpanel,CMO,Media,5000,50-100M,linkedin,86,hot,2024-04-03
-2,Amanda,Moore,Pardot,CEO,SaaS,100,100M+,cold_email,79,hot,2024-08-09
-3,Amanda,Wilson,Apollo,Sales Manager,Real Estate,500,50-100M,inbound,10,cold,2024-11-07
-4,Michael,Brown,ZoomInfo,Head of Growth,Media,250,10-50M,website,64,warm,2024-09-09
-5,James,Moore,Outreach,CRO,Consulting,10,<1M,inbound,10,cold,2024-09-14
-6,David,Davis,Clearbit,Sales Manager,E-commerce,1000,100M+,webinar,54,warm,2024-02-04
-7,Sarah,Williams,Mixpanel,Director of Marketing,SaaS,500,10-50M,webinar,71,hot,2024-05-21
-8,Amanda,Brown,Segment,Founder,Logistics,250,1-10M,inbound,92,hot,2024-12-03
-9,Emily,Smith,Amplitude,Director of Marketing,Real Estate,100,50-100M,inbound,25,cold,2024-01-10
-10,Lisa,Wilson,Pipedrive,VP of Sales,Manufacturing,5000,10-50M,inbound,74,hot,2024-09-07
-11,Lisa,Patel,Pipedrive,CMO,Manufacturing,100,100M+,conference,83,hot,2024-01-25
-12,Amanda,Moore,Zendesk,Business Development Manager,Healthcare,5000,10-50M,website,14,cold,2024-04-22
-13,Chris,Smith,Monday.com,Director of Marketing,EdTech,100,10-50M,conference,52,warm,2024-07-11
-14,Ryan,Moore,Drift,VP of Sales,Fintech,1000,<1M,webinar,43,cold,2024-10-01
-15,Amanda,Williams,HubSpot,Founder,EdTech,250,10-50M,inbound,76,hot,2024-10-16
-16,Jessica,Wilson,Mixpanel,Business Development Manager,Logistics,1000,10-50M,cold_email,28,cold,2024-12-15
-17,David,Miller,Braze,VP of Sales,Healthcare,50,<1M,cold_email,72,hot,2024-06-24
-18,Ryan,Taylor,Braze,Head of Growth,Fintech,250,1-10M,inbound,43,cold,2024-01-18
-19,Lisa,Brown,Segment,Director of Marketing,Healthcare,50,10-50M,cold_email,13,cold,2024-03-12
-20,Jessica,Taylor,Intercom,Head of Growth,Logistics,50,1-10M,conference,78,hot,2024-10-18
-21,Emily,Johnson,HubSpot,Head of Revenue,Manufacturing,50,10-50M,website,49,warm,2024-09-27
-22,Amanda,Johnson,Clearbit,Founder,Real Estate,5000,100M+,website,47,warm,2024-10-08
-23,Jessica,Patel,Mixpanel,Founder,Consulting,250,50-100M,referral,62,warm,2024-03-07
-24,Emily,Miller,ZoomInfo,Director of Marketing,EdTech,250,100M+,website,11,cold,2024-11-22
-25,Emily,Taylor,Pipedrive,Director of Marketing,EdTech,50,1-10M,referral,55,warm,2024-07-15
-26,Amanda,Miller,Apollo,CRO,EdTech,100,10-50M,inbound,50,warm,2024-11-09
-27,Amanda,Davis,Salesforce,CEO,Fintech,50,<1M,cold_email,83,hot,2024-06-25
-28,Amanda,Johnson,Marketo,VP of Sales,E-commerce,10,100M+,website,15,cold,2024-04-01
-29,Chris,Smith,Salesforce,Founder,Healthcare,5000,100M+,referral,53,warm,2024-09-12
-30,Michael,Smith,HubSpot,CEO,Manufacturing,500,100M+,cold_email,67,warm,2024-03-19
-31,Lisa,Patel,Monday.com,Head of Revenue,Logistics,500,<1M,linkedin,35,cold,2024-01-02
-32,Michael,Wilson,Salesforce,CRO,E-commerce,50,10-50M,inbound,55,warm,2024-06-17
-33,Emily,Patel,Pardot,CRO,Media,250,50-100M,website,53,warm,2024-07-19
-34,David,Miller,Monday.com,Sales Manager,Healthcare,50,<1M,inbound,71,hot,2024-11-03
-35,David,Patel,Braze,Head of Growth,Real Estate,100,<1M,linkedin,31,cold,2024-08-29
-36,Jessica,Patel,Salesforce,Head of Growth,Consulting,250,10-50M,conference,39,cold,2024-05-26
-37,Sarah,Taylor,HubSpot,Head of Growth,SaaS,5000,1-10M,cold_email,37,cold,2024-07-10
-38,David,Taylor,Marketo,Sales Manager,Fintech,10,1-10M,linkedin,82,hot,2024-02-14
-39,David,Wilson,Monday.com,CEO,Fintech,50,<1M,webinar,65,warm,2024-07-26
-40,David,Wilson,Klaviyo,Head of Revenue,E-commerce,100,100M+,referral,19,cold,2024-09-30
-41,Lisa,Smith,Drift,Head of Revenue,Consulting,1000,100M+,conference,88,hot,2024-06-11
-42,Michael,Davis,HubSpot,CRO,Healthcare,10,10-50M,website,51,warm,2024-06-30
-43,David,Miller,Klaviyo,Business Development Manager,SaaS,250,50-100M,webinar,57,warm,2024-12-29
-44,David,Williams,Pipedrive,Head of Growth,Healthcare,500,50-100M,referral,42,cold,2024-08-21
-45,Chris,Smith,ActiveCampaign,Sales Manager,Media,10,10-50M,cold_email,29,cold,2024-01-27
-46,Sarah,Patel,Segment,Sales Manager,Manufacturing,1000,10-50M,inbound,95,hot,2024-02-25
-47,Lisa,Smith,Klaviyo,Business Development Manager,EdTech,5000,100M+,website,75,hot,2024-07-05
-48,Ryan,Johnson,Salesforce,Sales Manager,Media,10,10-50M,cold_email,95,hot,2024-03-29
-49,David,Davis,Zendesk,Head of Revenue,Healthcare,5000,1-10M,inbound,46,warm,2024-03-27
-50,Lisa,Taylor,Intercom,CEO,EdTech,1000,10-50M,webinar,62,warm,2024-08-31
-51,Sarah,Miller,Apollo,VP of Sales,E-commerce,250,<1M,cold_email,16,cold,2024-03-21
-52,Emily,Patel,Mixpanel,CMO,EdTech,10,100M+,webinar,33,cold,2024-05-03
-53,Chris,Johnson,Marketo,Director of Marketing,SaaS,100,10-50M,conference,89,hot,2024-02-08
-54,Chris,Smith,Outreach,Founder,Healthcare,500,50-100M,webinar,33,cold,2024-09-23
-55,Chris,Smith,Gong,CRO,Manufacturing,50,10-50M,referral,91,hot,2024-01-01
-56,Amanda,Miller,Pardot,CMO,Real Estate,1000,<1M,website,25,cold,2024-04-23
-57,Michael,Davis,Apollo,Founder,Fintech,250,<1M,linkedin,93,hot,2024-08-29
-58,Emily,Williams,Braze,VP of Sales,Manufacturing,5000,10-50M,linkedin,85,hot,2024-07-31
-59,Jessica,Miller,Drift,Head of Revenue,SaaS,500,100M+,webinar,31,cold,2024-07-03
-60,Emily,Smith,Zendesk,CEO,Real Estate,100,100M+,cold_email,89,hot,2024-10-22
-61,Michael,Wilson,Intercom,CMO,Fintech,1000,<1M,cold_email,85,hot,2024-03-08
-62,James,Taylor,Segment,Director of Marketing,SaaS,50,50-100M,referral,20,cold,2024-04-21
-63,Ryan,Davis,HubSpot,Business Development Manager,Fintech,250,<1M,cold_email,15,cold,2024-11-30
-64,Amanda,Davis,Salesforce,Founder,Healthcare,1000,10-50M,linkedin,71,hot,2024-02-01
-65,Emily,Smith,HubSpot,CRO,Healthcare,100,10-50M,website,56,warm,2024-11-26
-66,Ryan,Johnson,Outreach,CRO,Media,1000,<1M,website,42,cold,2024-09-17
-67,Amanda,Davis,Pipedrive,Head of Revenue,Fintech,50,100M+,webinar,20,cold,2024-04-04
-68,Amanda,Patel,ZoomInfo,CRO,Real Estate,50,50-100M,webinar,68,warm,2024-09-02
-69,James,Smith,Apollo,CRO,E-commerce,1000,50-100M,linkedin,34,cold,2024-01-18
-70,Ryan,Miller,Apollo,CRO,Media,1000,<1M,conference,18,cold,2024-11-18
-71,Chris,Moore,Braze,Head of Growth,Consulting,5000,1-10M,linkedin,30,cold,2024-09-12
-72,Chris,Williams,Marketo,CEO,EdTech,50,100M+,inbound,37,cold,2024-10-14
-73,Sarah,Moore,Zendesk,VP of Sales,Media,5000,<1M,referral,62,warm,2024-11-02
-74,Amanda,Johnson,Outreach,Head of Growth,Logistics,10,50-100M,webinar,28,cold,2024-05-19
-75,Emily,Patel,ZoomInfo,CMO,Logistics,250,1-10M,webinar,72,hot,2024-03-18
-76,Chris,Taylor,Pipedrive,Founder,EdTech,10,<1M,inbound,93,hot,2024-03-21
-77,Sarah,Wilson,Segment,Director of Marketing,Fintech,100,<1M,conference,28,cold,2024-04-25
-78,David,Miller,Segment,Head of Growth,EdTech,500,100M+,conference,72,hot,2024-08-14
-79,Lisa,Brown,Clearbit,Head of Revenue,Media,10,50-100M,website,62,warm,2024-10-16
-80,Ryan,Brown,Intercom,Head of Revenue,EdTech,1000,50-100M,referral,48,warm,2024-09-28
-81,Chris,Johnson,Salesforce,Head of Growth,E-commerce,5000,50-100M,cold_email,40,cold,2024-06-14
-82,Michael,Taylor,Pipedrive,Head of Revenue,Fintech,500,50-100M,webinar,42,cold,2024-08-14
-83,James,Johnson,Intercom,CEO,E-commerce,10,50-100M,webinar,81,hot,2024-08-13
-84,Ryan,Johnson,ZoomInfo,Business Development Manager,Media,5000,50-100M,linkedin,48,warm,2024-08-29
-85,Emily,Williams,Amplitude,Sales Manager,Real Estate,50,<1M,website,95,hot,2024-12-05
-86,Lisa,Wilson,Gong,Founder,SaaS,250,<1M,inbound,69,warm,2024-04-11
-87,Ryan,Taylor,Drift,Business Development Manager,Healthcare,10,100M+,website,76,hot,2024-08-14
-88,Ryan,Johnson,ActiveCampaign,CMO,Healthcare,500,<1M,conference,88,hot,2024-05-11
-89,Chris,Miller,Drift,VP of Sales,Real Estate,250,50-100M,cold_email,10,cold,2024-01-12
-90,Amanda,Patel,Zendesk,CMO,Fintech,1000,100M+,cold_email,19,cold,2024-05-17
-91,Michael,Smith,Salesforce,Head of Growth,Manufacturing,500,1-10M,cold_email,44,cold,2024-02-21
-92,Jessica,Miller,Mixpanel,CRO,Logistics,5000,<1M,website,48,warm,2024-09-22
-93,Amanda,Miller,Segment,CRO,Fintech,50,10-50M,cold_email,48,warm,2024-10-14
-94,Emily,Moore,Marketo,Founder,E-commerce,5000,10-50M,inbound,69,warm,2024-05-22
-95,Amanda,Miller,Gong,Head of Growth,SaaS,500,1-10M,website,63,warm,2024-12-17
-96,Amanda,Brown,Marketo,CEO,SaaS,10,10-50M,webinar,57,warm,2024-06-24
-97,Michael,Brown,Outreach,CMO,SaaS,10,<1M,conference,14,cold,2024-05-16
-98,Ryan,Johnson,Marketo,Sales Manager,Manufacturing,250,50-100M,cold_email,88,hot,2024-08-27
-99,Ryan,Brown,Apollo,Founder,SaaS,250,50-100M,conference,15,cold,2024-06-10
-100,Sarah,Taylor,Braze,CEO,Media,10,10-50M,inbound,26,cold,2024-12-23
-101,David,Taylor,Mixpanel,CEO,Fintech,500,1-10M,webinar,82,hot,2024-09-25
-102,Ryan,Johnson,Mixpanel,Head of Growth,SaaS,500,100M+,cold_email,93,hot,2024-06-10
-103,Michael,Johnson,Zendesk,Founder,SaaS,10,<1M,inbound,40,cold,2024-10-08
-104,Chris,Taylor,Drift,Business Development Manager,Manufacturing,1000,1-10M,inbound,25,cold,2024-12-26
-105,Amanda,Brown,Salesforce,VP of Sales,Media,500,50-100M,conference,65,warm,2024-02-08
-106,Sarah,Davis,Drift,Head of Revenue,SaaS,5000,<1M,cold_email,30,cold,2024-02-06
-107,James,Moore,ZoomInfo,CMO,SaaS,500,100M+,linkedin,21,cold,2024-01-11
-108,Emily,Moore,Clearbit,VP of Sales,Healthcare,250,1-10M,conference,84,hot,2024-12-16
-109,James,Davis,Outreach,Head of Revenue,Manufacturing,250,50-100M,cold_email,50,warm,2024-05-04
-110,Michael,Patel,Klaviyo,CMO,EdTech,250,50-100M,conference,90,hot,2024-01-24
-111,Michael,Taylor,ActiveCampaign,Business Development Manager,Logistics,10,1-10M,webinar,69,warm,2024-12-14
-112,James,Johnson,Zendesk,Sales Manager,SaaS,1000,<1M,referral,89,hot,2024-02-10
-113,Emily,Moore,Mixpanel,Founder,Manufacturing,100,1-10M,referral,60,warm,2024-01-13
-114,Michael,Davis,Pardot,Founder,EdTech,500,1-10M,conference,21,cold,2024-10-15
-115,David,Miller,Amplitude,Founder,Real Estate,100,<1M,linkedin,51,warm,2024-03-21
-116,Amanda,Brown,Braze,CMO,Healthcare,500,<1M,conference,77,hot,2024-01-12
-117,Emily,Miller,Mixpanel,Founder,Manufacturing,250,100M+,webinar,68,warm,2024-12-16
-118,David,Brown,Drift,CRO,E-commerce,50,100M+,cold_email,12,cold,2024-06-14
-119,Sarah,Moore,Braze,CEO,Logistics,100,100M+,conference,22,cold,2024-10-14
-120,Jessica,Taylor,HubSpot,CEO,Logistics,100,50-100M,referral,81,hot,2024-11-03
-121,Michael,Brown,Klaviyo,CMO,Healthcare,250,50-100M,inbound,18,cold,2024-04-14
-122,Sarah,Moore,Outreach,Sales Manager,EdTech,10,10-50M,cold_email,38,cold,2024-03-27
-123,Jessica,Patel,Amplitude,Director of Marketing,EdTech,100,10-50M,inbound,76,hot,2024-12-21
-124,James,Johnson,Outreach,Sales Manager,Consulting,10,<1M,inbound,35,cold,2024-06-26
-125,James,Davis,Pardot,VP of Sales,Fintech,250,100M+,website,14,cold,2024-01-04
-126,Amanda,Taylor,Outreach,Director of Marketing,EdTech,1000,1-10M,inbound,92,hot,2024-09-04
-127,Jessica,Taylor,Salesforce,CMO,Logistics,50,50-100M,cold_email,90,hot,2024-04-07
-128,Emily,Patel,Salesforce,VP of Sales,Manufacturing,1000,<1M,cold_email,94,hot,2024-03-12
-129,Sarah,Patel,Clearbit,Head of Revenue,Real Estate,5000,50-100M,cold_email,85,hot,2024-07-30
-130,David,Taylor,Pipedrive,CRO,Healthcare,1000,<1M,linkedin,64,warm,2024-05-29
-131,Ryan,Williams,Marketo,Business Development Manager,Media,250,100M+,cold_email,58,warm,2024-07-26
-132,Amanda,Johnson,Drift,Director of Marketing,Healthcare,10,100M+,webinar,11,cold,2024-10-20
-133,Amanda,Moore,Segment,Head of Revenue,E-commerce,500,<1M,inbound,77,hot,2024-07-09
-134,James,Moore,Klaviyo,Head of Growth,E-commerce,250,<1M,website,45,warm,2024-03-04
-135,Lisa,Moore,Apollo,CMO,Manufacturing,10,100M+,webinar,57,warm,2024-01-15
-136,Emily,Wilson,Mixpanel,Head of Revenue,EdTech,1000,100M+,linkedin,52,warm,2024-02-04
-137,Amanda,Williams,Drift,CRO,Logistics,250,100M+,website,55,warm,2024-07-11
-138,David,Patel,Marketo,Sales Manager,E-commerce,100,1-10M,conference,20,cold,2024-03-21
-139,Emily,Patel,ActiveCampaign,CMO,Media,5000,50-100M,linkedin,30,cold,2024-06-25
-140,Lisa,Brown,Clearbit,Head of Growth,SaaS,1000,50-100M,website,44,cold,2024-12-23
-141,Jessica,Miller,HubSpot,Sales Manager,Real Estate,250,100M+,cold_email,16,cold,2024-09-02
-142,James,Davis,Segment,Founder,Manufacturing,1000,<1M,website,18,cold,2024-11-14
-143,Michael,Moore,Outreach,Head of Revenue,Healthcare,50,10-50M,inbound,22,cold,2024-11-07
-144,Michael,Moore,Monday.com,CRO,Media,250,50-100M,linkedin,80,hot,2024-05-20
-145,Emily,Johnson,Salesforce,Business Development Manager,Fintech,100,1-10M,webinar,76,hot,2024-04-09
-146,Lisa,Taylor,Apollo,Founder,SaaS,50,10-50M,inbound,79,hot,2024-04-15
-147,James,Miller,Mixpanel,CEO,SaaS,5000,50-100M,cold_email,84,hot,2024-05-16
-148,Michael,Smith,HubSpot,CMO,Consulting,5000,1-10M,linkedin,68,warm,2024-11-27
-149,James,Wilson,Outreach,VP of Sales,Media,50,1-10M,website,59,warm,2024-01-16
-150,David,Moore,Salesforce,CMO,Logistics,1000,<1M,inbound,70,hot,2024-05-14
-151,Sarah,Patel,Marketo,Founder,Manufacturing,10,100M+,cold_email,25,cold,2024-02-14
-152,Emily,Patel,Drift,Director of Marketing,Manufacturing,100,1-10M,website,63,warm,2024-01-05
-153,Lisa,Brown,Drift,Director of Marketing,Fintech,5000,1-10M,website,35,cold,2024-10-30
-154,Lisa,Smith,Salesforce,Head of Growth,Media,50,50-100M,conference,38,cold,2024-05-02
-155,James,Taylor,Marketo,VP of Sales,E-commerce,250,1-10M,linkedin,91,hot,2024-01-11
-156,James,Moore,Intercom,CEO,Consulting,5000,<1M,website,38,cold,2024-06-29
-157,Amanda,Brown,Pardot,Head of Revenue,Consulting,5000,1-10M,conference,77,hot,2024-04-06
-158,Lisa,Davis,Intercom,CMO,E-commerce,100,50-100M,website,69,warm,2024-10-28
-159,Amanda,Williams,Clearbit,Business Development Manager,EdTech,50,1-10M,conference,69,warm,2024-03-03
-160,Michael,Smith,Salesforce,VP of Sales,Consulting,500,100M+,conference,50,warm,2024-08-17
-161,Emily,Moore,Pardot,Director of Marketing,Media,5000,1-10M,cold_email,28,cold,2024-11-08
-162,Ryan,Williams,Drift,Head of Growth,Consulting,250,1-10M,conference,81,hot,2024-12-11
-163,Amanda,Smith,Amplitude,CRO,Healthcare,50,<1M,linkedin,14,cold,2024-05-13
-164,Sarah,Johnson,Outreach,CRO,Media,500,<1M,webinar,59,warm,2024-05-01
-165,Emily,Patel,Clearbit,CMO,Real Estate,1000,1-10M,linkedin,23,cold,2024-01-08
-166,Sarah,Johnson,ActiveCampaign,Head of Revenue,E-commerce,5000,10-50M,webinar,54,warm,2024-06-19
-167,Sarah,Taylor,Drift,Head of Growth,Manufacturing,250,1-10M,conference,31,cold,2024-06-21
-168,Chris,Smith,ZoomInfo,Sales Manager,Healthcare,50,<1M,linkedin,85,hot,2024-05-13
-169,David,Johnson,HubSpot,Head of Revenue,Real Estate,5000,10-50M,inbound,37,cold,2024-02-17
-170,David,Moore,Clearbit,Head of Growth,Healthcare,1000,100M+,website,11,cold,2024-03-01
-171,Lisa,Smith,ActiveCampaign,Director of Marketing,Media,500,50-100M,webinar,80,hot,2024-11-30
-172,Michael,Davis,HubSpot,Director of Marketing,EdTech,1000,1-10M,cold_email,10,cold,2024-12-10
-173,James,Wilson,Zendesk,VP of Sales,SaaS,1000,1-10M,cold_email,64,warm,2024-05-27
-174,David,Taylor,Mixpanel,Head of Revenue,Logistics,500,1-10M,referral,13,cold,2024-02-16
-175,Lisa,Davis,Amplitude,Head of Revenue,Fintech,500,50-100M,website,30,cold,2024-08-08
-176,Ryan,Patel,Zendesk,Head of Growth,Manufacturing,50,<1M,cold_email,33,cold,2024-10-05
-177,Emily,Davis,HubSpot,Director of Marketing,E-commerce,10,100M+,linkedin,15,cold,2024-05-20
-178,David,Patel,Pipedrive,CRO,Healthcare,500,100M+,cold_email,82,hot,2024-08-30
-179,Jessica,Davis,Marketo,CEO,Manufacturing,500,50-100M,website,53,warm,2024-10-09
-180,Lisa,Davis,Zendesk,VP of Sales,E-commerce,10,<1M,referral,77,hot,2024-09-29
-181,Lisa,Davis,Zendesk,CEO,EdTech,1000,100M+,linkedin,19,cold,2024-04-17
-182,Jessica,Johnson,Clearbit,VP of Sales,E-commerce,50,10-50M,linkedin,87,hot,2024-02-29
-183,Michael,Patel,Segment,Founder,Healthcare,1000,10-50M,referral,52,warm,2024-05-30
-184,Amanda,Johnson,Apollo,CMO,EdTech,5000,1-10M,referral,13,cold,2024-09-23
-185,Amanda,Patel,Gong,Founder,SaaS,500,50-100M,website,55,warm,2024-04-21
-186,James,Moore,Monday.com,Sales Manager,Logistics,10,10-50M,conference,82,hot,2024-08-21
-187,Amanda,Patel,Apollo,Director of Marketing,E-commerce,1000,100M+,webinar,51,warm,2024-05-29
-188,Emily,Moore,HubSpot,VP of Sales,SaaS,100,<1M,webinar,19,cold,2024-04-17
-189,Emily,Smith,Salesforce,CRO,Logistics,50,100M+,inbound,16,cold,2024-01-20
-190,Ryan,Johnson,Outreach,Head of Revenue,Manufacturing,250,<1M,cold_email,53,warm,2024-04-06
-191,Emily,Johnson,Braze,Business Development Manager,SaaS,100,10-50M,website,22,cold,2024-04-24
-192,James,Davis,Clearbit,CMO,SaaS,50,50-100M,conference,47,warm,2024-12-23
-193,Jessica,Davis,Salesforce,Founder,Consulting,5000,<1M,inbound,79,hot,2024-04-01
-194,Ryan,Brown,Drift,CMO,Real Estate,10,1-10M,inbound,16,cold,2024-10-10
-195,Amanda,Wilson,Pardot,Director of Marketing,EdTech,1000,1-10M,cold_email,49,warm,2024-04-10
-196,Emily,Moore,Apollo,CMO,Manufacturing,100,100M+,webinar,64,warm,2024-03-20
-197,James,Taylor,Outreach,Business Development Manager,Real Estate,250,<1M,website,65,warm,2024-11-09
-198,Chris,Smith,Mixpanel,Founder,Manufacturing,500,10-50M,conference,91,hot,2024-08-26
-199,Michael,Taylor,Intercom,Head of Growth,SaaS,50,1-10M,conference,43,cold,2024-05-23
-200,Emily,Moore,Amplitude,Founder,Manufacturing,5000,10-50M,referral,62,warm,2024-05-13
-201,Sarah,Wilson,Braze,Founder,SaaS,250,<1M,website,58,warm,2024-04-06
-202,Sarah,Moore,Monday.com,Director of Marketing,Manufacturing,500,1-10M,conference,37,cold,2024-04-09
-203,David,Davis,Mixpanel,CRO,Media,100,1-10M,conference,10,cold,2024-04-23
-204,Chris,Smith,Intercom,Founder,Manufacturing,500,1-10M,cold_email,81,hot,2024-11-18
-205,Lisa,Wilson,Marketo,Head of Growth,Logistics,100,100M+,conference,91,hot,2024-08-14
-206,David,Patel,Intercom,Sales Manager,Media,50,10-50M,linkedin,91,hot,2024-03-18
-207,Lisa,Williams,ZoomInfo,Head of Growth,EdTech,50,50-100M,referral,62,warm,2024-10-28
-208,Lisa,Taylor,Pardot,Founder,Healthcare,50,10-50M,linkedin,64,warm,2024-03-11
-209,Emily,Brown,HubSpot,Founder,SaaS,500,100M+,conference,32,cold,2024-06-21
-210,Michael,Wilson,Pipedrive,Founder,Real Estate,1000,1-10M,conference,79,hot,2024-12-03
-211,Michael,Wilson,Drift,VP of Sales,E-commerce,100,<1M,referral,90,hot,2024-11-06
-212,Chris,Brown,HubSpot,Business Development Manager,SaaS,500,100M+,inbound,94,hot,2024-04-15
-213,Michael,Miller,Pardot,Business Development Manager,Healthcare,50,1-10M,website,71,hot,2024-04-24
-214,Sarah,Smith,Mixpanel,CEO,SaaS,100,<1M,webinar,66,warm,2024-06-04
-215,Lisa,Brown,Apollo,Head of Revenue,E-commerce,100,<1M,cold_email,14,cold,2024-08-16
-216,Amanda,Johnson,Mixpanel,Head of Growth,Fintech,100,100M+,inbound,32,cold,2024-12-26
-217,Michael,Davis,Monday.com,Business Development Manager,Logistics,50,1-10M,conference,45,warm,2024-06-01
-218,James,Wilson,Apollo,Head of Growth,Fintech,5000,10-50M,inbound,56,warm,2024-05-18
-219,Michael,Wilson,Outreach,Founder,Healthcare,500,50-100M,inbound,57,warm,2024-09-17
-220,Michael,Davis,Segment,Business Development Manager,Manufacturing,100,10-50M,referral,41,cold,2024-12-06
-221,Ryan,Wilson,Intercom,VP of Sales,Real Estate,10,100M+,cold_email,79,hot,2024-10-17
-222,Amanda,Williams,HubSpot,CMO,Media,500,<1M,inbound,48,warm,2024-03-18
-223,David,Taylor,Klaviyo,VP of Sales,Real Estate,1000,10-50M,referral,35,cold,2024-08-24
-224,Amanda,Brown,Braze,Founder,Media,1000,10-50M,website,22,cold,2024-09-22
-225,Chris,Williams,Drift,Head of Revenue,Media,100,1-10M,conference,54,warm,2024-06-24
-226,Michael,Davis,Mixpanel,CMO,Manufacturing,50,100M+,linkedin,39,cold,2024-08-04
-227,James,Brown,Mixpanel,Head of Revenue,Logistics,500,<1M,referral,66,warm,2024-09-18
-228,James,Moore,Clearbit,Founder,Fintech,250,50-100M,referral,71,hot,2024-05-29
-229,Jessica,Smith,Gong,Director of Marketing,Logistics,5000,10-50M,cold_email,12,cold,2024-02-04
-230,Lisa,Moore,Monday.com,CMO,SaaS,50,10-50M,conference,24,cold,2024-05-08
-231,Michael,Patel,Monday.com,Director of Marketing,Fintech,100,100M+,cold_email,64,warm,2024-07-30
-232,Lisa,Wilson,Pardot,CRO,Fintech,500,10-50M,referral,78,hot,2024-01-08
-233,Emily,Patel,ActiveCampaign,Head of Growth,Manufacturing,1000,10-50M,webinar,63,warm,2024-09-13
-234,Sarah,Moore,Intercom,Head of Growth,Manufacturing,1000,<1M,website,47,warm,2024-08-16
-235,Jessica,Miller,Monday.com,Director of Marketing,Manufacturing,5000,50-100M,website,57,warm,2024-06-01
-236,Jessica,Johnson,Intercom,CEO,Healthcare,100,100M+,cold_email,35,cold,2024-08-15
-237,Michael,Wilson,Marketo,Head of Revenue,Real Estate,1000,50-100M,referral,73,hot,2024-11-07
-238,James,Taylor,Intercom,Business Development Manager,EdTech,10,<1M,website,87,hot,2024-06-10
-239,Michael,Patel,Pipedrive,Founder,E-commerce,250,50-100M,inbound,52,warm,2024-10-01
-240,James,Brown,ZoomInfo,Head of Revenue,Manufacturing,250,<1M,webinar,40,cold,2024-03-17
-241,Emily,Taylor,Clearbit,Head of Growth,Manufacturing,1000,50-100M,website,43,cold,2024-01-05
-242,David,Miller,Zendesk,CEO,Logistics,50,50-100M,website,32,cold,2024-05-27
-243,Ryan,Taylor,Apollo,Director of Marketing,EdTech,100,100M+,conference,70,hot,2024-08-01
-244,Jessica,Brown,Amplitude,Sales Manager,E-commerce,500,50-100M,webinar,22,cold,2024-12-15
-245,Chris,Williams,Pipedrive,Head of Revenue,Consulting,1000,10-50M,website,11,cold,2024-03-05
-246,Emily,Smith,Drift,Sales Manager,EdTech,1000,50-100M,referral,45,warm,2024-03-23
-247,Lisa,Smith,Segment,Head of Revenue,Fintech,1000,1-10M,referral,79,hot,2024-08-19
-248,James,Williams,Outreach,CEO,Real Estate,50,1-10M,website,86,hot,2024-07-26
-249,Emily,Smith,Braze,CEO,Media,5000,50-100M,inbound,36,cold,2024-08-16
-250,Michael,Moore,Intercom,Head of Growth,Fintech,500,10-50M,website,38,cold,2024-01-15
-251,Lisa,Brown,Apollo,Founder,Manufacturing,50,10-50M,cold_email,39,cold,2024-04-05
-252,Ryan,Wilson,Klaviyo,Founder,EdTech,1000,100M+,linkedin,27,cold,2024-03-01
-253,Amanda,Smith,Zendesk,Head of Growth,Media,500,1-10M,cold_email,82,hot,2024-10-20
-254,David,Wilson,HubSpot,Founder,Logistics,5000,10-50M,referral,89,hot,2024-12-06
-255,Chris,Moore,Gong,Head of Revenue,Manufacturing,5000,10-50M,linkedin,35,cold,2024-02-25
-256,Amanda,Moore,Zendesk,Head of Revenue,Real Estate,1000,100M+,website,32,cold,2024-01-07
-257,Amanda,Johnson,Salesforce,Sales Manager,Manufacturing,100,50-100M,linkedin,92,hot,2024-02-23
-258,Lisa,Williams,Monday.com,CMO,Logistics,5000,1-10M,referral,56,warm,2024-12-21
-259,Sarah,Johnson,Outreach,Head of Revenue,Healthcare,500,<1M,webinar,87,hot,2024-01-16
-260,Michael,Johnson,Apollo,Business Development Manager,E-commerce,1000,1-10M,conference,93,hot,2024-07-11
-261,Jessica,Taylor,Gong,Founder,Healthcare,5000,1-10M,referral,73,hot,2024-11-19
-262,Amanda,Davis,ActiveCampaign,Founder,Healthcare,500,50-100M,webinar,61,warm,2024-07-15
-263,Chris,Williams,Pardot,Sales Manager,EdTech,250,<1M,inbound,12,cold,2024-12-23
-264,Sarah,Smith,Marketo,CEO,Logistics,100,100M+,conference,62,warm,2024-11-14
-265,Amanda,Davis,Drift,Head of Growth,EdTech,10,10-50M,conference,42,cold,2024-09-15
-266,Chris,Brown,HubSpot,Head of Revenue,E-commerce,250,<1M,referral,74,hot,2024-01-05
-267,Jessica,Moore,ZoomInfo,Founder,SaaS,50,10-50M,website,15,cold,2024-03-01
-268,James,Moore,Segment,CRO,SaaS,10,100M+,inbound,56,warm,2024-04-20
-269,James,Patel,Mixpanel,Sales Manager,E-commerce,250,50-100M,referral,35,cold,2024-05-06
-270,Michael,Brown,HubSpot,CRO,SaaS,10,<1M,webinar,37,cold,2024-02-26
-271,David,Taylor,Pipedrive,CMO,Manufacturing,10,50-100M,linkedin,63,warm,2024-09-05
-272,Ryan,Miller,Mixpanel,VP of Sales,E-commerce,10,100M+,referral,84,hot,2024-12-02
-273,Jessica,Moore,Braze,Business Development Manager,Real Estate,100,<1M,inbound,68,warm,2024-07-14
-274,Lisa,Patel,Pardot,Head of Growth,SaaS,10,<1M,conference,51,warm,2024-05-23
-275,Emily,Patel,Marketo,CRO,Manufacturing,1000,1-10M,linkedin,83,hot,2024-09-18
-276,Sarah,Patel,Apollo,Sales Manager,Healthcare,100,<1M,webinar,63,warm,2024-06-13
-277,Emily,Davis,Outreach,CMO,Manufacturing,50,50-100M,webinar,31,cold,2024-04-06
-278,Chris,Miller,Salesforce,CRO,E-commerce,50,50-100M,webinar,60,warm,2024-01-22
-279,Michael,Williams,Amplitude,CMO,Logistics,100,50-100M,webinar,51,warm,2024-02-07
-280,James,Smith,Apollo,Sales Manager,Media,100,100M+,cold_email,95,hot,2024-07-26
-281,Lisa,Miller,Drift,Sales Manager,Manufacturing,50,<1M,linkedin,27,cold,2024-07-12
-282,Chris,Smith,Drift,Business Development Manager,Media,100,10-50M,webinar,59,warm,2024-10-25
-283,Ryan,Johnson,Pipedrive,CMO,Manufacturing,5000,50-100M,linkedin,28,cold,2024-08-26
-284,James,Moore,Drift,CRO,Manufacturing,100,<1M,inbound,87,hot,2024-05-26
-285,Amanda,Moore,Klaviyo,Head of Revenue,EdTech,1000,1-10M,webinar,92,hot,2024-01-16
-286,Emily,Davis,Segment,VP of Sales,Healthcare,100,50-100M,cold_email,53,warm,2024-11-19
-287,Ryan,Moore,Zendesk,Head of Growth,EdTech,500,<1M,webinar,58,warm,2024-11-17
-288,David,Taylor,Gong,VP of Sales,Consulting,50,50-100M,website,23,cold,2024-12-02
-289,Jessica,Davis,Clearbit,Head of Revenue,Consulting,5000,10-50M,conference,95,hot,2024-02-14
-290,Chris,Brown,Gong,CMO,Consulting,500,50-100M,linkedin,67,warm,2024-04-16
-291,Jessica,Davis,Drift,CRO,SaaS,10,100M+,inbound,58,warm,2024-04-27
-292,Emily,Patel,Segment,CMO,Media,50,100M+,cold_email,23,cold,2024-03-21
-293,Lisa,Patel,Intercom,CMO,Healthcare,50,10-50M,linkedin,76,hot,2024-09-01
-294,James,Moore,Zendesk,CMO,Real Estate,500,100M+,linkedin,88,hot,2024-12-27
-295,Ryan,Moore,Segment,Sales Manager,Fintech,5000,100M+,webinar,57,warm,2024-09-09
-296,Lisa,Smith,Amplitude,CMO,E-commerce,500,100M+,referral,78,hot,2024-12-21
-297,Chris,Johnson,Zendesk,Sales Manager,Manufacturing,1000,100M+,cold_email,31,cold,2024-03-06
-298,David,Wilson,Pipedrive,VP of Sales,Fintech,5000,100M+,website,74,hot,2024-01-14
-299,Lisa,Johnson,Drift,Sales Manager,Media,1000,10-50M,webinar,49,warm,2024-01-11
-300,Michael,Wilson,Zendesk,Head of Growth,Logistics,100,10-50M,linkedin,32,cold,2024-11-01
-301,Sarah,Taylor,Drift,CEO,Media,100,<1M,cold_email,28,cold,2024-10-22
-302,Michael,Brown,Zendesk,Founder,EdTech,500,50-100M,linkedin,91,hot,2024-09-27
-303,Lisa,Wilson,Clearbit,Founder,Consulting,5000,100M+,inbound,46,warm,2024-08-07
-304,David,Johnson,ActiveCampaign,Founder,Healthcare,250,1-10M,cold_email,31,cold,2024-07-20
-305,James,Johnson,Pardot,CEO,Consulting,500,<1M,linkedin,56,warm,2024-02-12
-306,Jessica,Johnson,Gong,Head of Growth,Media,5000,<1M,cold_email,80,hot,2024-01-06
-307,Michael,Moore,Apollo,Director of Marketing,Logistics,50,10-50M,linkedin,49,warm,2024-01-03
-308,Lisa,Brown,Segment,CEO,Consulting,50,100M+,website,78,hot,2024-02-04
-309,Amanda,Brown,Outreach,Head of Revenue,Consulting,1000,10-50M,linkedin,84,hot,2024-06-09
-310,Sarah,Taylor,HubSpot,Head of Growth,Media,5000,100M+,webinar,67,warm,2024-06-04
-311,Sarah,Patel,Segment,Director of Marketing,Logistics,250,10-50M,website,54,warm,2024-01-30
-312,Lisa,Wilson,Clearbit,Founder,Real Estate,10,10-50M,linkedin,78,hot,2024-08-13
-313,Emily,Williams,ZoomInfo,VP of Sales,Consulting,100,1-10M,referral,83,hot,2024-06-16
-314,Amanda,Taylor,Klaviyo,CEO,E-commerce,1000,10-50M,linkedin,72,hot,2024-08-31
-315,Amanda,Miller,HubSpot,Head of Revenue,EdTech,250,1-10M,website,15,cold,2024-10-28
-316,Michael,Smith,Clearbit,Director of Marketing,EdTech,50,<1M,linkedin,69,warm,2024-08-11
-317,Sarah,Brown,Outreach,Founder,EdTech,50,1-10M,linkedin,35,cold,2024-08-19
-318,Ryan,Brown,Zendesk,Head of Revenue,Logistics,10,10-50M,webinar,38,cold,2024-05-02
-319,Michael,Moore,Outreach,CRO,E-commerce,5000,<1M,referral,38,cold,2024-06-04
-320,Michael,Patel,Salesforce,CMO,EdTech,250,<1M,linkedin,77,hot,2024-07-10
-321,Chris,Williams,ZoomInfo,Business Development Manager,E-commerce,250,50-100M,cold_email,94,hot,2024-04-18
-322,Ryan,Wilson,Segment,Director of Marketing,Manufacturing,10,1-10M,cold_email,37,cold,2024-12-30
-323,Jessica,Moore,Intercom,Head of Revenue,Manufacturing,250,1-10M,referral,78,hot,2024-12-28
-324,Chris,Smith,Amplitude,Sales Manager,E-commerce,1000,50-100M,conference,94,hot,2024-07-12
-325,James,Taylor,Intercom,Founder,Consulting,1000,10-50M,inbound,32,cold,2024-06-28
-326,Chris,Wilson,Apollo,CRO,Manufacturing,10,100M+,webinar,29,cold,2024-11-01
-327,James,Miller,ZoomInfo,CMO,EdTech,250,<1M,inbound,40,cold,2024-04-19
-328,Amanda,Brown,Mixpanel,CEO,Media,1000,1-10M,cold_email,76,hot,2024-09-29
-329,James,Taylor,Drift,Head of Revenue,Healthcare,100,<1M,inbound,94,hot,2024-05-01
-330,Chris,Patel,Segment,Sales Manager,SaaS,1000,50-100M,linkedin,54,warm,2024-04-04
-331,David,Davis,Gong,CMO,SaaS,100,1-10M,website,72,hot,2024-03-04
-332,Ryan,Moore,Pipedrive,Head of Growth,Real Estate,250,50-100M,cold_email,62,warm,2024-11-18
-333,David,Wilson,Outreach,CEO,Manufacturing,10,10-50M,inbound,89,hot,2024-05-23
-334,Emily,Johnson,ZoomInfo,VP of Sales,E-commerce,50,1-10M,referral,83,hot,2024-10-10
-335,Michael,Miller,Pardot,CMO,Consulting,100,<1M,inbound,35,cold,2024-07-22
-336,James,Johnson,Segment,CRO,Healthcare,5000,10-50M,website,14,cold,2024-03-28
-337,David,Davis,ActiveCampaign,Business Development Manager,SaaS,500,100M+,inbound,54,warm,2024-10-17
-338,David,Davis,HubSpot,Head of Growth,Fintech,500,100M+,webinar,89,hot,2024-01-26
-339,Emily,Patel,Monday.com,VP of Sales,EdTech,500,1-10M,referral,23,cold,2024-11-13
-340,Michael,Johnson,Intercom,Business Development Manager,Fintech,50,50-100M,webinar,76,hot,2024-03-20
-341,Lisa,Davis,Salesforce,CEO,SaaS,500,10-50M,conference,79,hot,2024-05-14
-342,Chris,Wilson,Pardot,Head of Revenue,EdTech,5000,100M+,webinar,81,hot,2024-01-22
-343,James,Johnson,Clearbit,Founder,Logistics,100,10-50M,referral,83,hot,2024-03-01
-344,Lisa,Taylor,Drift,CMO,Consulting,10,1-10M,inbound,26,cold,2024-11-25
-345,Chris,Patel,Outreach,Head of Revenue,Manufacturing,5000,<1M,conference,88,hot,2024-10-21
-346,Emily,Williams,Braze,CMO,Media,5000,100M+,cold_email,17,cold,2024-05-30
-347,David,Miller,Marketo,Business Development Manager,Real Estate,1000,<1M,conference,17,cold,2024-01-16
-348,Lisa,Johnson,Outreach,Director of Marketing,SaaS,100,<1M,linkedin,42,cold,2024-07-16
-349,Chris,Taylor,Apollo,Director of Marketing,Real Estate,250,50-100M,referral,55,warm,2024-08-17
-350,Amanda,Davis,Gong,Sales Manager,EdTech,50,50-100M,cold_email,24,cold,2024-12-02
-351,Ryan,Johnson,Gong,Head of Growth,Manufacturing,10,<1M,linkedin,32,cold,2024-04-29
-352,Amanda,Miller,Gong,Head of Revenue,Fintech,5000,100M+,webinar,36,cold,2024-04-09
-353,Jessica,Taylor,Monday.com,Head of Growth,SaaS,1000,100M+,webinar,81,hot,2024-05-19
-354,Sarah,Moore,Braze,CRO,E-commerce,10,<1M,webinar,26,cold,2024-01-11
-355,Jessica,Williams,Marketo,VP of Sales,Fintech,5000,100M+,website,53,warm,2024-12-02
-356,Amanda,Davis,ActiveCampaign,Founder,Fintech,500,50-100M,webinar,56,warm,2024-03-01
-357,James,Moore,Gong,CMO,Logistics,5000,50-100M,linkedin,85,hot,2024-01-15
-358,Amanda,Johnson,Zendesk,Sales Manager,SaaS,50,1-10M,referral,56,warm,2024-03-14
-359,Emily,Smith,Braze,Head of Growth,Media,500,1-10M,inbound,67,warm,2024-09-04
-360,James,Patel,ZoomInfo,Founder,Real Estate,500,<1M,cold_email,54,warm,2024-10-15
-361,Ryan,Johnson,Segment,VP of Sales,Healthcare,50,100M+,webinar,62,warm,2024-12-05
-362,Ryan,Williams,Drift,Head of Revenue,Consulting,10,10-50M,webinar,47,warm,2024-03-17
-363,Amanda,Brown,Drift,Head of Revenue,Healthcare,50,100M+,webinar,32,cold,2024-02-15
-364,Sarah,Patel,Salesforce,Founder,Media,5000,1-10M,website,38,cold,2024-06-21
-365,David,Patel,Clearbit,Head of Revenue,Consulting,500,100M+,cold_email,91,hot,2024-06-10
-366,Michael,Williams,ZoomInfo,Head of Growth,Consulting,50,10-50M,referral,34,cold,2024-09-23
-367,Michael,Wilson,Monday.com,VP of Sales,Real Estate,10,1-10M,cold_email,74,hot,2024-10-18
-368,Sarah,Davis,ZoomInfo,VP of Sales,E-commerce,250,1-10M,webinar,87,hot,2024-11-28
-369,Michael,Williams,Intercom,Sales Manager,Healthcare,10,1-10M,referral,22,cold,2024-03-10
-370,James,Wilson,Pardot,Head of Growth,Real Estate,50,10-50M,webinar,77,hot,2024-11-06
-371,Lisa,Williams,Marketo,CEO,EdTech,250,1-10M,cold_email,26,cold,2024-11-03
-372,Ryan,Taylor,Braze,Business Development Manager,Real Estate,1000,<1M,website,49,warm,2024-12-07
-373,Jessica,Smith,Klaviyo,VP of Sales,Fintech,10,10-50M,inbound,19,cold,2024-12-26
-374,Lisa,Wilson,Pipedrive,Sales Manager,Consulting,50,<1M,webinar,58,warm,2024-12-10
-375,Sarah,Wilson,HubSpot,CEO,SaaS,250,100M+,referral,42,cold,2024-09-14
-376,Amanda,Brown,Pardot,Head of Growth,Logistics,250,1-10M,conference,36,cold,2024-10-06
-377,Chris,Smith,Outreach,CMO,Consulting,5000,1-10M,website,22,cold,2024-08-11
-378,David,Brown,Braze,Sales Manager,Media,5000,50-100M,webinar,51,warm,2024-08-07
-379,Amanda,Davis,Pipedrive,Founder,Real Estate,1000,50-100M,linkedin,83,hot,2024-08-27
-380,Ryan,Patel,Intercom,VP of Sales,Real Estate,50,10-50M,conference,26,cold,2024-03-22
-381,James,Williams,Marketo,Director of Marketing,Consulting,1000,1-10M,cold_email,12,cold,2024-10-24
-382,Sarah,Smith,ZoomInfo,CRO,Logistics,500,50-100M,conference,93,hot,2024-05-07
-383,Sarah,Smith,ActiveCampaign,VP of Sales,EdTech,100,<1M,cold_email,74,hot,2024-08-11
-384,James,Williams,Marketo,Head of Revenue,Media,100,10-50M,inbound,89,hot,2024-04-04
-385,Amanda,Taylor,Segment,VP of Sales,Consulting,1000,10-50M,webinar,65,warm,2024-06-22
-386,James,Johnson,Pipedrive,CMO,E-commerce,50,1-10M,website,79,hot,2024-12-09
-387,James,Wilson,Drift,Sales Manager,Manufacturing,10,50-100M,linkedin,56,warm,2024-10-01
-388,Michael,Miller,Outreach,CMO,Real Estate,100,50-100M,website,23,cold,2024-11-28
-389,James,Moore,Pipedrive,Head of Growth,Logistics,250,1-10M,linkedin,61,warm,2024-12-29
-390,Ryan,Williams,Braze,VP of Sales,Fintech,500,50-100M,inbound,88,hot,2024-10-23
-391,Chris,Johnson,Marketo,Director of Marketing,SaaS,100,50-100M,cold_email,75,hot,2024-09-24
-392,Michael,Williams,Mixpanel,Business Development Manager,Logistics,5000,1-10M,referral,55,warm,2024-07-17
-393,Chris,Wilson,Marketo,CRO,Media,10,<1M,linkedin,64,warm,2024-01-09
-394,James,Johnson,Outreach,Founder,Manufacturing,50,50-100M,website,59,warm,2024-02-26
-395,Ryan,Wilson,Intercom,Business Development Manager,E-commerce,5000,100M+,webinar,49,warm,2024-01-16
-396,Jessica,Moore,Segment,Head of Revenue,Healthcare,10,1-10M,webinar,72,hot,2024-03-30
-397,Emily,Johnson,Outreach,Sales Manager,SaaS,5000,100M+,cold_email,56,warm,2024-09-24
-398,Jessica,Patel,ZoomInfo,Business Development Manager,Fintech,1000,10-50M,conference,29,cold,2024-08-31
-399,James,Smith,Drift,CRO,Fintech,100,100M+,linkedin,44,cold,2024-10-07
-400,Ryan,Patel,Zendesk,Sales Manager,Healthcare,250,10-50M,referral,65,warm,2024-03-25
-401,Ryan,Smith,Mixpanel,Business Development Manager,Manufacturing,250,50-100M,cold_email,84,hot,2024-11-01
-402,James,Brown,Apollo,CRO,E-commerce,100,1-10M,webinar,72,hot,2024-08-19
-403,Michael,Brown,Pipedrive,Head of Revenue,E-commerce,5000,10-50M,website,84,hot,2024-04-21
-404,Lisa,Johnson,Gong,VP of Sales,SaaS,1000,50-100M,webinar,22,cold,2024-01-24
-405,James,Moore,Apollo,Business Development Manager,Real Estate,500,<1M,webinar,93,hot,2024-06-11
-406,Lisa,Taylor,Klaviyo,VP of Sales,Consulting,500,10-50M,conference,85,hot,2024-11-01
-407,Michael,Johnson,Drift,Business Development Manager,Consulting,250,<1M,conference,32,cold,2024-03-27
-408,Michael,Taylor,Zendesk,Sales Manager,SaaS,10,10-50M,website,95,hot,2024-10-24
-409,Emily,Smith,Klaviyo,Head of Growth,Fintech,50,50-100M,referral,44,cold,2024-07-27
-410,Jessica,Johnson,Apollo,VP of Sales,Real Estate,100,100M+,referral,27,cold,2024-10-16
-411,Jessica,Davis,Braze,CMO,Manufacturing,100,<1M,inbound,90,hot,2024-01-13
-412,Michael,Patel,Segment,Business Development Manager,Logistics,5000,100M+,inbound,74,hot,2024-01-18
-413,James,Davis,HubSpot,CMO,Logistics,1000,100M+,webinar,54,warm,2024-08-18
-414,Amanda,Williams,Pipedrive,CMO,Manufacturing,100,1-10M,inbound,53,warm,2024-08-28
-415,James,Patel,Outreach,Head of Growth,Real Estate,100,100M+,conference,44,cold,2024-12-02
-416,James,Brown,Pipedrive,VP of Sales,Healthcare,10,1-10M,cold_email,34,cold,2024-08-04
-417,Amanda,Johnson,Outreach,VP of Sales,Logistics,1000,100M+,conference,42,cold,2024-09-18
-418,Michael,Davis,Zendesk,Head of Growth,Consulting,1000,<1M,inbound,43,cold,2024-06-19
-419,Emily,Williams,Gong,Director of Marketing,E-commerce,10,1-10M,referral,77,hot,2024-01-10
-420,Lisa,Johnson,Marketo,Director of Marketing,Consulting,100,50-100M,website,42,cold,2024-02-15
-421,Ryan,Miller,Outreach,Head of Growth,Media,100,100M+,website,67,warm,2024-02-24
-422,David,Davis,Zendesk,CMO,Fintech,1000,100M+,linkedin,27,cold,2024-07-10
-423,David,Moore,Amplitude,Business Development Manager,Consulting,50,<1M,conference,49,warm,2024-04-19
-424,Chris,Brown,Apollo,CEO,EdTech,50,50-100M,linkedin,34,cold,2024-10-11
-425,Emily,Davis,Marketo,Business Development Manager,Manufacturing,250,50-100M,conference,81,hot,2024-08-21
-426,David,Miller,Amplitude,CRO,Media,5000,1-10M,cold_email,31,cold,2024-08-01
-427,Ryan,Wilson,Pipedrive,CMO,Consulting,100,50-100M,webinar,83,hot,2024-08-20
-428,Lisa,Smith,Gong,Sales Manager,Consulting,500,1-10M,website,95,hot,2024-06-21
-429,James,Johnson,HubSpot,CEO,Media,5000,<1M,inbound,37,cold,2024-02-12
-430,Lisa,Williams,Salesforce,Head of Growth,Manufacturing,10,1-10M,cold_email,74,hot,2024-05-04
-431,Lisa,Taylor,Monday.com,CMO,Manufacturing,5000,<1M,linkedin,48,warm,2024-10-06
-432,Jessica,Miller,ActiveCampaign,VP of Sales,Manufacturing,10,50-100M,referral,94,hot,2024-02-28
-433,Sarah,Moore,ZoomInfo,Business Development Manager,Fintech,5000,1-10M,website,75,hot,2024-07-19
-434,Sarah,Smith,Pardot,VP of Sales,Consulting,1000,<1M,referral,32,cold,2024-07-02
-435,Jessica,Johnson,ActiveCampaign,VP of Sales,Healthcare,1000,50-100M,linkedin,47,warm,2024-09-11
-436,Michael,Moore,Zendesk,CRO,Manufacturing,5000,100M+,linkedin,72,hot,2024-05-30
-437,Emily,Davis,Marketo,CRO,E-commerce,500,50-100M,webinar,71,hot,2024-02-08
-438,Jessica,Davis,Drift,CEO,Logistics,250,10-50M,cold_email,72,hot,2024-01-09
-439,Amanda,Wilson,Pipedrive,VP of Sales,SaaS,5000,50-100M,inbound,84,hot,2024-11-27
-440,Sarah,Smith,Apollo,CMO,Media,500,10-50M,cold_email,79,hot,2024-11-24
-441,Lisa,Davis,ZoomInfo,Head of Revenue,SaaS,250,10-50M,webinar,45,warm,2024-05-16
-442,Michael,Moore,Klaviyo,CEO,Media,1000,50-100M,conference,71,hot,2024-08-05
-443,Lisa,Patel,Mixpanel,CEO,Logistics,250,1-10M,referral,22,cold,2024-09-26
-444,Sarah,Miller,Intercom,Business Development Manager,Fintech,500,10-50M,linkedin,87,hot,2024-07-24
-445,James,Smith,Drift,CMO,Logistics,1000,<1M,conference,36,cold,2024-09-12
-446,Ryan,Brown,Braze,Head of Revenue,EdTech,10,<1M,inbound,74,hot,2024-08-28
-447,Ryan,Williams,Zendesk,Business Development Manager,Fintech,50,1-10M,inbound,23,cold,2024-09-08
-448,James,Patel,Braze,CRO,Media,1000,1-10M,inbound,69,warm,2024-10-23
-449,Chris,Brown,ActiveCampaign,Head of Growth,E-commerce,100,100M+,cold_email,42,cold,2024-11-20
-450,Sarah,Johnson,Zendesk,Founder,Logistics,1000,<1M,website,30,cold,2024-08-16
-451,Jessica,Davis,ZoomInfo,Head of Growth,Fintech,10,<1M,cold_email,32,cold,2024-10-26
-452,Ryan,Moore,Intercom,Business Development Manager,Healthcare,100,100M+,website,49,warm,2024-07-31
-453,Emily,Miller,Pardot,Head of Growth,Fintech,250,10-50M,inbound,71,hot,2024-09-09
-454,Chris,Patel,Clearbit,Head of Growth,Media,10,50-100M,inbound,58,warm,2024-07-29
-455,David,Wilson,Monday.com,Director of Marketing,Fintech,500,<1M,cold_email,16,cold,2024-10-19
-456,David,Williams,Marketo,Business Development Manager,SaaS,500,<1M,webinar,34,cold,2024-06-23
-457,Emily,Miller,Outreach,Head of Growth,Manufacturing,1000,50-100M,linkedin,23,cold,2024-01-05
-458,Jessica,Miller,Salesforce,CMO,Consulting,500,100M+,webinar,30,cold,2024-10-30
-459,Amanda,Patel,Amplitude,Founder,Consulting,250,100M+,cold_email,85,hot,2024-11-22
-460,James,Moore,Outreach,Sales Manager,SaaS,250,<1M,inbound,87,hot,2024-11-04
-461,Sarah,Patel,ActiveCampaign,CEO,Healthcare,250,100M+,webinar,63,warm,2024-06-14
-462,Jessica,Miller,Salesforce,Director of Marketing,Healthcare,250,<1M,inbound,77,hot,2024-01-29
-463,Jessica,Taylor,ZoomInfo,Director of Marketing,Logistics,50,10-50M,website,13,cold,2024-03-16
-464,Michael,Johnson,Marketo,Head of Revenue,EdTech,50,1-10M,conference,19,cold,2024-01-09
-465,Chris,Johnson,ZoomInfo,CMO,Media,500,10-50M,linkedin,14,cold,2024-09-29
-466,David,Johnson,Braze,CRO,Real Estate,500,10-50M,website,72,hot,2024-08-26
-467,Emily,Miller,Pipedrive,Business Development Manager,Manufacturing,50,<1M,website,37,cold,2024-08-16
-468,Ryan,Wilson,Intercom,Head of Growth,Consulting,500,1-10M,cold_email,31,cold,2024-01-17
-469,James,Miller,HubSpot,Director of Marketing,Media,100,<1M,cold_email,16,cold,2024-04-24
-470,Chris,Smith,Outreach,VP of Sales,E-commerce,1000,100M+,webinar,38,cold,2024-08-07
-471,Sarah,Wilson,Segment,Head of Growth,SaaS,10,50-100M,webinar,57,warm,2024-04-22
-472,Chris,Wilson,Intercom,Founder,EdTech,250,1-10M,conference,65,warm,2024-03-25
-473,David,Davis,ActiveCampaign,CEO,Consulting,1000,1-10M,cold_email,28,cold,2024-06-20
-474,James,Miller,HubSpot,CEO,Fintech,100,1-10M,referral,35,cold,2024-10-23
-475,Jessica,Wilson,Mixpanel,Director of Marketing,Consulting,250,100M+,conference,49,warm,2024-05-05
-476,Ryan,Brown,Pipedrive,Director of Marketing,Real Estate,1000,50-100M,webinar,24,cold,2024-01-31
-477,David,Brown,Monday.com,CMO,EdTech,250,100M+,referral,39,cold,2024-05-23
-478,David,Johnson,Apollo,VP of Sales,Healthcare,1000,<1M,cold_email,87,hot,2024-06-21
-479,David,Williams,ZoomInfo,Business Development Manager,EdTech,50,<1M,cold_email,85,hot,2024-10-07
-480,Chris,Patel,ActiveCampaign,CMO,Manufacturing,250,1-10M,linkedin,21,cold,2024-08-02
-481,Lisa,Taylor,Clearbit,Head of Growth,Logistics,250,100M+,website,26,cold,2024-12-17
-482,Chris,Taylor,Klaviyo,CEO,EdTech,100,50-100M,webinar,32,cold,2024-12-18
-483,Emily,Johnson,Braze,Director of Marketing,EdTech,100,50-100M,inbound,90,hot,2024-01-02
-484,Michael,Moore,Apollo,Head of Growth,Media,250,1-10M,webinar,40,cold,2024-10-09
-485,Emily,Williams,Klaviyo,Sales Manager,E-commerce,250,1-10M,linkedin,66,warm,2024-04-16
-486,James,Patel,Segment,Sales Manager,Real Estate,100,100M+,referral,46,warm,2024-11-19
-487,Jessica,Taylor,Klaviyo,VP of Sales,Healthcare,50,1-10M,cold_email,35,cold,2024-05-21
-488,Amanda,Taylor,ActiveCampaign,Head of Revenue,EdTech,5000,100M+,webinar,40,cold,2024-10-08
-489,Chris,Johnson,Amplitude,CMO,EdTech,100,50-100M,inbound,48,warm,2024-12-15
-490,Michael,Miller,HubSpot,Sales Manager,Fintech,250,100M+,cold_email,38,cold,2024-04-24
-491,Emily,Smith,HubSpot,VP of Sales,EdTech,5000,<1M,website,56,warm,2024-09-15
-492,Sarah,Davis,Outreach,Head of Growth,Logistics,1000,1-10M,conference,64,warm,2024-12-06
-493,Chris,Davis,Pardot,Business Development Manager,Real Estate,5000,100M+,conference,38,cold,2024-03-18
-494,Emily,Taylor,Intercom,Head of Revenue,Logistics,10,100M+,inbound,37,cold,2024-12-04
-495,Sarah,Wilson,Pardot,Head of Revenue,Real Estate,250,1-10M,conference,34,cold,2024-04-02
-496,Sarah,Davis,Drift,Sales Manager,Logistics,100,100M+,referral,20,cold,2024-10-31
-497,Michael,Patel,Amplitude,Business Development Manager,Healthcare,250,100M+,webinar,30,cold,2024-10-23
-498,Lisa,Patel,Pardot,CEO,EdTech,500,<1M,inbound,26,cold,2024-05-15
-499,Michael,Brown,Monday.com,Head of Revenue,E-commerce,50,10-50M,webinar,83,hot,2024-02-08
-500,Lisa,Taylor,Intercom,Head of Growth,Real Estate,10,50-100M,linkedin,85,hot,2024-04-13
+firstname,lastname,email,company,jobtitle,industry,num_employees,annualrevenue,hs_lead_status,source,createdate
+Isabella,Lee,isabella.lee21@datastream.com,DataStream,Customer Success Manager,Cloud Infrastructure,10-50,1B+,warm,linkedin,2026-06-26
+Lei,Sanders,lei.sanders63@qualys.com,Qualys,VP Marketing,Media,200-500,200M-1B,hot,organic,2026-04-13
+Robert,Baker,robert.baker28@varonis.com,Varonis,COO,EdTech,1000-5000,1-10M,cold,paid_ads,2026-05-04
+Mark,Bell,mark.bell44@bentley.com,Bentley,VP Sales,Data Analytics,1000-5000,200M-1B,cold,conference,2025-07-03
+Paul,Rogers,paul.rogers21@zendesk.com,Zendesk,SDR Manager,AI/ML,1000-5000,200M-1B,cold,organic,2026-06-23
+Liam,Collins,liam.collins55@techcorp.com,TechCorp,Head of Growth,HR Tech,500-1000,200M-1B,hot,linkedin,2026-06-01
+Emma,Peterson,emma.peterson47@heap.com,Heap,Engineering Manager,HR Tech,1000-5000,1B+,cold,paid_ads,2026-03-20
+Carol,Wilson,carol.wilson31@autodesk.com,Autodesk,VP Marketing,Manufacturing,200-500,1B+,cold,paid_ads,2026-06-19
+Pooja,James,pooja.james91@trustpilot.com,Trustpilot,Engineering Manager,Cybersecurity,10-50,10-50M,cold,referral,2026-04-24
+Yusuf,Mitchell,yusuf.mitchell23@monday.com,Monday,Founder,Data Analytics,10-50,50-200M,cold,inbound,2026-01-16
+Xin,Ross,xin.ross44@hubspot.com,HubSpot,Founder,FinTech,5000+,1-10M,hot,referral,2025-09-07
+Nathan,Robinson,nathan.robinson25@glassdoor.com,Glassdoor,COO,Real Estate,1-10,<1M,hot,conference,2025-07-04
+Kenneth,Flores,kenneth.flores30@zoom.com,Zoom,Head of Operations,MarTech,1000-5000,<1M,warm,webinar,2025-07-22
+Sofia,Carter,sofia.carter92@zendesk.com,Zendesk,Director of Sales,SaaS,5000+,50-200M,warm,cold_email,2026-03-11
+Kavya,Jenkins,kavya.jenkins96@bombora.com,Bombora,Co-Founder,DevTools,50-200,1-10M,cold,partner,2025-08-19
+Zara,Morris,zara.morris12@clay.com,Clay,Revenue Operations Manager,Data Analytics,10-50,1B+,warm,webinar,2025-08-21
+Anthony,Collins,anthony.collins71@ptc.com,PTC,Founder,FinTech,1-10,200M-1B,hot,organic,2026-04-03
+Sarah,Sanders,sarah.sanders83@freshworks.com,Freshworks,Account Executive,EdTech,5000+,1B+,warm,inbound,2026-04-13
+Thomas,Richardson,thomas.richardson27@nexustech.com,NexusTech,Head of Product,HealthTech,1000-5000,200M-1B,hot,paid_ads,2026-05-25
+Raj,Lee,raj.lee63@mixpanel.com,Mixpanel,Director of Engineering,DevTools,10-50,1-10M,hot,linkedin,2026-03-30
+Charlotte,Ward,charlotte.ward68@grafana.com,Grafana,VP Sales,Cloud Infrastructure,5000+,1-10M,warm,conference,2025-12-13
+Charlotte,Henderson,charlotte.henderson46@trimble.com,Trimble,Head of Sales,Real Estate,500-1000,1B+,hot,linkedin,2025-12-18
+William,Young,william.young68@intuit.com,Intuit,Head of Marketing,HR Tech,10-50,1-10M,hot,partner,2026-02-03
+Robert,Walker,robert.walker85@qualified.com,Qualified,Director of Engineering,DevTools,1000-5000,<1M,cold,inbound,2025-10-27
+Zoe,Campbell,zoe.campbell15@shopify.com,Shopify,Director of Engineering,AI/ML,500-1000,50-200M,warm,partner,2026-06-08
+Fatima,Powell,fatima.powell97@grafana.com,Grafana,Director of Engineering,Real Estate,50-200,10-50M,warm,outbound,2025-07-19
+Hui,King,hui.king19@lusha.com,Lusha,GTM Engineer,E-commerce,5000+,1B+,hot,organic,2025-08-21
+Ryan,Brown,ryan.brown29@zendesk.com,Zendesk,Head of Product,HealthTech,10-50,1B+,cold,inbound,2025-11-30
+Susan,Peterson,susan.peterson8@crowdstrike.com,CrowdStrike,Sales Manager,HealthTech,50-200,50-200M,warm,inbound,2025-08-07
+Fatima,Stewart,fatima.stewart98@tenable.com,Tenable,Head of Sales,FinTech,1000-5000,10-50M,warm,referral,2026-02-18
+Logan,Murphy,logan.murphy39@outreach.com,Outreach,Account Executive,Consulting,50-200,10-50M,hot,webinar,2025-12-29
+Lei,Johnson,lei.johnson14@techcorp.com,TechCorp,Account Executive,HR Tech,200-500,<1M,warm,referral,2025-09-24
+Ali,Turner,ali.turner40@twilio.com,Twilio,Head of Sales,HR Tech,500-1000,10-50M,cold,organic,2026-06-24
+Margaret,Phillips,margaret.phillips34@hubspot.com,HubSpot,VP Marketing,Media,1000-5000,10-50M,warm,conference,2025-08-07
+Barbara,Gray,barbara.gray95@intuit.com,Intuit,Head of Marketing,Cloud Infrastructure,5000+,10-50M,hot,linkedin,2025-08-30
+Anita,Torres,anita.torres5@attentive.com,Attentive,President,Cloud Infrastructure,200-500,1B+,warm,webinar,2026-04-18
+Brian,Watson,brian.watson62@fusioncrm.com,FusionCRM,Sales Manager,Media,500-1000,1-10M,hot,webinar,2025-11-16
+Mark,Hernandez,mark.hernandez73@hotjar.com,Hotjar,Revenue Operations Manager,Data Analytics,1-10,1-10M,warm,referral,2025-11-29
+Fatou,Thomas,fatou.thomas51@clay.com,Clay,CMO,Logistics,500-1000,200M-1B,cold,inbound,2026-05-15
+Kavya,Torres,kavya.torres98@clarityhq.com,ClarityHQ,Director of Engineering,E-commerce,5000+,50-200M,hot,referral,2026-06-13
+Wei,Hernandez,wei.hernandez66@crunchbase.com,Crunchbase,Director of Engineering,AI/ML,500-1000,<1M,hot,inbound,2026-05-25
+Liam,King,liam.king85@zerotoone.com,ZeroToOne,COO,MarTech,500-1000,<1M,hot,cold_email,2025-11-16
+Kavya,Parker,kavya.parker70@techtarget.com,TechTarget,Marketing Manager,HR Tech,1000-5000,50-200M,hot,outbound,2026-01-03
+Maria,Butler,maria.butler24@metadata.com,Metadata,VP Product,Legal Tech,1000-5000,50-200M,warm,conference,2025-07-04
+Fatima,Lewis,fatima.lewis86@attentive.com,Attentive,Head of Operations,E-commerce,200-500,50-200M,cold,webinar,2026-01-26
+Ashley,Jackson,ashley.jackson14@trustpilot.com,Trustpilot,COO,Manufacturing,50-200,1B+,cold,cold_email,2025-08-12
+Barbara,Edwards,barbara.edwards31@grafana.com,Grafana,President,EdTech,500-1000,1B+,hot,paid_ads,2026-01-12
+Paul,Anderson,paul.anderson16@datadog.com,Datadog,Founder,Consulting,1000-5000,200M-1B,hot,referral,2025-08-08
+Paul,Simmons,paul.simmons2@datadog.com,Datadog,CTO,E-commerce,10-50,50-200M,cold,paid_ads,2025-11-06
+Liam,King,liam.king25@clay.com,Clay,Co-Founder,E-commerce,5000+,1B+,cold,conference,2026-06-01
+Andrew,Ross,andrew.ross1@qualified.com,Qualified,Managing Director,AI/ML,10-50,1-10M,hot,webinar,2026-04-04
+Steven,Gray,steven.gray74@coupa.com,Coupa,Solutions Engineer,HR Tech,1-10,1B+,warm,inbound,2026-03-01
+Tom,Patel,tom.patel31@hubspot.com,HubSpot,Partnership Manager,Real Estate,10-50,10-50M,warm,webinar,2026-02-10
+Sarah,Gray,sarah.gray42@rapid7.com,Rapid7,Revenue Operations Manager,FinTech,10-50,10-50M,cold,referral,2025-09-17
+Yang,Campbell,yang.campbell6@sprinklr.com,Sprinklr,Managing Director,Data Analytics,1-10,10-50M,cold,outbound,2025-12-05
+Noah,Morris,noah.morris84@salesforce.com,Salesforce,SDR Manager,Consulting,1000-5000,10-50M,hot,partner,2025-08-18
+Ahmed,Gray,ahmed.gray39@growthco.com,GrowthCo,Head of Operations,Data Analytics,500-1000,50-200M,cold,partner,2025-09-03
+Michelle,Simmons,michelle.simmons88@amplitude.com,Amplitude,Sales Manager,Media,1-10,200M-1B,hot,outbound,2025-11-22
+Ethan,Turner,ethan.turner85@salesloft.com,Salesloft,Sales Manager,E-commerce,1000-5000,50-200M,hot,webinar,2026-06-19
+Noah,Ramirez,noah.ramirez73@peakanalytics.com,PeakAnalytics,VP Sales,Manufacturing,1000-5000,<1M,warm,partner,2026-05-10
+Karen,Murphy,karen.murphy21@nexgen.com,NexGen,Managing Director,DevTools,5000+,1-10M,warm,paid_ads,2025-12-24
+Nadia,Nelson,nadia.nelson16@salesloft.com,Salesloft,CMO,SaaS,1000-5000,1-10M,hot,organic,2025-12-15
+Margaret,Stewart,margaret.stewart14@orbitsaas.com,OrbitSaaS,Revenue Operations Manager,Cybersecurity,5000+,1B+,hot,organic,2026-04-21
+Rahul,Patterson,rahul.patterson61@attentive.com,Attentive,CMO,HealthTech,5000+,1B+,hot,inbound,2025-12-02
+Ibrahim,Green,ibrahim.green15@nexgen.com,NexGen,VP Sales,Real Estate,1000-5000,10-50M,cold,organic,2026-05-03
+Betty,Torres,betty.torres36@figma.com,Figma,Solutions Engineer,Media,500-1000,50-200M,hot,webinar,2026-04-20
+Emma,Evans,emma.evans98@nexgen.com,NexGen,VP Sales,Real Estate,500-1000,50-200M,cold,organic,2025-07-09
+Amit,Walker,amit.walker86@zscaler.com,Zscaler,CMO,Logistics,10-50,10-50M,warm,linkedin,2026-02-08
+Robert,Morgan,robert.morgan89@revlane.com,RevLane,Revenue Operations Manager,Cybersecurity,1000-5000,200M-1B,cold,partner,2026-06-15
+David,Patel,david.patel81@klaviyo.com,Klaviyo,VP Sales,Consulting,1000-5000,1-10M,warm,organic,2026-05-01
+Jun,Butler,jun.butler60@crunchbase.com,Crunchbase,GTM Engineer,HR Tech,5000+,1B+,warm,outbound,2025-10-09
+Aisha,Morris,aisha.morris92@varonis.com,Varonis,Co-Founder,HR Tech,200-500,50-200M,warm,outbound,2026-06-05
+Yang,Hughes,yang.hughes28@orbitsaas.com,OrbitSaaS,President,SaaS,1000-5000,1B+,hot,inbound,2025-12-22
+Nina,Cox,nina.cox25@mixpanel.com,Mixpanel,CEO,E-commerce,50-200,1B+,cold,inbound,2026-04-23
+Ava,Clark,ava.clark10@hexagon.com,Hexagon,Business Development Manager,Manufacturing,5000+,1-10M,warm,cold_email,2026-02-04
+Xin,King,xin.king96@clay.com,Clay,SDR Manager,AI/ML,1-10,50-200M,cold,cold_email,2026-01-01
+David,Perez,david.perez56@heap.com,Heap,CTO,Media,5000+,50-200M,hot,conference,2025-10-23
+Carol,Jenkins,carol.jenkins46@fusioncrm.com,FusionCRM,Revenue Operations Manager,DevTools,1-10,50-200M,warm,outbound,2026-05-01
+Aisha,Brooks,aisha.brooks80@capterra.com,Capterra,Sales Manager,Legal Tech,1-10,<1M,warm,webinar,2025-10-11
+Fatou,Cook,fatou.cook70@cbinsights.com,CB Insights,Engineering Manager,E-commerce,500-1000,<1M,hot,cold_email,2026-01-28
+Mei,Evans,mei.evans63@vaultai.com,VaultAI,Engineering Manager,FinTech,500-1000,<1M,cold,referral,2025-10-18
+Raj,Williams,raj.williams24@revenuepro.com,RevenuePro,Product Manager,FinTech,10-50,200M-1B,cold,partner,2025-07-09
+Susan,Wright,susan.wright88@autodesk.com,Autodesk,Co-Founder,Real Estate,500-1000,1B+,warm,cold_email,2025-11-18
+Deepa,Lee,deepa.lee24@vaultai.com,VaultAI,CMO,Real Estate,10-50,200M-1B,cold,inbound,2026-02-28
+James,Brooks,james.brooks59@gong.com,Gong,CEO,MarTech,200-500,1-10M,hot,cold_email,2026-02-25
+Carol,Adams,carol.adams9@monday.com,Monday,Revenue Operations Manager,Real Estate,500-1000,<1M,warm,partner,2025-09-28
+Liam,Kelly,liam.kelly30@databricks.com,Databricks,Growth Manager,Manufacturing,50-200,<1M,hot,paid_ads,2025-10-17
+Anthony,Ward,anthony.ward70@orbitsaas.com,OrbitSaaS,Head of Sales,E-commerce,10-50,10-50M,cold,outbound,2026-01-04
+Nancy,White,nancy.white70@elastic.com,Elastic,Sales Manager,FinTech,200-500,50-200M,hot,linkedin,2026-01-21
+Jennifer,Richardson,jennifer.richardson85@lusha.com,Lusha,Head of Sales,DevTools,200-500,<1M,cold,organic,2026-03-22
+Karen,Campbell,karen.campbell56@clari.com,Clari,Director of Marketing,Cybersecurity,5000+,1-10M,warm,referral,2025-12-08
+Donna,Jackson,donna.jackson92@peakanalytics.com,PeakAnalytics,Partnership Manager,Media,1000-5000,10-50M,cold,linkedin,2025-07-04
+Fatou,Carter,fatou.carter6@shopify.com,Shopify,COO,DevTools,200-500,200M-1B,cold,linkedin,2026-01-13
+Lucas,Jackson,lucas.jackson45@salesforce.com,Salesforce,Managing Director,Logistics,200-500,1B+,warm,cold_email,2025-07-24
+Hassan,Cook,hassan.cook32@bombora.com,Bombora,VP Sales,HR Tech,500-1000,<1M,hot,paid_ads,2026-05-09
+Fatima,King,fatima.king63@qualys.com,Qualys,CTO,DevTools,1-10,1-10M,warm,webinar,2025-07-10
+Andrew,Cooper,andrew.cooper63@qualified.com,Qualified,Partnership Manager,Cloud Infrastructure,200-500,200M-1B,warm,outbound,2026-01-06
+Amanda,Coleman,amanda.coleman56@clari.com,Clari,Revenue Operations Manager,Real Estate,50-200,200M-1B,warm,inbound,2025-11-03
+Maria,Mitchell,maria.mitchell98@growthsignal.com,GrowthSignal,CFO,Cloud Infrastructure,5000+,1-10M,warm,cold_email,2025-12-07
+Tom,White,tom.white76@iterable.com,Iterable,Founder,Cloud Infrastructure,50-200,10-50M,cold,conference,2025-09-15
+Emily,Hill,emily.hill65@iterable.com,Iterable,Head of Sales,HR Tech,500-1000,1B+,warm,partner,2025-08-24
+Xin,Wilson,xin.wilson27@vaultai.com,VaultAI,GTM Engineer,Legal Tech,200-500,10-50M,hot,cold_email,2025-10-06
+Robert,Hughes,robert.hughes55@attentive.com,Attentive,Customer Success Manager,Cybersecurity,1-10,1B+,hot,conference,2025-10-13
+Nina,Anderson,nina.anderson95@zerotoone.com,ZeroToOne,CFO,E-commerce,1-10,10-50M,cold,inbound,2026-03-11
+Dorothy,Flores,dorothy.flores57@elastic.com,Elastic,GTM Engineer,Cloud Infrastructure,1000-5000,1B+,warm,inbound,2025-11-12
+Jing,Nelson,jing.nelson2@glassdoor.com,Glassdoor,Managing Director,Logistics,500-1000,1B+,hot,cold_email,2025-08-06
+Susan,Ramirez,susan.ramirez95@cbinsights.com,CB Insights,Head of Operations,Data Analytics,10-50,1B+,warm,inbound,2026-01-11
+Jennifer,Morris,jennifer.morris37@zscaler.com,Zscaler,General Manager,FinTech,10-50,200M-1B,hot,outbound,2025-09-22
+Jennifer,Murphy,jennifer.murphy96@bentley.com,Bentley,Engineering Manager,FinTech,200-500,10-50M,warm,outbound,2025-12-26
+Deborah,Barnes,deborah.barnes45@g2.com,G2,Founder,DevTools,1-10,50-200M,hot,referral,2026-02-26
+Betty,Coleman,betty.coleman51@nexgen.com,NexGen,Partnership Manager,Cloud Infrastructure,1-10,<1M,cold,partner,2025-08-16
+Karen,Martin,karen.martin18@sprinklr.com,Sprinklr,Revenue Operations Manager,Consulting,5000+,<1M,cold,cold_email,2026-04-17
+Ethan,Davis,ethan.davis6@sendbird.com,Sendbird,Head of Operations,Legal Tech,200-500,1B+,hot,organic,2026-04-30
+Pooja,King,pooja.king2@hexagon.com,Hexagon,Managing Director,Data Analytics,5000+,50-200M,hot,inbound,2025-12-04
+Jing,Ward,jing.ward58@okta.com,Okta,VP Engineering,AI/ML,1-10,10-50M,hot,outbound,2025-07-20
+Lei,Cooper,lei.cooper39@glassdoor.com,Glassdoor,VP Engineering,HR Tech,50-200,200M-1B,hot,organic,2026-01-08
+Donald,Rogers,donald.rogers41@hubspot.com,HubSpot,Engineering Manager,EdTech,1-10,50-200M,warm,partner,2025-12-24
+Ashley,Gray,ashley.gray47@databricks.com,Databricks,CMO,Cloud Infrastructure,5000+,200M-1B,warm,organic,2025-11-16
+Jun,Hall,jun.hall99@sendbird.com,Sendbird,Business Development Manager,FinTech,50-200,200M-1B,warm,organic,2026-02-09
+Derek,Barnes,derek.barnes13@intercom.com,Intercom,Head of Marketing,SaaS,50-200,<1M,hot,paid_ads,2025-11-18
+Arjun,Nelson,arjun.nelson33@6sense.com,6sense,CMO,SaaS,1-10,1B+,warm,conference,2026-04-15
+Liam,Torres,liam.torres3@attentive.com,Attentive,Customer Success Manager,MarTech,500-1000,10-50M,hot,organic,2025-11-27
+Hannah,Martin,hannah.martin26@cloudbase.com,CloudBase,Managing Director,DevTools,200-500,<1M,warm,linkedin,2025-09-29
+Andrew,Thompson,andrew.thompson1@sprinklr.com,Sprinklr,Sales Manager,FinTech,500-1000,<1M,hot,referral,2026-04-09
+Wei,Torres,wei.torres83@salesloft.com,Salesloft,Marketing Manager,Legal Tech,10-50,1B+,warm,referral,2026-03-15
+Fatima,Adams,fatima.adams63@cloudbase.com,CloudBase,CEO,AI/ML,50-200,1B+,hot,organic,2026-05-12
+Pooja,Allen,pooja.allen18@g2.com,G2,Co-Founder,Cloud Infrastructure,10-50,1B+,warm,partner,2026-04-11
+Donna,Edwards,donna.edwards5@stackflow.com,StackFlow,Founder,SaaS,200-500,10-50M,hot,outbound,2026-04-18
+Lisa,Cox,lisa.cox55@hubspot.com,HubSpot,Growth Manager,MarTech,10-50,10-50M,warm,outbound,2026-02-13
+William,Cooper,william.cooper29@datadog.com,Datadog,CEO,Cybersecurity,5000+,<1M,cold,referral,2026-06-06
+Liam,Flores,liam.flores61@stripe.com,Stripe,Head of Growth,HR Tech,5000+,1-10M,cold,partner,2026-05-10
+Mason,Bailey,mason.bailey50@monday.com,Monday,VP Engineering,AI/ML,50-200,10-50M,hot,conference,2025-07-26
+David,Henderson,david.henderson55@salesforce.com,Salesforce,Director of Engineering,Legal Tech,50-200,50-200M,cold,outbound,2025-07-24
+Wei,Bailey,wei.bailey85@glassdoor.com,Glassdoor,GTM Engineer,Consulting,10-50,200M-1B,cold,conference,2025-08-24
+Melissa,Lopez,melissa.lopez24@growthco.com,GrowthCo,Co-Founder,SaaS,1000-5000,50-200M,warm,organic,2026-02-25
+Jun,Kim,jun.kim75@6sense.com,6sense,Head of Growth,Data Analytics,500-1000,1B+,cold,paid_ads,2026-03-10
+Ali,Lee,ali.lee76@growthco.com,GrowthCo,SDR Manager,Cloud Infrastructure,500-1000,200M-1B,hot,conference,2025-08-04
+Layla,Collins,layla.collins85@adobe.com,Adobe,Director of Operations,Consulting,200-500,1-10M,cold,outbound,2025-08-07
+Christopher,Anderson,christopher.anderson78@klaviyo.com,Klaviyo,COO,SaaS,500-1000,1-10M,cold,webinar,2025-09-17
+Donna,Howard,donna.howard28@cbinsights.com,CB Insights,Revenue Operations Manager,Real Estate,10-50,200M-1B,cold,outbound,2026-03-13
+Charles,Baker,charles.baker37@workday.com,Workday,Head of Growth,SaaS,200-500,50-200M,warm,partner,2025-09-07
+Isabella,Clark,isabella.clark42@zoom.com,Zoom,CTO,HR Tech,10-50,<1M,hot,webinar,2025-09-16
+Christopher,Perry,christopher.perry93@bentley.com,Bentley,Account Executive,AI/ML,1000-5000,1B+,cold,paid_ads,2026-06-01
+Hannah,Howard,hannah.howard4@elastic.com,Elastic,Managing Director,Consulting,1-10,1B+,cold,conference,2026-01-04
+Mia,Rogers,mia.rogers46@sendbird.com,Sendbird,Partnership Manager,FinTech,500-1000,<1M,cold,inbound,2026-03-27
+Yusuf,Robinson,yusuf.robinson40@cloudbase.com,CloudBase,Head of Growth,FinTech,5000+,1-10M,hot,outbound,2025-12-07
+Ibrahim,Williams,ibrahim.williams70@tenable.com,Tenable,Customer Success Manager,DevTools,50-200,50-200M,warm,linkedin,2025-09-22
+Mia,King,mia.king96@growthsignal.com,GrowthSignal,General Manager,FinTech,50-200,50-200M,hot,linkedin,2026-04-21
+Jennifer,Jackson,jennifer.jackson40@freshworks.com,Freshworks,Managing Director,SaaS,1-10,200M-1B,cold,linkedin,2025-11-30
+Linda,Roberts,linda.roberts29@fullstory.com,FullStory,CFO,Cybersecurity,500-1000,50-200M,hot,organic,2026-02-09
+Xin,Rogers,xin.rogers16@launchpad.com,LaunchPad,Sales Manager,Legal Tech,500-1000,1B+,hot,cold_email,2025-11-26
+Arjun,Chen,arjun.chen81@procore.com,Procore,Founder,Cybersecurity,5000+,1-10M,warm,referral,2025-10-20
+Emma,Allen,emma.allen99@launchpad.com,LaunchPad,General Manager,Manufacturing,200-500,10-50M,hot,referral,2025-10-20
+Barbara,Morgan,barbara.morgan56@datadog.com,Datadog,SDR Manager,SaaS,1-10,<1M,hot,cold_email,2025-07-15
+David,Torres,david.torres59@databricks.com,Databricks,CMO,FinTech,5000+,1B+,warm,inbound,2025-11-05
+Xin,Lopez,xin.lopez47@crowdstrike.com,CrowdStrike,CFO,Logistics,5000+,1B+,warm,cold_email,2025-11-28
+Jennifer,Roberts,jennifer.roberts71@hashicorp.com,HashiCorp,Marketing Manager,SaaS,200-500,200M-1B,hot,webinar,2025-11-25
+Jennifer,Martinez,jennifer.martinez94@nexustech.com,NexusTech,Director of Marketing,Real Estate,50-200,1B+,cold,inbound,2026-03-24
+Nadia,Clark,nadia.clark59@heap.com,Heap,President,Data Analytics,1-10,200M-1B,cold,outbound,2026-04-12
+Mason,Harris,mason.harris42@mongodb.com,MongoDB,Head of Sales,EdTech,5000+,1-10M,cold,inbound,2025-09-28
+Kevin,Anderson,kevin.anderson91@asana.com,Asana,Head of Growth,DevTools,1000-5000,10-50M,warm,cold_email,2026-01-31
+Lei,Phillips,lei.phillips45@clari.com,Clari,Head of Growth,FinTech,50-200,50-200M,hot,linkedin,2026-02-10
+Yang,Sanders,yang.sanders10@chorus.com,Chorus,SDR Manager,MarTech,50-200,10-50M,cold,conference,2026-01-03
+Xin,Peterson,xin.peterson70@lusha.com,Lusha,VP Product,Logistics,5000+,10-50M,warm,linkedin,2025-11-22
+Yang,Ward,yang.ward65@techtarget.com,TechTarget,CFO,Manufacturing,10-50,<1M,hot,outbound,2025-07-03
+Ahmed,Flores,ahmed.flores84@veeva.com,Veeva,Customer Success Manager,EdTech,500-1000,50-200M,cold,inbound,2025-07-23
+Ethan,Thomas,ethan.thomas21@capterra.com,Capterra,Revenue Operations Manager,MarTech,1-10,<1M,hot,linkedin,2025-11-20
+Paul,James,paul.james18@rapid7.com,Rapid7,Solutions Engineer,Cybersecurity,500-1000,10-50M,hot,organic,2025-12-12
+Sneha,Patterson,sneha.patterson64@hashicorp.com,HashiCorp,GTM Engineer,Logistics,5000+,<1M,hot,conference,2025-12-11
+Alex,Howard,alex.howard80@monday.com,Monday,General Manager,SaaS,200-500,200M-1B,cold,cold_email,2026-04-09
+Isabella,Anderson,isabella.anderson47@g2.com,G2,Customer Success Manager,AI/ML,10-50,200M-1B,cold,linkedin,2026-06-12
+Deborah,Adams,deborah.adams81@qualys.com,Qualys,Partnership Manager,EdTech,10-50,1-10M,cold,referral,2026-01-06
+Deepa,Cook,deepa.cook49@salesloft.com,Salesloft,Growth Manager,Manufacturing,1000-5000,50-200M,cold,cold_email,2025-12-25
+Ashley,Nelson,ashley.nelson48@pipelineai.com,PipelineAI,Revenue Operations Manager,Data Analytics,200-500,200M-1B,cold,conference,2025-09-13
+Mia,Henderson,mia.henderson86@orbitsaas.com,OrbitSaaS,VP Engineering,Manufacturing,1-10,1-10M,warm,organic,2025-12-20
+Karen,Bailey,karen.bailey69@pitchbook.com,PitchBook,CTO,SaaS,10-50,<1M,cold,linkedin,2026-03-27
+Melissa,Robinson,melissa.robinson84@bombora.com,Bombora,GTM Engineer,EdTech,200-500,10-50M,cold,outbound,2026-05-03
+Mia,Martinez,mia.martinez67@nexgen.com,NexGen,GTM Engineer,Media,5000+,50-200M,cold,referral,2025-09-16
+Melissa,Watson,melissa.watson36@okta.com,Okta,Director of Operations,E-commerce,10-50,1-10M,warm,conference,2026-01-03
+Linda,Thomas,linda.thomas51@lusha.com,Lusha,VP Engineering,Cybersecurity,1000-5000,10-50M,cold,cold_email,2026-01-20
+Daniel,Thomas,daniel.thomas47@okta.com,Okta,VP Marketing,Cybersecurity,5000+,<1M,warm,inbound,2025-10-17
+William,Baker,william.baker47@rapid7.com,Rapid7,VP Marketing,Data Analytics,1000-5000,1-10M,cold,conference,2026-01-24
+Robert,Lee,robert.lee69@clari.com,Clari,Customer Success Manager,Real Estate,50-200,1-10M,warm,outbound,2026-02-04
+Robert,Hughes,robert.hughes97@vaultai.com,VaultAI,Revenue Operations Manager,EdTech,5000+,1-10M,warm,cold_email,2025-10-02
+Andrew,Bell,andrew.bell17@braze.com,Braze,Customer Success Manager,MarTech,5000+,<1M,hot,outbound,2025-08-20
+Linda,Torres,linda.torres73@stripe.com,Stripe,Growth Manager,EdTech,10-50,<1M,cold,organic,2025-11-08
+Thomas,Chen,thomas.chen74@slack.com,Slack,CEO,MarTech,10-50,1-10M,hot,paid_ads,2025-10-03
+Yang,Adams,yang.adams41@qualys.com,Qualys,Account Executive,DevTools,50-200,<1M,cold,conference,2026-06-23
+Thomas,Walker,thomas.walker31@sprinklr.com,Sprinklr,Revenue Operations Manager,HR Tech,200-500,200M-1B,cold,paid_ads,2025-08-15
+Barbara,Baker,barbara.baker93@revenuepro.com,RevenuePro,Head of Product,Legal Tech,1-10,200M-1B,cold,paid_ads,2025-07-25
+Jessica,Hughes,jessica.hughes29@zoominfo.com,ZoomInfo,CTO,Real Estate,50-200,1-10M,warm,conference,2026-06-07
+Daniel,Richardson,daniel.richardson20@terminus.com,Terminus,Head of Sales,Manufacturing,200-500,200M-1B,warm,partner,2025-08-04
+Kenneth,Bennett,kenneth.bennett98@paloaltonetworks.com,Palo Alto Networks,President,Cloud Infrastructure,200-500,1B+,hot,paid_ads,2025-07-26
+Alex,Hall,alex.hall59@hexagon.com,Hexagon,VP Product,FinTech,10-50,<1M,warm,webinar,2026-04-02
+Ethan,Martinez,ethan.martinez14@zoominfo.com,ZoomInfo,Director of Marketing,Media,500-1000,<1M,warm,referral,2026-04-21
+Aisha,Bailey,aisha.bailey9@workday.com,Workday,Solutions Engineer,FinTech,1-10,10-50M,cold,inbound,2025-12-30
+Daniel,Flores,daniel.flores16@twilio.com,Twilio,Marketing Manager,Cybersecurity,1000-5000,1B+,hot,referral,2025-09-15
+Karen,Evans,karen.evans93@qualified.com,Qualified,Founder,Cybersecurity,10-50,10-50M,cold,organic,2026-03-05
+Zoe,Young,zoe.young34@datadog.com,Datadog,Head of Growth,Legal Tech,50-200,1B+,warm,paid_ads,2025-12-31
+Yang,Lewis,yang.lewis36@trimble.com,Trimble,Sales Manager,Consulting,10-50,50-200M,warm,referral,2025-07-26
+Sneha,White,sneha.white15@zerotoone.com,ZeroToOne,Customer Success Manager,Manufacturing,500-1000,<1M,cold,referral,2026-06-13
+Paul,Hill,paul.hill8@pitchbook.com,PitchBook,Marketing Manager,Data Analytics,1-10,200M-1B,cold,outbound,2025-10-18
+Nathan,Patel,nathan.patel58@clarityhq.com,ClarityHQ,VP Product,MarTech,1000-5000,50-200M,cold,partner,2025-08-13
+Sneha,Bailey,sneha.bailey53@terminus.com,Terminus,Head of Growth,AI/ML,1000-5000,10-50M,warm,organic,2026-04-05
+Mason,Davis,mason.davis42@sentinelone.com,SentinelOne,President,HR Tech,50-200,1-10M,cold,inbound,2025-08-04
+Priya,Campbell,priya.campbell85@autodesk.com,Autodesk,Co-Founder,AI/ML,1000-5000,<1M,hot,webinar,2025-09-16
+James,Kelly,james.kelly77@metadata.com,Metadata,Engineering Manager,HR Tech,10-50,10-50M,cold,linkedin,2025-08-26
+Pooja,Perry,pooja.perry87@stackflow.com,StackFlow,Engineering Manager,Cybersecurity,50-200,50-200M,hot,inbound,2026-06-11
+Fatima,Coleman,fatima.coleman40@autodesk.com,Autodesk,Sales Manager,HR Tech,10-50,1B+,warm,conference,2026-06-07
+Anthony,Peterson,anthony.peterson10@growthsignal.com,GrowthSignal,CFO,DevTools,1-10,200M-1B,cold,webinar,2025-10-28
+Melissa,Williams,melissa.williams65@varonis.com,Varonis,Business Development Manager,E-commerce,10-50,200M-1B,hot,partner,2026-05-27
+Donna,Sanchez,donna.sanchez25@vaultai.com,VaultAI,Head of Product,Manufacturing,50-200,50-200M,cold,partner,2025-08-18
+Sneha,Martinez,sneha.martinez6@attentive.com,Attentive,Director of Operations,EdTech,5000+,<1M,hot,webinar,2025-07-12
+Betty,Garcia,betty.garcia73@rollworks.com,RollWorks,Customer Success Manager,E-commerce,500-1000,<1M,cold,paid_ads,2025-10-28
+Lisa,Evans,lisa.evans69@hashicorp.com,HashiCorp,CEO,EdTech,500-1000,1B+,cold,inbound,2026-05-31
+Sarah,Mitchell,sarah.mitchell57@qualys.com,Qualys,Growth Manager,HR Tech,50-200,<1M,warm,paid_ads,2026-02-06
+Alex,Perez,alex.perez24@vaultai.com,VaultAI,Managing Director,Logistics,50-200,1B+,hot,inbound,2026-06-14
+Nadia,Brooks,nadia.brooks54@financeplus.com,FinancePlus,Marketing Manager,Logistics,10-50,50-200M,hot,conference,2026-06-04
+Robert,Hill,robert.hill61@shopify.com,Shopify,Partnership Manager,Real Estate,50-200,200M-1B,hot,partner,2026-04-27
+Thomas,Martin,thomas.martin99@intercom.com,Intercom,Customer Success Manager,Cybersecurity,200-500,200M-1B,hot,webinar,2025-12-11
+Fatou,Bennett,fatou.bennett28@ptc.com,PTC,President,Media,5000+,1-10M,hot,organic,2026-04-14
+Deborah,Murphy,deborah.murphy57@pipelineai.com,PipelineAI,VP Marketing,Manufacturing,50-200,10-50M,warm,partner,2025-12-30
+Fatima,Garcia,fatima.garcia74@zendesk.com,Zendesk,Revenue Operations Manager,E-commerce,50-200,50-200M,cold,inbound,2025-12-21
+Carlos,Barnes,carlos.barnes51@revenuepro.com,RevenuePro,Director of Engineering,AI/ML,5000+,1-10M,hot,conference,2026-01-29
+Kavya,Kim,kavya.kim51@bombora.com,Bombora,VP Marketing,Logistics,50-200,<1M,warm,organic,2026-04-05
+Nadia,Ward,nadia.ward67@freshworks.com,Freshworks,VP Product,Manufacturing,50-200,50-200M,cold,partner,2025-08-09
+Aisha,Peterson,aisha.peterson14@capterra.com,Capterra,CTO,DevTools,5000+,200M-1B,hot,referral,2026-01-20
+Xin,Ross,xin.ross97@crunchbase.com,Crunchbase,CMO,Cloud Infrastructure,1-10,50-200M,hot,conference,2025-09-16
+Daniel,Phillips,daniel.phillips44@mixpanel.com,Mixpanel,VP Sales,HR Tech,200-500,1-10M,cold,organic,2026-06-16
+Jessica,Walker,jessica.walker35@datadog.com,Datadog,General Manager,E-commerce,10-50,<1M,warm,conference,2026-05-12
+Deepa,Washington,deepa.washington61@outreach.com,Outreach,Growth Manager,AI/ML,200-500,200M-1B,hot,linkedin,2026-02-07
+Christopher,Chen,christopher.chen91@zerotoone.com,ZeroToOne,Director of Engineering,SaaS,50-200,200M-1B,warm,paid_ads,2025-12-08
+Matthew,Rivera,matthew.rivera32@freshworks.com,Freshworks,Head of Marketing,HR Tech,500-1000,200M-1B,warm,outbound,2025-07-07
+Mei,Hill,mei.hill94@twilio.com,Twilio,VP Sales,HR Tech,50-200,10-50M,cold,paid_ads,2026-03-23
+Ling,Wilson,ling.wilson84@revenuepro.com,RevenuePro,Director of Engineering,Real Estate,10-50,10-50M,cold,referral,2025-12-27
+Nadia,Sanchez,nadia.sanchez2@stripe.com,Stripe,Business Development Manager,MarTech,5000+,<1M,warm,partner,2025-07-01
+Liam,White,liam.white1@revlane.com,RevLane,COO,Consulting,1-10,<1M,warm,webinar,2026-03-14
+Hui,Lopez,hui.lopez67@ptc.com,PTC,Director of Sales,EdTech,1000-5000,200M-1B,hot,paid_ads,2026-05-21
+Mei,Morgan,mei.morgan77@zendesk.com,Zendesk,Head of Sales,EdTech,10-50,10-50M,warm,cold_email,2025-10-28
+Logan,Rodriguez,logan.rodriguez97@crunchbase.com,Crunchbase,President,E-commerce,500-1000,10-50M,cold,cold_email,2025-11-11
+Fatou,Cox,fatou.cox83@chorus.com,Chorus,CFO,Cybersecurity,5000+,50-200M,hot,inbound,2026-01-09
+Mark,Green,mark.green18@stripe.com,Stripe,Partnership Manager,Manufacturing,5000+,<1M,hot,cold_email,2026-04-21
+Donna,Patterson,donna.patterson74@lusha.com,Lusha,Product Manager,SaaS,50-200,200M-1B,hot,webinar,2025-08-29
+Jing,Collins,jing.collins11@veeva.com,Veeva,Founder,Cybersecurity,200-500,1-10M,warm,paid_ads,2025-07-13
+Omar,Perry,omar.perry9@databricks.com,Databricks,Product Manager,Cloud Infrastructure,5000+,50-200M,hot,linkedin,2025-12-12
+Hannah,Collins,hannah.collins17@iterable.com,Iterable,Product Manager,SaaS,5000+,10-50M,hot,conference,2025-10-19
+Donna,Wilson,donna.wilson23@rollworks.com,RollWorks,Revenue Operations Manager,HR Tech,1-10,50-200M,cold,inbound,2025-12-27
+Mei,Ross,mei.ross73@figma.com,Figma,COO,Cloud Infrastructure,5000+,200M-1B,warm,outbound,2025-11-28
+Fatou,Gray,fatou.gray5@amplitude.com,Amplitude,General Manager,E-commerce,500-1000,50-200M,cold,linkedin,2026-01-30
+Arjun,Reed,arjun.reed9@mixpanel.com,Mixpanel,CTO,MarTech,200-500,1B+,warm,paid_ads,2026-01-28
+Zara,Henderson,zara.henderson47@asana.com,Asana,Solutions Engineer,Consulting,1000-5000,50-200M,hot,webinar,2026-04-14
+Mark,Davis,mark.davis63@trimble.com,Trimble,VP Marketing,Cybersecurity,1000-5000,1B+,hot,outbound,2026-03-01
+Mei,Thompson,mei.thompson3@financeplus.com,FinancePlus,Director of Operations,FinTech,10-50,200M-1B,hot,cold_email,2025-07-30
+Joshua,Long,joshua.long30@gong.com,Gong,VP Engineering,SaaS,50-200,1-10M,hot,organic,2026-05-30
+Aisha,Perez,aisha.perez39@bombora.com,Bombora,Head of Product,HR Tech,1-10,10-50M,cold,partner,2026-03-05
+Karen,Collins,karen.collins53@gong.com,Gong,Founder,Consulting,200-500,200M-1B,hot,conference,2025-09-21
+Amanda,Peterson,amanda.peterson93@intuit.com,Intuit,Customer Success Manager,Legal Tech,5000+,<1M,hot,conference,2025-08-17
+Priya,Coleman,priya.coleman41@veeva.com,Veeva,VP Marketing,MarTech,200-500,10-50M,cold,webinar,2025-11-29
+Hui,Lee,hui.lee19@6sense.com,6sense,Revenue Operations Manager,Data Analytics,1-10,1-10M,cold,cold_email,2025-10-03
+Deepa,Butler,deepa.butler66@hashicorp.com,HashiCorp,Engineering Manager,Data Analytics,10-50,10-50M,cold,outbound,2025-08-02
+Yang,Robinson,yang.robinson37@zoom.com,Zoom,COO,Cloud Infrastructure,1-10,1B+,hot,partner,2026-05-17
+Steven,Price,steven.price68@nexgen.com,NexGen,GTM Engineer,Real Estate,200-500,50-200M,warm,organic,2025-10-04
+Dorothy,Long,dorothy.long27@bombora.com,Bombora,CMO,SaaS,5000+,200M-1B,warm,inbound,2026-03-22
+Hassan,Ramirez,hassan.ramirez21@outreach.com,Outreach,Director of Marketing,HR Tech,10-50,1B+,hot,webinar,2026-06-22
+Vikram,Johnson,vikram.johnson17@shopify.com,Shopify,CMO,MarTech,200-500,1B+,hot,cold_email,2026-04-21
+Anthony,Wilson,anthony.wilson34@crowdstrike.com,CrowdStrike,Co-Founder,Legal Tech,10-50,1B+,warm,partner,2025-12-23
+Kavya,Butler,kavya.butler97@peakanalytics.com,PeakAnalytics,CTO,MarTech,1000-5000,10-50M,cold,linkedin,2026-01-24
+Yusuf,Thomas,yusuf.thomas80@snowflake.com,Snowflake,GTM Engineer,Cloud Infrastructure,1-10,200M-1B,warm,cold_email,2025-11-04
+Matthew,Gray,matthew.gray60@grafana.com,Grafana,Head of Sales,AI/ML,10-50,10-50M,cold,conference,2025-08-07
+Michelle,Powell,michelle.powell23@cloudbase.com,CloudBase,VP Marketing,Media,10-50,10-50M,cold,referral,2025-12-29
+Donald,Sanchez,donald.sanchez58@launchpad.com,LaunchPad,VP Marketing,Real Estate,1000-5000,<1M,cold,conference,2026-04-27
+Zoe,Sanders,zoe.sanders71@tenable.com,Tenable,Marketing Manager,MarTech,1000-5000,10-50M,cold,linkedin,2026-05-07
+Jing,Clark,jing.clark8@vaultai.com,VaultAI,CTO,Legal Tech,50-200,50-200M,warm,organic,2026-03-22
+Susan,Wright,susan.wright50@bentley.com,Bentley,General Manager,MarTech,200-500,1B+,cold,conference,2026-01-03
+Liam,Rivera,liam.rivera38@techcorp.com,TechCorp,Partnership Manager,Consulting,50-200,1B+,warm,paid_ads,2026-01-06
+Michelle,Young,michelle.young77@autodesk.com,Autodesk,Head of Sales,Media,200-500,200M-1B,cold,webinar,2025-11-11
+James,Barnes,james.barnes92@rollworks.com,RollWorks,CTO,MarTech,10-50,<1M,cold,conference,2026-01-22
+Lei,Watson,lei.watson38@scalehq.com,ScaleHQ,CTO,MarTech,50-200,10-50M,warm,referral,2025-11-25
+Rahul,Gray,rahul.gray67@sendbird.com,Sendbird,Customer Success Manager,E-commerce,1-10,10-50M,cold,linkedin,2026-01-06
+Charlotte,Rivera,charlotte.rivera85@fullstory.com,FullStory,CFO,HR Tech,50-200,200M-1B,hot,organic,2025-08-30
+Donald,Chen,donald.chen7@ptc.com,PTC,COO,Cloud Infrastructure,5000+,10-50M,hot,outbound,2025-10-20
+Lucas,Taylor,lucas.taylor30@sentinelone.com,SentinelOne,Director of Sales,FinTech,50-200,1B+,cold,linkedin,2026-05-23
+Tom,Richardson,tom.richardson55@figma.com,Figma,GTM Engineer,Logistics,5000+,10-50M,hot,inbound,2025-12-03
+Betty,Parker,betty.parker70@6sense.com,6sense,Managing Director,MarTech,50-200,<1M,hot,conference,2025-12-10
+Mia,Collins,mia.collins10@intercom.com,Intercom,President,Cloud Infrastructure,200-500,10-50M,hot,outbound,2026-05-03
+Mark,Harris,mark.harris20@hubspot.com,HubSpot,Marketing Manager,Logistics,500-1000,1B+,warm,partner,2026-02-16
+Sarah,Williams,sarah.williams10@zoominfo.com,ZoomInfo,CTO,EdTech,500-1000,1B+,warm,partner,2026-04-04
+Deepa,Hill,deepa.hill6@shopify.com,Shopify,Growth Manager,E-commerce,1000-5000,200M-1B,warm,inbound,2025-07-23
+Sofia,Campbell,sofia.campbell44@twilio.com,Twilio,Head of Product,AI/ML,5000+,1B+,warm,webinar,2025-09-01
+Margaret,Kim,margaret.kim71@clay.com,Clay,Business Development Manager,Consulting,1-10,<1M,cold,organic,2026-03-31
+Rahul,Morgan,rahul.morgan65@cbinsights.com,CB Insights,Head of Product,FinTech,1000-5000,1-10M,cold,webinar,2026-05-03
+Michael,Wood,michael.wood37@pitchbook.com,PitchBook,Co-Founder,SaaS,5000+,10-50M,warm,paid_ads,2026-04-17
+Nadia,Kim,nadia.kim48@fullstory.com,FullStory,Head of Operations,FinTech,5000+,50-200M,warm,inbound,2025-10-14
+Ali,Hughes,ali.hughes44@pipelineai.com,PipelineAI,Head of Growth,HR Tech,5000+,10-50M,cold,referral,2025-12-16
+Lisa,Scott,lisa.scott12@iterable.com,Iterable,Founder,Consulting,1-10,<1M,hot,conference,2026-03-09
+Xin,Rodriguez,xin.rodriguez28@cbinsights.com,CB Insights,Managing Director,Cybersecurity,50-200,1-10M,warm,cold_email,2026-04-02
+Yusuf,Patel,yusuf.patel35@scalehq.com,ScaleHQ,Partnership Manager,E-commerce,200-500,200M-1B,cold,webinar,2025-09-30
+Dorothy,Lee,dorothy.lee15@cloudbase.com,CloudBase,Managing Director,HR Tech,5000+,<1M,cold,referral,2026-04-02
+Mei,Howard,mei.howard42@paloaltonetworks.com,Palo Alto Networks,CTO,Logistics,1000-5000,<1M,warm,referral,2025-09-16
+Michelle,Patel,michelle.patel78@chorus.com,Chorus,Growth Manager,FinTech,5000+,200M-1B,hot,outbound,2025-10-07
+Rahul,Richardson,rahul.richardson9@monday.com,Monday,Head of Marketing,MarTech,1-10,200M-1B,cold,webinar,2025-10-31
+Fatou,Powell,fatou.powell79@pipelineai.com,PipelineAI,VP Engineering,Legal Tech,10-50,200M-1B,hot,paid_ads,2026-01-25
+Linda,Rogers,linda.rogers68@salesloft.com,Salesloft,COO,AI/ML,200-500,10-50M,hot,partner,2025-10-28
+Charles,Barnes,charles.barnes7@techcorp.com,TechCorp,Head of Sales,E-commerce,1000-5000,200M-1B,hot,conference,2025-08-16
+Hassan,Campbell,hassan.campbell38@scalehq.com,ScaleHQ,GTM Engineer,HealthTech,50-200,<1M,warm,referral,2026-03-21
+Fatima,Evans,fatima.evans13@outreach.com,Outreach,CTO,HealthTech,200-500,200M-1B,warm,partner,2026-06-27
+Joseph,Kelly,joseph.kelly78@zerotoone.com,ZeroToOne,Director of Operations,Media,500-1000,1-10M,warm,cold_email,2026-01-27
+Kenneth,Hughes,kenneth.hughes84@twilio.com,Twilio,Director of Engineering,EdTech,10-50,<1M,cold,linkedin,2025-09-25
+Priya,Hernandez,priya.hernandez96@nexgen.com,NexGen,VP Product,Manufacturing,5000+,10-50M,hot,referral,2025-08-05
+Hannah,Sanders,hannah.sanders12@procore.com,Procore,VP Marketing,HealthTech,500-1000,<1M,warm,paid_ads,2025-12-06
+Anthony,Howard,anthony.howard21@capterra.com,Capterra,President,AI/ML,5000+,1B+,cold,organic,2025-11-09
+Alex,Barnes,alex.barnes42@trustpilot.com,Trustpilot,CTO,Manufacturing,200-500,1-10M,hot,webinar,2026-03-17
+David,Rodriguez,david.rodriguez16@notion.com,Notion,Account Executive,Cloud Infrastructure,5000+,10-50M,hot,webinar,2025-11-27
+Anthony,Long,anthony.long1@shopify.com,Shopify,VP Sales,Logistics,10-50,200M-1B,hot,conference,2026-03-01
+Zoe,Perez,zoe.perez12@asana.com,Asana,Head of Product,Consulting,500-1000,1B+,cold,cold_email,2025-11-27
+Amanda,Scott,amanda.scott2@trimble.com,Trimble,Head of Sales,AI/ML,10-50,<1M,warm,partner,2026-02-06
+Steven,Bell,steven.bell1@nexustech.com,NexusTech,Director of Marketing,Real Estate,10-50,<1M,hot,linkedin,2026-01-18
+Nina,Peterson,nina.peterson49@datastream.com,DataStream,Marketing Manager,FinTech,1-10,10-50M,cold,linkedin,2026-04-25
+Logan,Collins,logan.collins56@crunchbase.com,Crunchbase,CFO,EdTech,10-50,1-10M,cold,inbound,2026-04-01
+Robert,Phillips,robert.phillips54@braze.com,Braze,CTO,Media,50-200,1-10M,hot,conference,2026-03-10
+Noah,Green,noah.green38@veeva.com,Veeva,COO,SaaS,200-500,200M-1B,cold,conference,2026-03-06
+Omar,Rodriguez,omar.rodriguez69@nexustech.com,NexusTech,CTO,FinTech,5000+,10-50M,cold,webinar,2026-04-22
+Xin,Reed,xin.reed12@techcorp.com,TechCorp,Director of Marketing,DevTools,5000+,1-10M,cold,partner,2026-06-09
+Sarah,Morris,sarah.morris80@terminus.com,Terminus,Customer Success Manager,E-commerce,1-10,50-200M,hot,referral,2025-11-11
+Melissa,Turner,melissa.turner9@glassdoor.com,Glassdoor,Director of Operations,Cloud Infrastructure,1000-5000,1B+,warm,referral,2026-05-04
+Jessica,Edwards,jessica.edwards67@financeplus.com,FinancePlus,Director of Sales,E-commerce,10-50,10-50M,warm,partner,2025-10-23
+Daniel,Anderson,daniel.anderson12@freshworks.com,Freshworks,SDR Manager,MarTech,5000+,10-50M,warm,conference,2026-04-06
+Ava,Howard,ava.howard15@heap.com,Heap,Head of Product,Legal Tech,10-50,10-50M,cold,referral,2025-08-14
+Liam,Flores,liam.flores4@confluent.com,Confluent,Sales Manager,HR Tech,500-1000,200M-1B,cold,webinar,2026-06-26
+Jennifer,Howard,jennifer.howard46@twilio.com,Twilio,CTO,EdTech,50-200,50-200M,warm,conference,2026-03-13
+Barbara,Robinson,barbara.robinson67@rollworks.com,RollWorks,Head of Sales,HR Tech,200-500,10-50M,warm,cold_email,2026-05-26
+Raj,Roberts,raj.roberts90@iterable.com,Iterable,Director of Operations,Cybersecurity,500-1000,10-50M,cold,outbound,2025-07-10
+Derek,Barnes,derek.barnes54@cbinsights.com,CB Insights,President,EdTech,500-1000,10-50M,cold,conference,2025-08-15
+Omar,Flores,omar.flores32@nexgen.com,NexGen,Product Manager,FinTech,1000-5000,1-10M,hot,conference,2026-04-17
+Deepa,Adams,deepa.adams72@zendesk.com,Zendesk,Engineering Manager,Legal Tech,200-500,1-10M,warm,linkedin,2026-01-09
+Arjun,Roberts,arjun.roberts58@zscaler.com,Zscaler,SDR Manager,Consulting,1-10,1-10M,cold,conference,2025-10-18
+Hannah,Thomas,hannah.thomas85@clay.com,Clay,Head of Sales,SaaS,500-1000,50-200M,warm,outbound,2026-02-02
+Fatima,Gray,fatima.gray63@zoom.com,Zoom,Sales Manager,DevTools,500-1000,<1M,cold,webinar,2026-03-17
+Michelle,Bennett,michelle.bennett23@procore.com,Procore,CEO,Legal Tech,500-1000,200M-1B,hot,webinar,2026-03-05
+Layla,Robinson,layla.robinson58@zerotoone.com,ZeroToOne,Head of Sales,Cloud Infrastructure,200-500,1-10M,hot,partner,2026-04-01
+Xin,Lopez,xin.lopez93@growthsignal.com,GrowthSignal,Product Manager,HR Tech,5000+,10-50M,cold,linkedin,2025-09-06
+Melissa,Taylor,melissa.taylor47@zendesk.com,Zendesk,VP Sales,Cloud Infrastructure,10-50,1-10M,cold,referral,2025-12-17
+Priya,Coleman,priya.coleman23@capterra.com,Capterra,Partnership Manager,SaaS,1-10,50-200M,cold,paid_ads,2026-05-26
+Kenneth,Wilson,kenneth.wilson12@workday.com,Workday,CTO,EdTech,500-1000,200M-1B,warm,cold_email,2026-04-29
+Andrew,Robinson,andrew.robinson23@asana.com,Asana,Head of Growth,Real Estate,500-1000,<1M,warm,linkedin,2025-10-01
+Jun,Collins,jun.collins18@crunchbase.com,Crunchbase,Director of Operations,FinTech,10-50,1-10M,cold,paid_ads,2025-10-01
+Xin,Bell,xin.bell60@stripe.com,Stripe,CEO,Legal Tech,200-500,1B+,hot,partner,2025-07-20
+Christopher,Watson,christopher.watson32@mixpanel.com,Mixpanel,Customer Success Manager,SaaS,500-1000,50-200M,hot,cold_email,2025-08-17
+Sandra,Lewis,sandra.lewis59@sprinklr.com,Sprinklr,Director of Engineering,E-commerce,200-500,10-50M,hot,outbound,2026-02-04
+Yusuf,Barnes,yusuf.barnes98@tenable.com,Tenable,Co-Founder,SaaS,500-1000,50-200M,warm,paid_ads,2025-11-21
+Amanda,Coleman,amanda.coleman26@paloaltonetworks.com,Palo Alto Networks,Managing Director,DevTools,5000+,200M-1B,hot,organic,2025-08-24
+Fatou,Long,fatou.long33@g2.com,G2,Product Manager,Legal Tech,200-500,1-10M,hot,organic,2025-11-25
+Anita,Ward,anita.ward23@confluent.com,Confluent,Product Manager,HR Tech,500-1000,10-50M,warm,conference,2025-08-13
+Joshua,Torres,joshua.torres70@growthsignal.com,GrowthSignal,COO,Legal Tech,200-500,200M-1B,warm,referral,2026-02-18
+Noah,Clark,noah.clark2@rapid7.com,Rapid7,CEO,SaaS,500-1000,1B+,warm,partner,2025-10-07
+Pooja,Thomas,pooja.thomas46@sprinklr.com,Sprinklr,Co-Founder,Cloud Infrastructure,1000-5000,<1M,cold,partner,2026-02-13
+Sandra,Martinez,sandra.martinez36@snowflake.com,Snowflake,Sales Manager,Media,1000-5000,50-200M,hot,linkedin,2025-12-15
+Brian,Walker,brian.walker95@qualified.com,Qualified,General Manager,AI/ML,5000+,1B+,hot,webinar,2025-07-30
+Steven,Long,steven.long20@vaultai.com,VaultAI,Partnership Manager,Consulting,1-10,10-50M,hot,outbound,2026-02-03
+Nathan,Price,nathan.price25@coupa.com,Coupa,Product Manager,HealthTech,1000-5000,1B+,warm,referral,2026-05-19
+Ava,Nelson,ava.nelson91@hashicorp.com,HashiCorp,VP Engineering,Legal Tech,10-50,<1M,hot,webinar,2026-01-19
+Melissa,Allen,melissa.allen6@pipelineai.com,PipelineAI,Managing Director,FinTech,5000+,1B+,warm,partner,2026-06-02
+Ryan,Butler,ryan.butler39@glassdoor.com,Glassdoor,Marketing Manager,Data Analytics,1-10,10-50M,warm,paid_ads,2026-02-22
+Linda,Turner,linda.turner3@nexustech.com,NexusTech,CMO,HR Tech,50-200,<1M,hot,paid_ads,2026-04-19
+Anthony,Chen,anthony.chen87@gong.com,Gong,General Manager,Manufacturing,200-500,1B+,cold,paid_ads,2026-06-20
+Donna,Jenkins,donna.jenkins72@clarityhq.com,ClarityHQ,Revenue Operations Manager,DevTools,1-10,1B+,hot,inbound,2025-12-21
+Maria,Reed,maria.reed18@fullstory.com,FullStory,CTO,HealthTech,10-50,50-200M,hot,referral,2026-04-13
+Ali,Rivera,ali.rivera80@g2.com,G2,Co-Founder,Cybersecurity,1-10,10-50M,hot,paid_ads,2026-06-18
+Nina,Barnes,nina.barnes16@notion.com,Notion,VP Sales,Data Analytics,200-500,<1M,warm,cold_email,2025-07-06
+Linda,Howard,linda.howard1@intercom.com,Intercom,VP Sales,MarTech,500-1000,1B+,hot,conference,2025-08-13
+Richard,Adams,richard.adams34@lusha.com,Lusha,SDR Manager,HealthTech,500-1000,<1M,warm,partner,2025-11-24
+Emma,Bennett,emma.bennett80@paloaltonetworks.com,Palo Alto Networks,Head of Sales,Cloud Infrastructure,10-50,1B+,cold,organic,2026-05-07
+Mia,Phillips,mia.phillips34@procore.com,Procore,VP Engineering,Logistics,1000-5000,1-10M,warm,referral,2026-06-27
+Jun,Green,jun.green48@salesforce.com,Salesforce,CEO,Legal Tech,500-1000,1B+,warm,referral,2025-07-11
+Betty,Peterson,betty.peterson75@qualys.com,Qualys,Director of Engineering,Legal Tech,10-50,200M-1B,cold,paid_ads,2025-10-15
+Emily,Hughes,emily.hughes21@salesloft.com,Salesloft,VP Product,Media,500-1000,<1M,cold,partner,2026-03-13
+Andrew,Reed,andrew.reed7@glassdoor.com,Glassdoor,VP Engineering,Legal Tech,50-200,<1M,hot,cold_email,2025-07-10
+Hannah,Cooper,hannah.cooper39@adobe.com,Adobe,Engineering Manager,DevTools,1-10,1-10M,hot,linkedin,2026-04-09
+Ashley,Morris,ashley.morris1@sprinklr.com,Sprinklr,GTM Engineer,Legal Tech,200-500,50-200M,warm,webinar,2026-06-15
+Joshua,Peterson,joshua.peterson38@workday.com,Workday,Director of Sales,FinTech,500-1000,200M-1B,hot,paid_ads,2026-04-16
+David,Ward,david.ward43@outreach.com,Outreach,CTO,Consulting,500-1000,1B+,hot,referral,2026-06-20
+Sneha,Cook,sneha.cook49@hotjar.com,Hotjar,Engineering Manager,Consulting,10-50,10-50M,warm,cold_email,2026-03-10
+William,Young,william.young97@pitchbook.com,PitchBook,Engineering Manager,Legal Tech,500-1000,1-10M,cold,referral,2025-07-05
+Susan,Lewis,susan.lewis56@elastic.com,Elastic,VP Engineering,Consulting,1000-5000,1-10M,cold,organic,2026-06-15
+Sarah,Ramirez,sarah.ramirez62@sprinklr.com,Sprinklr,Head of Marketing,Legal Tech,10-50,50-200M,cold,referral,2025-11-25
+Ling,Robinson,ling.robinson60@workday.com,Workday,Director of Operations,Legal Tech,1000-5000,10-50M,hot,paid_ads,2026-01-13
+Michael,Ward,michael.ward41@bombora.com,Bombora,General Manager,Cloud Infrastructure,5000+,50-200M,warm,webinar,2026-02-25
+James,Henderson,james.henderson58@trimble.com,Trimble,Head of Growth,HR Tech,10-50,10-50M,cold,referral,2026-01-18
+Ryan,Scott,ryan.scott90@revlane.com,RevLane,Sales Manager,FinTech,1000-5000,50-200M,cold,outbound,2025-10-19
+Jennifer,White,jennifer.white23@salesloft.com,Salesloft,Head of Marketing,Logistics,50-200,10-50M,cold,outbound,2025-12-20
+Emily,Torres,emily.torres11@growthsignal.com,GrowthSignal,Business Development Manager,HealthTech,10-50,200M-1B,warm,inbound,2026-06-02
+Jessica,Rodriguez,jessica.rodriguez84@sprinklr.com,Sprinklr,Director of Engineering,EdTech,1-10,50-200M,hot,partner,2026-02-21
+Kavya,Hill,kavya.hill20@ptc.com,PTC,Customer Success Manager,Media,200-500,200M-1B,warm,organic,2025-11-14
+Logan,Richardson,logan.richardson58@scalehq.com,ScaleHQ,VP Sales,Cybersecurity,5000+,1B+,hot,inbound,2025-11-29
+Layla,Thomas,layla.thomas24@elastic.com,Elastic,VP Engineering,Real Estate,1-10,1B+,cold,webinar,2026-03-12
+Matthew,Thompson,matthew.thompson8@slack.com,Slack,President,Legal Tech,200-500,1-10M,cold,webinar,2025-12-21
+Fatima,Ross,fatima.ross84@pipelineai.com,PipelineAI,Business Development Manager,Real Estate,50-200,200M-1B,warm,webinar,2026-02-22
+Robert,Cox,robert.cox99@peakanalytics.com,PeakAnalytics,Revenue Operations Manager,Manufacturing,500-1000,1-10M,warm,cold_email,2025-07-17
+Maria,Anderson,maria.anderson13@rapid7.com,Rapid7,Head of Sales,Media,500-1000,200M-1B,cold,referral,2026-01-27
+Noah,Scott,noah.scott44@rollworks.com,RollWorks,Head of Sales,SaaS,10-50,200M-1B,cold,organic,2026-05-30
+Daniel,Wood,daniel.wood23@apollo.com,Apollo,CEO,SaaS,500-1000,1B+,cold,conference,2025-08-22
+Ling,Evans,ling.evans53@cbinsights.com,CB Insights,VP Product,Cybersecurity,200-500,1-10M,warm,organic,2025-09-01
+Ava,Anderson,ava.anderson39@okta.com,Okta,Head of Operations,Real Estate,200-500,1-10M,hot,organic,2026-01-22
+Brian,Campbell,brian.campbell98@salesloft.com,Salesloft,CEO,Consulting,1-10,1B+,warm,inbound,2025-12-08
+Donald,White,donald.white12@revenuepro.com,RevenuePro,Head of Operations,Consulting,1000-5000,200M-1B,warm,paid_ads,2025-08-15
+Anthony,Torres,anthony.torres68@zscaler.com,Zscaler,Partnership Manager,Cybersecurity,200-500,<1M,warm,webinar,2025-10-27
+Hassan,Hernandez,hassan.hernandez40@clay.com,Clay,Marketing Manager,FinTech,500-1000,50-200M,cold,referral,2025-09-07
+Tom,Patel,tom.patel17@hubspot.com,HubSpot,CEO,SaaS,1000-5000,1-10M,hot,conference,2026-01-29
+David,Bell,david.bell31@techtarget.com,TechTarget,General Manager,MarTech,10-50,10-50M,cold,webinar,2025-07-10
+Amina,Simmons,amina.simmons65@slack.com,Slack,Partnership Manager,Cloud Infrastructure,1-10,10-50M,warm,cold_email,2026-02-09
+Lucas,Scott,lucas.scott26@revlane.com,RevLane,Partnership Manager,EdTech,200-500,1B+,warm,cold_email,2025-09-30
+Anthony,Bailey,anthony.bailey63@outreach.com,Outreach,Marketing Manager,HR Tech,200-500,200M-1B,hot,partner,2026-05-18
+Kavya,Sanchez,kavya.sanchez7@datadog.com,Datadog,Business Development Manager,EdTech,1-10,200M-1B,cold,cold_email,2026-06-12
+Sarah,Turner,sarah.turner86@databricks.com,Databricks,President,AI/ML,1-10,50-200M,warm,cold_email,2026-05-11
+Christopher,Kelly,christopher.kelly46@g2.com,G2,Solutions Engineer,Consulting,500-1000,1B+,warm,inbound,2025-09-05
+Robert,Walker,robert.walker35@amplitude.com,Amplitude,GTM Engineer,AI/ML,1000-5000,50-200M,cold,referral,2026-02-14
+Anthony,Watson,anthony.watson58@stripe.com,Stripe,Revenue Operations Manager,AI/ML,200-500,1-10M,cold,cold_email,2025-07-07
+Michelle,Stewart,michelle.stewart11@hotjar.com,Hotjar,Founder,Legal Tech,500-1000,<1M,hot,linkedin,2026-02-19
+Aisha,Adams,aisha.adams28@bentley.com,Bentley,VP Sales,MarTech,10-50,1B+,hot,cold_email,2025-08-16
+Fang,Anderson,fang.anderson63@intuit.com,Intuit,Solutions Engineer,Legal Tech,200-500,200M-1B,warm,outbound,2026-06-14
+Derek,Sanchez,derek.sanchez5@qualys.com,Qualys,Marketing Manager,Manufacturing,200-500,10-50M,hot,organic,2026-06-28
+Paul,Ramirez,paul.ramirez74@clarityhq.com,ClarityHQ,Growth Manager,Real Estate,10-50,<1M,warm,cold_email,2026-05-04
+William,Sanders,william.sanders27@qualified.com,Qualified,Growth Manager,Media,200-500,200M-1B,cold,partner,2025-10-14
+Ethan,Bell,ethan.bell74@veeva.com,Veeva,Director of Operations,DevTools,50-200,1-10M,warm,linkedin,2026-02-26
+Betty,Hill,betty.hill3@trimble.com,Trimble,Sales Manager,Manufacturing,200-500,1B+,cold,partner,2025-11-15
+Pooja,Phillips,pooja.phillips26@sentinelone.com,SentinelOne,Account Executive,Consulting,500-1000,10-50M,warm,referral,2025-09-28
+Deepa,Clark,deepa.clark49@hubspot.com,HubSpot,Director of Marketing,Cybersecurity,1-10,200M-1B,cold,webinar,2025-07-10
+Christopher,Sanchez,christopher.sanchez51@launchpad.com,LaunchPad,Sales Manager,FinTech,200-500,10-50M,warm,linkedin,2025-10-23
+Emma,Washington,emma.washington29@revenuepro.com,RevenuePro,Sales Manager,Cybersecurity,500-1000,200M-1B,hot,inbound,2026-05-24
+Melissa,Price,melissa.price45@qualified.com,Qualified,Customer Success Manager,EdTech,10-50,200M-1B,cold,partner,2025-12-17
+Charlotte,Robinson,charlotte.robinson89@nexgen.com,NexGen,Director of Operations,Manufacturing,1-10,50-200M,cold,referral,2025-10-03
+Kevin,Collins,kevin.collins73@fullstory.com,FullStory,Engineering Manager,Logistics,200-500,<1M,cold,webinar,2025-09-27
+Susan,Reed,susan.reed75@datastream.com,DataStream,Business Development Manager,DevTools,50-200,10-50M,warm,conference,2025-08-21
+Fatima,Powell,fatima.powell75@crowdstrike.com,CrowdStrike,Sales Manager,Data Analytics,1000-5000,<1M,warm,organic,2026-04-21
+Ethan,Cook,ethan.cook72@orbitsaas.com,OrbitSaaS,Marketing Manager,Data Analytics,50-200,1-10M,cold,organic,2025-08-30
+Margaret,Hall,margaret.hall50@outreach.com,Outreach,Head of Operations,SaaS,1000-5000,10-50M,warm,outbound,2025-09-26
+Mark,Hill,mark.hill7@qualified.com,Qualified,Head of Operations,Media,50-200,50-200M,warm,webinar,2026-05-29
+Sneha,Sanchez,sneha.sanchez19@clarityhq.com,ClarityHQ,Head of Product,FinTech,1000-5000,50-200M,hot,cold_email,2026-05-19
+Emily,Adams,emily.adams80@varonis.com,Varonis,Head of Sales,E-commerce,500-1000,10-50M,cold,paid_ads,2026-06-07
+Maria,James,maria.james18@zoom.com,Zoom,Director of Operations,Logistics,50-200,<1M,warm,organic,2025-08-10
+Ahmed,Chen,ahmed.chen2@growthco.com,GrowthCo,Managing Director,Manufacturing,500-1000,200M-1B,cold,conference,2026-01-15
+Logan,Garcia,logan.garcia88@amplitude.com,Amplitude,Head of Product,Cybersecurity,50-200,200M-1B,warm,cold_email,2026-06-10
+Melissa,Henderson,melissa.henderson82@capterra.com,Capterra,Partnership Manager,Cloud Infrastructure,10-50,1-10M,cold,linkedin,2025-12-16
+Nancy,Martin,nancy.martin27@zoom.com,Zoom,Solutions Engineer,Manufacturing,5000+,200M-1B,hot,cold_email,2026-04-19
+Yusuf,King,yusuf.king26@attentive.com,Attentive,Partnership Manager,HR Tech,50-200,1-10M,warm,partner,2025-11-10
+Amanda,Richardson,amanda.richardson18@nexustech.com,NexusTech,Account Executive,Real Estate,200-500,200M-1B,cold,conference,2025-11-19
+Nathan,Sanchez,nathan.sanchez44@capterra.com,Capterra,CMO,EdTech,1-10,<1M,hot,conference,2026-06-21
+Aisha,Anderson,aisha.anderson93@adobe.com,Adobe,Growth Manager,Data Analytics,5000+,10-50M,warm,cold_email,2026-01-27
+Mia,Simmons,mia.simmons90@intuit.com,Intuit,Head of Product,E-commerce,200-500,200M-1B,warm,conference,2026-03-27
+Yang,Watson,yang.watson53@freshworks.com,Freshworks,Director of Operations,SaaS,1000-5000,50-200M,hot,webinar,2026-01-12
+Jing,Sanchez,jing.sanchez28@asana.com,Asana,Business Development Manager,SaaS,200-500,1B+,cold,partner,2026-03-14
+Christopher,Brown,christopher.brown94@sprinklr.com,Sprinklr,CMO,Manufacturing,1-10,10-50M,cold,partner,2026-05-01
+Daniel,White,daniel.white64@g2.com,G2,Director of Sales,Cybersecurity,50-200,200M-1B,hot,paid_ads,2026-06-17
+Vikram,Long,vikram.long97@fusioncrm.com,FusionCRM,Director of Marketing,Media,10-50,1-10M,warm,webinar,2025-11-21
+Maria,Stewart,maria.stewart11@elastic.com,Elastic,Head of Product,DevTools,1-10,50-200M,warm,linkedin,2026-02-20
+Mason,Jenkins,mason.jenkins75@fullstory.com,FullStory,CFO,MarTech,5000+,1-10M,hot,referral,2025-11-14
+Barbara,Hill,barbara.hill25@figma.com,Figma,Product Manager,HealthTech,5000+,10-50M,hot,linkedin,2026-02-02
+Rahul,Washington,rahul.washington1@autodesk.com,Autodesk,Account Executive,DevTools,1-10,200M-1B,warm,cold_email,2025-12-20
+Brian,Johnson,brian.johnson99@revlane.com,RevLane,Director of Operations,Consulting,10-50,200M-1B,cold,linkedin,2025-08-03
+Zara,Sanders,zara.sanders7@hashicorp.com,HashiCorp,Director of Operations,E-commerce,1-10,50-200M,hot,cold_email,2026-06-04
+Donna,Morris,donna.morris78@crunchbase.com,Crunchbase,CMO,Manufacturing,10-50,200M-1B,hot,inbound,2025-12-14
+Dorothy,Hughes,dorothy.hughes12@veeva.com,Veeva,Solutions Engineer,DevTools,1-10,1-10M,cold,referral,2025-10-02
+Deepa,Lee,deepa.lee71@procore.com,Procore,Director of Engineering,Cybersecurity,1000-5000,10-50M,hot,paid_ads,2025-07-07
+Melissa,Evans,melissa.evans37@iterable.com,Iterable,General Manager,Manufacturing,1000-5000,1-10M,hot,webinar,2026-01-16
+Deborah,Allen,deborah.allen13@fusioncrm.com,FusionCRM,GTM Engineer,MarTech,500-1000,1B+,hot,paid_ads,2025-11-25
+Amit,Sanchez,amit.sanchez71@crowdstrike.com,CrowdStrike,Growth Manager,Logistics,10-50,1B+,cold,webinar,2025-07-25
+Ethan,Scott,ethan.scott56@orbitsaas.com,OrbitSaaS,Head of Operations,AI/ML,200-500,1B+,cold,outbound,2026-03-07
+Richard,Lewis,richard.lewis87@notion.com,Notion,COO,HealthTech,5000+,50-200M,warm,cold_email,2026-03-30
+Yusuf,White,yusuf.white82@hubspot.com,HubSpot,Business Development Manager,DevTools,500-1000,10-50M,hot,webinar,2026-02-10
+Ling,Bennett,ling.bennett33@notion.com,Notion,Engineering Manager,EdTech,1-10,200M-1B,hot,cold_email,2026-01-06
+Derek,Lopez,derek.lopez39@hexagon.com,Hexagon,Managing Director,SaaS,1000-5000,<1M,warm,organic,2026-05-11
+Deborah,Rivera,deborah.rivera83@asana.com,Asana,Head of Operations,Cloud Infrastructure,500-1000,<1M,hot,partner,2026-05-15
+Ethan,Harris,ethan.harris59@orbitsaas.com,OrbitSaaS,Director of Marketing,MarTech,500-1000,200M-1B,hot,partner,2026-06-09
+Alex,Powell,alex.powell61@sendbird.com,Sendbird,VP Engineering,DevTools,500-1000,<1M,cold,referral,2025-11-24
+Logan,Sanders,logan.sanders27@6sense.com,6sense,Business Development Manager,FinTech,1-10,<1M,warm,outbound,2025-09-01
+Barbara,Edwards,barbara.edwards8@growthco.com,GrowthCo,Growth Manager,Media,200-500,1B+,warm,referral,2026-03-29
+Noah,Cooper,noah.cooper88@monday.com,Monday,Engineering Manager,Real Estate,1000-5000,10-50M,hot,cold_email,2026-01-12
+Hui,Harris,hui.harris95@peakanalytics.com,PeakAnalytics,Founder,E-commerce,5000+,50-200M,hot,paid_ads,2025-07-15
+Yang,Hughes,yang.hughes73@workday.com,Workday,President,Data Analytics,5000+,1B+,hot,paid_ads,2026-02-08
+Carlos,Parker,carlos.parker20@sendbird.com,Sendbird,CEO,Cybersecurity,1-10,<1M,hot,paid_ads,2026-04-02
+Fatima,Chen,fatima.chen9@paloaltonetworks.com,Palo Alto Networks,CTO,EdTech,500-1000,200M-1B,cold,inbound,2026-03-14
+Kavya,Scott,kavya.scott45@iterable.com,Iterable,Customer Success Manager,Data Analytics,500-1000,1-10M,cold,cold_email,2025-06-30
+Steven,Roberts,steven.roberts99@okta.com,Okta,CFO,DevTools,1-10,1-10M,hot,organic,2026-01-15
+Brian,Simmons,brian.simmons48@hotjar.com,Hotjar,Director of Engineering,EdTech,200-500,1-10M,hot,partner,2026-04-27
+Isabella,Powell,isabella.powell59@apollo.com,Apollo,Growth Manager,AI/ML,1000-5000,200M-1B,cold,partner,2025-10-04
+Ryan,Coleman,ryan.coleman70@zoominfo.com,ZoomInfo,VP Sales,Media,10-50,50-200M,hot,partner,2026-05-06
+Matthew,Gray,matthew.gray69@drift.com,Drift,VP Sales,EdTech,1-10,50-200M,warm,conference,2025-10-25
+Noah,Lopez,noah.lopez48@cloudbase.com,CloudBase,Business Development Manager,EdTech,50-200,200M-1B,warm,inbound,2026-06-22
+Deborah,Gray,deborah.gray84@sendbird.com,Sendbird,VP Sales,Manufacturing,200-500,10-50M,cold,paid_ads,2026-01-11
+Xin,Kelly,xin.kelly71@veeva.com,Veeva,COO,HR Tech,10-50,10-50M,hot,paid_ads,2025-09-20
+Emily,Anderson,emily.anderson18@twilio.com,Twilio,Head of Marketing,Media,500-1000,1B+,warm,webinar,2025-10-10
+Anthony,Chen,anthony.chen12@workday.com,Workday,Managing Director,HealthTech,500-1000,<1M,hot,conference,2026-03-07
+Charles,Chen,charles.chen49@slack.com,Slack,Director of Sales,Media,5000+,50-200M,cold,partner,2025-08-17
+Ahmed,Kim,ahmed.kim47@nexustech.com,NexusTech,Head of Sales,Manufacturing,1-10,200M-1B,warm,paid_ads,2026-06-26
+Thomas,James,thomas.james40@cbinsights.com,CB Insights,Head of Product,Real Estate,5000+,50-200M,hot,outbound,2025-07-23
+Logan,Harris,logan.harris88@terminus.com,Terminus,Head of Sales,MarTech,5000+,10-50M,warm,organic,2026-01-31
+Ashley,Gray,ashley.gray22@amplitude.com,Amplitude,Head of Operations,E-commerce,5000+,50-200M,hot,inbound,2025-11-08
+Mark,Scott,mark.scott1@drift.com,Drift,VP Product,Logistics,1-10,10-50M,hot,partner,2025-07-22
+Deborah,Anderson,deborah.anderson89@zendesk.com,Zendesk,Managing Director,Media,5000+,10-50M,warm,referral,2025-07-16
+Michael,Wilson,michael.wilson20@orbitsaas.com,OrbitSaaS,GTM Engineer,E-commerce,5000+,1-10M,cold,cold_email,2025-08-03
+Xin,Hall,xin.hall20@orbitsaas.com,OrbitSaaS,Head of Growth,Cybersecurity,1-10,1B+,hot,inbound,2026-04-06
+Zoe,Kim,zoe.kim56@shopify.com,Shopify,CTO,Media,1-10,1-10M,cold,outbound,2026-03-24
+Isabella,Lewis,isabella.lewis25@amplitude.com,Amplitude,VP Engineering,Consulting,5000+,10-50M,hot,webinar,2026-03-07
+Liam,Perry,liam.perry91@drift.com,Drift,Founder,E-commerce,500-1000,200M-1B,warm,cold_email,2026-03-29
+Joseph,Patel,joseph.patel42@sprinklr.com,Sprinklr,Founder,SaaS,1-10,<1M,cold,conference,2026-01-29
+Daniel,Richardson,daniel.richardson39@salesforce.com,Salesforce,Product Manager,EdTech,50-200,200M-1B,cold,referral,2025-11-16
+Richard,Adams,richard.adams87@snowflake.com,Snowflake,COO,Cloud Infrastructure,10-50,10-50M,warm,outbound,2026-02-22
+Derek,Barnes,derek.barnes54@freshworks.com,Freshworks,Co-Founder,SaaS,50-200,10-50M,cold,webinar,2025-12-01
+Mei,Cooper,mei.cooper49@klaviyo.com,Klaviyo,Growth Manager,Logistics,50-200,1-10M,warm,organic,2026-06-05
+Charles,Brooks,charles.brooks83@sprinklr.com,Sprinklr,Head of Growth,DevTools,1000-5000,<1M,hot,webinar,2026-01-10
+Anita,Robinson,anita.robinson41@intercom.com,Intercom,CEO,HealthTech,50-200,50-200M,warm,organic,2026-01-03
+Carol,Price,carol.price21@sentinelone.com,SentinelOne,Business Development Manager,MarTech,10-50,50-200M,cold,webinar,2026-03-31
+Arjun,Richardson,arjun.richardson17@stripe.com,Stripe,VP Product,Cybersecurity,5000+,<1M,warm,organic,2025-08-07
+Linda,Ramirez,linda.ramirez85@bentley.com,Bentley,VP Engineering,AI/ML,500-1000,1B+,hot,outbound,2025-07-29
+Mason,Roberts,mason.roberts91@financeplus.com,FinancePlus,Head of Operations,HR Tech,500-1000,1B+,hot,webinar,2026-06-10
+David,Roberts,david.roberts55@intercom.com,Intercom,VP Marketing,E-commerce,1-10,50-200M,cold,cold_email,2026-05-25
+Xin,Martin,xin.martin62@vaultai.com,VaultAI,VP Engineering,Cybersecurity,1000-5000,50-200M,hot,partner,2026-03-07
+Michelle,Evans,michelle.evans80@trustpilot.com,Trustpilot,Head of Product,HR Tech,50-200,10-50M,cold,referral,2026-02-20
+Mia,Sanders,mia.sanders69@slack.com,Slack,SDR Manager,Cloud Infrastructure,200-500,10-50M,cold,outbound,2025-10-15
+Lisa,Thomas,lisa.thomas10@sendbird.com,Sendbird,VP Marketing,MarTech,1-10,50-200M,warm,organic,2025-07-17
+Ava,Campbell,ava.campbell70@outreach.com,Outreach,Partnership Manager,AI/ML,1-10,10-50M,cold,referral,2026-05-19
+Xin,Perez,xin.perez87@snowflake.com,Snowflake,Product Manager,Cybersecurity,200-500,1B+,hot,webinar,2025-10-25
+Karen,James,karen.james65@hexagon.com,Hexagon,Head of Operations,Real Estate,1-10,10-50M,cold,partner,2026-03-28
+Emily,Phillips,emily.phillips88@trimble.com,Trimble,CTO,Data Analytics,1-10,50-200M,hot,paid_ads,2026-05-14
+Deborah,Watson,deborah.watson84@zscaler.com,Zscaler,CEO,Consulting,10-50,1B+,hot,outbound,2026-03-05
+Raj,King,raj.king96@crowdstrike.com,CrowdStrike,Partnership Manager,Media,5000+,1B+,cold,linkedin,2026-03-09
+Yang,Murphy,yang.murphy56@hotjar.com,Hotjar,Head of Growth,E-commerce,1000-5000,<1M,cold,cold_email,2025-08-15
+Margaret,Clark,margaret.clark51@zscaler.com,Zscaler,VP Product,Cybersecurity,1-10,50-200M,hot,inbound,2025-09-21
+Fatima,Johnson,fatima.johnson67@clarityhq.com,ClarityHQ,VP Engineering,HealthTech,500-1000,200M-1B,cold,partner,2026-04-07
+Lucas,Carter,lucas.carter79@procore.com,Procore,Head of Marketing,AI/ML,500-1000,200M-1B,hot,outbound,2026-04-02
+Robert,Adams,robert.adams24@launchpad.com,LaunchPad,President,MarTech,5000+,10-50M,hot,organic,2025-10-30
+Liam,Henderson,liam.henderson85@financeplus.com,FinancePlus,SDR Manager,E-commerce,500-1000,10-50M,cold,linkedin,2026-05-18
+Jing,Scott,jing.scott17@sprinklr.com,Sprinklr,CFO,Manufacturing,5000+,50-200M,hot,organic,2025-11-11
+Ahmed,Davis,ahmed.davis8@rapid7.com,Rapid7,Head of Growth,FinTech,10-50,50-200M,warm,linkedin,2026-02-18
+Nancy,Campbell,nancy.campbell40@veeva.com,Veeva,GTM Engineer,HR Tech,1000-5000,50-200M,hot,conference,2025-12-08
+Jun,Brown,jun.brown15@grafana.com,Grafana,VP Sales,E-commerce,5000+,1-10M,warm,conference,2026-04-01
+Emily,Simmons,emily.simmons4@techcorp.com,TechCorp,CFO,Legal Tech,50-200,1B+,hot,linkedin,2026-02-03
+Mason,Rodriguez,mason.rodriguez77@qualified.com,Qualified,Revenue Operations Manager,Real Estate,1000-5000,1B+,cold,outbound,2026-05-20
+Charles,Perez,charles.perez2@intuit.com,Intuit,Marketing Manager,Consulting,50-200,10-50M,warm,conference,2026-02-01
+Sarah,Edwards,sarah.edwards55@confluent.com,Confluent,Solutions Engineer,SaaS,50-200,<1M,hot,inbound,2026-02-04
+Hui,Reed,hui.reed80@techtarget.com,TechTarget,Partnership Manager,Real Estate,50-200,1-10M,hot,linkedin,2026-05-05
+Ashley,Carter,ashley.carter14@trimble.com,Trimble,Marketing Manager,HR Tech,200-500,1B+,cold,outbound,2025-10-23
+Sarah,Bell,sarah.bell96@cloudbase.com,CloudBase,Founder,E-commerce,10-50,1B+,cold,cold_email,2026-05-11
+Aisha,Watson,aisha.watson44@mongodb.com,MongoDB,Partnership Manager,EdTech,500-1000,1-10M,hot,linkedin,2026-02-24
+Ava,Jackson,ava.jackson17@cloudbase.com,CloudBase,Engineering Manager,Media,5000+,1B+,cold,cold_email,2025-12-13
+Isabella,Jackson,isabella.jackson51@revenuepro.com,RevenuePro,Managing Director,Logistics,10-50,1B+,cold,organic,2026-06-10
+Tom,Cox,tom.cox30@peakanalytics.com,PeakAnalytics,VP Product,HR Tech,500-1000,200M-1B,warm,paid_ads,2026-06-03
+Wei,Chen,wei.chen55@6sense.com,6sense,Head of Sales,Real Estate,5000+,<1M,hot,outbound,2026-03-16
+Deborah,Lee,deborah.lee40@paloaltonetworks.com,Palo Alto Networks,President,HR Tech,500-1000,1B+,warm,referral,2026-06-14
+Fang,Brooks,fang.brooks3@vaultai.com,VaultAI,President,FinTech,500-1000,1-10M,cold,cold_email,2026-01-12
+Donald,Young,donald.young83@clarityhq.com,ClarityHQ,Head of Operations,Manufacturing,1-10,1B+,hot,inbound,2026-03-26
+Ahmed,Robinson,ahmed.robinson85@trustpilot.com,Trustpilot,Solutions Engineer,Data Analytics,1000-5000,<1M,hot,webinar,2025-08-10
+Linda,Campbell,linda.campbell90@chorus.com,Chorus,Managing Director,DevTools,1000-5000,200M-1B,warm,conference,2026-04-16
+Joseph,Coleman,joseph.coleman2@veeva.com,Veeva,Head of Growth,FinTech,1000-5000,10-50M,hot,inbound,2025-11-29
+Ibrahim,Williams,ibrahim.williams2@databricks.com,Databricks,Director of Operations,MarTech,10-50,1-10M,warm,conference,2026-02-28
+Nathan,Patterson,nathan.patterson21@scalehq.com,ScaleHQ,Managing Director,Legal Tech,200-500,1-10M,warm,outbound,2025-12-23
+Olivia,Patel,olivia.patel75@qualys.com,Qualys,Head of Sales,Consulting,1-10,200M-1B,hot,organic,2026-01-08
+Aisha,Hall,aisha.hall66@trimble.com,Trimble,VP Product,HR Tech,10-50,200M-1B,cold,referral,2025-08-02
+Kavya,Murphy,kavya.murphy30@fusioncrm.com,FusionCRM,Head of Marketing,EdTech,50-200,1B+,warm,inbound,2026-01-14
+Karen,Chen,karen.chen84@salesforce.com,Salesforce,Growth Manager,Cloud Infrastructure,5000+,1B+,cold,conference,2025-07-17
+Priya,Wilson,priya.wilson83@revlane.com,RevLane,COO,Manufacturing,5000+,10-50M,warm,organic,2025-06-30
+Fang,Taylor,fang.taylor46@bombora.com,Bombora,Engineering Manager,SaaS,10-50,200M-1B,cold,partner,2025-09-16
+Sneha,Clark,sneha.clark45@fullstory.com,FullStory,VP Product,Logistics,5000+,50-200M,cold,outbound,2025-12-11
+Anthony,Kelly,anthony.kelly41@growthco.com,GrowthCo,President,Logistics,200-500,50-200M,cold,partner,2026-01-08
+Richard,Cook,richard.cook77@trustpilot.com,Trustpilot,President,EdTech,1-10,50-200M,cold,linkedin,2026-04-24
+Paul,Perry,paul.perry15@sendbird.com,Sendbird,Head of Growth,Consulting,5000+,<1M,warm,webinar,2025-12-01
+Lucas,Anderson,lucas.anderson77@nexustech.com,NexusTech,Director of Sales,FinTech,200-500,1-10M,warm,cold_email,2026-06-13
+Yusuf,Perez,yusuf.perez7@sendbird.com,Sendbird,VP Marketing,EdTech,50-200,10-50M,hot,conference,2025-08-24
+Nina,White,nina.white69@bombora.com,Bombora,Director of Marketing,AI/ML,10-50,50-200M,cold,cold_email,2026-02-09
+Anita,Carter,anita.carter72@varonis.com,Varonis,Growth Manager,FinTech,1000-5000,10-50M,hot,linkedin,2026-01-14
+Zara,Martinez,zara.martinez26@mixpanel.com,Mixpanel,CTO,AI/ML,5000+,10-50M,hot,linkedin,2026-02-27
+Sandra,Lopez,sandra.lopez44@crunchbase.com,Crunchbase,Co-Founder,Real Estate,200-500,1B+,cold,organic,2026-02-04
+Anthony,Ramirez,anthony.ramirez50@trimble.com,Trimble,COO,HR Tech,1-10,200M-1B,hot,conference,2026-01-06
+Jun,Henderson,jun.henderson12@hotjar.com,Hotjar,Sales Manager,Consulting,10-50,10-50M,cold,inbound,2026-04-20
+Nathan,Johnson,nathan.johnson79@mixpanel.com,Mixpanel,Head of Growth,MarTech,5000+,200M-1B,cold,referral,2026-06-18
+Olivia,Price,olivia.price73@clarityhq.com,ClarityHQ,Managing Director,Legal Tech,200-500,1-10M,hot,webinar,2026-03-04
+Christopher,Harris,christopher.harris26@figma.com,Figma,Head of Product,HR Tech,500-1000,<1M,cold,webinar,2025-08-30
+Amina,Campbell,amina.campbell91@bombora.com,Bombora,Head of Growth,AI/ML,1000-5000,200M-1B,warm,paid_ads,2026-03-05
+Ryan,Clark,ryan.clark38@fortinet.com,Fortinet,Partnership Manager,Legal Tech,500-1000,<1M,hot,webinar,2026-01-27
+Sarah,Chen,sarah.chen82@hexagon.com,Hexagon,Revenue Operations Manager,Real Estate,500-1000,50-200M,hot,organic,2026-01-03
+Sarah,James,sarah.james85@servicenow.com,ServiceNow,CEO,Manufacturing,200-500,10-50M,cold,conference,2025-07-01
+Zara,Parker,zara.parker31@revenuepro.com,RevenuePro,COO,Logistics,5000+,200M-1B,warm,webinar,2026-04-23
+Lisa,Henderson,lisa.henderson21@terminus.com,Terminus,VP Sales,FinTech,1-10,50-200M,hot,cold_email,2025-11-21
+Richard,Jackson,richard.jackson99@clarityhq.com,ClarityHQ,VP Engineering,Real Estate,1000-5000,1B+,hot,linkedin,2026-01-10
+Lucas,Martin,lucas.martin62@chorus.com,Chorus,VP Sales,Data Analytics,500-1000,1B+,hot,organic,2026-02-18
+Betty,Wilson,betty.wilson70@techtarget.com,TechTarget,Co-Founder,DevTools,10-50,200M-1B,warm,cold_email,2026-01-01
+Vikram,Edwards,vikram.edwards17@crunchbase.com,Crunchbase,Product Manager,FinTech,10-50,<1M,hot,cold_email,2025-07-24
+Ibrahim,Jenkins,ibrahim.jenkins60@datadog.com,Datadog,Customer Success Manager,E-commerce,200-500,200M-1B,warm,paid_ads,2025-07-08
+Tom,Wood,tom.wood91@gong.com,Gong,VP Marketing,Media,10-50,1B+,cold,linkedin,2025-12-20
+Fatima,Murphy,fatima.murphy3@asana.com,Asana,Co-Founder,Cloud Infrastructure,1-10,10-50M,cold,outbound,2026-03-01
+David,Chen,david.chen32@pitchbook.com,PitchBook,Revenue Operations Manager,Media,10-50,1B+,warm,partner,2026-05-01
+Priya,Rivera,priya.rivera99@mixpanel.com,Mixpanel,Engineering Manager,HealthTech,1-10,1B+,warm,organic,2025-09-27
+Mason,Powell,mason.powell58@twilio.com,Twilio,Customer Success Manager,Cybersecurity,200-500,10-50M,cold,inbound,2026-06-10
+Thomas,Torres,thomas.torres92@apollo.com,Apollo,Head of Growth,Logistics,10-50,50-200M,hot,referral,2025-09-11
+Richard,Bell,richard.bell21@autodesk.com,Autodesk,Sales Manager,Cloud Infrastructure,10-50,50-200M,cold,paid_ads,2026-04-03
+Robert,Young,robert.young18@trustpilot.com,Trustpilot,CEO,Data Analytics,500-1000,50-200M,hot,paid_ads,2025-08-30
+Lei,Wilson,lei.wilson28@zendesk.com,Zendesk,VP Sales,HealthTech,10-50,200M-1B,warm,organic,2026-01-30
+Robert,Chen,robert.chen40@demandbase.com,Demandbase,Director of Marketing,AI/ML,200-500,1-10M,cold,referral,2025-11-16
+Fatou,Hughes,fatou.hughes81@metadata.com,Metadata,CEO,Manufacturing,5000+,50-200M,warm,cold_email,2026-02-07
+Amina,Turner,amina.turner82@workday.com,Workday,VP Engineering,EdTech,500-1000,1B+,warm,cold_email,2025-10-13
+Alex,Martinez,alex.martinez61@financeplus.com,FinancePlus,Director of Engineering,MarTech,5000+,<1M,hot,partner,2026-06-25
+Charles,Hernandez,charles.hernandez14@zendesk.com,Zendesk,Solutions Engineer,Data Analytics,200-500,200M-1B,hot,conference,2025-09-07
+Melissa,Torres,melissa.torres79@hashicorp.com,HashiCorp,VP Marketing,Consulting,50-200,10-50M,hot,outbound,2026-06-06
+Paul,Bell,paul.bell20@klaviyo.com,Klaviyo,Sales Manager,EdTech,10-50,<1M,hot,paid_ads,2026-05-22
+Karen,Rodriguez,karen.rodriguez55@hexagon.com,Hexagon,Head of Growth,HR Tech,5000+,50-200M,warm,referral,2026-04-26
+Sneha,Sanders,sneha.sanders8@trustpilot.com,Trustpilot,Co-Founder,Cloud Infrastructure,1-10,200M-1B,hot,outbound,2025-07-28
+Layla,Bennett,layla.bennett98@sprinklr.com,Sprinklr,Account Executive,FinTech,10-50,200M-1B,warm,outbound,2026-06-26
+Mason,Jackson,mason.jackson59@crowdstrike.com,CrowdStrike,GTM Engineer,E-commerce,200-500,1-10M,hot,outbound,2025-07-20
+Ashley,Wood,ashley.wood17@nexgen.com,NexGen,GTM Engineer,MarTech,5000+,50-200M,cold,conference,2026-04-27
+Donald,Allen,donald.allen36@zendesk.com,Zendesk,CFO,Cybersecurity,200-500,50-200M,hot,outbound,2025-08-18
+Ethan,Brown,ethan.brown39@qualys.com,Qualys,Director of Sales,HealthTech,1-10,1B+,warm,referral,2025-08-16
+Ahmed,Thompson,ahmed.thompson23@clay.com,Clay,Head of Sales,Manufacturing,500-1000,1-10M,warm,organic,2026-05-29
+Emma,Gray,emma.gray9@datastream.com,DataStream,VP Marketing,AI/ML,50-200,200M-1B,hot,linkedin,2025-07-21
+Hassan,Williams,hassan.williams94@mongodb.com,MongoDB,CTO,Consulting,1-10,<1M,warm,referral,2025-12-03
+Christopher,Kelly,christopher.kelly96@klaviyo.com,Klaviyo,Director of Marketing,FinTech,10-50,1-10M,warm,conference,2025-08-23
+Nathan,Lewis,nathan.lewis31@launchpad.com,LaunchPad,CTO,SaaS,50-200,50-200M,hot,webinar,2025-07-02
+Amit,Allen,amit.allen2@workday.com,Workday,Business Development Manager,EdTech,200-500,10-50M,hot,cold_email,2025-11-21
+Emily,Kelly,emily.kelly66@klaviyo.com,Klaviyo,VP Engineering,EdTech,10-50,200M-1B,cold,partner,2026-03-08
+Brian,Cooper,brian.cooper37@chorus.com,Chorus,Head of Product,FinTech,1-10,200M-1B,cold,cold_email,2025-12-30
+Steven,Hill,steven.hill69@mongodb.com,MongoDB,Managing Director,Legal Tech,200-500,50-200M,warm,linkedin,2026-06-25
+Robert,Bennett,robert.bennett48@paloaltonetworks.com,Palo Alto Networks,VP Sales,Real Estate,1000-5000,1-10M,warm,organic,2025-10-25
+David,Cox,david.cox55@adobe.com,Adobe,Marketing Manager,Consulting,500-1000,200M-1B,hot,partner,2026-06-03
+Yusuf,Sanders,yusuf.sanders66@trimble.com,Trimble,CFO,SaaS,500-1000,50-200M,cold,organic,2025-12-28
+Carol,Morris,carol.morris29@fullstory.com,FullStory,CFO,Consulting,1-10,50-200M,cold,cold_email,2025-09-05
+Derek,Rogers,derek.rogers15@datastream.com,DataStream,VP Sales,Cybersecurity,10-50,50-200M,cold,cold_email,2026-06-28
+Mason,Richardson,mason.richardson1@fullstory.com,FullStory,Director of Engineering,EdTech,5000+,<1M,cold,linkedin,2026-04-11
+Hannah,Harris,hannah.harris96@attentive.com,Attentive,Sales Manager,Real Estate,10-50,1-10M,warm,cold_email,2026-04-12
+Thomas,Brooks,thomas.brooks12@asana.com,Asana,Business Development Manager,MarTech,1000-5000,10-50M,cold,inbound,2026-05-19
+Maria,Wilson,maria.wilson46@figma.com,Figma,Sales Manager,E-commerce,10-50,200M-1B,cold,paid_ads,2026-01-06
+Amina,Robinson,amina.robinson21@klaviyo.com,Klaviyo,Marketing Manager,Media,500-1000,10-50M,cold,conference,2025-08-17
+Paul,Ramirez,paul.ramirez55@shopify.com,Shopify,Co-Founder,Manufacturing,50-200,<1M,cold,outbound,2025-10-18
+Arjun,Murphy,arjun.murphy58@outreach.com,Outreach,COO,Consulting,200-500,1B+,warm,linkedin,2026-05-27
+James,Reed,james.reed90@zoominfo.com,ZoomInfo,Head of Growth,SaaS,5000+,50-200M,warm,webinar,2025-11-04
+Linda,Perry,linda.perry83@klaviyo.com,Klaviyo,VP Product,Manufacturing,1-10,200M-1B,warm,conference,2026-03-16
+Mei,Sanders,mei.sanders98@workday.com,Workday,CEO,Cybersecurity,50-200,200M-1B,hot,outbound,2025-08-10
+Ethan,Parker,ethan.parker37@paloaltonetworks.com,Palo Alto Networks,Head of Product,EdTech,50-200,1B+,warm,outbound,2025-12-21
+Nancy,Chen,nancy.chen15@confluent.com,Confluent,Revenue Operations Manager,SaaS,500-1000,10-50M,cold,conference,2026-04-23
+Joseph,Reed,joseph.reed95@coupa.com,Coupa,CFO,SaaS,10-50,200M-1B,cold,referral,2026-02-25
+Yusuf,Wood,yusuf.wood69@mixpanel.com,Mixpanel,Revenue Operations Manager,SaaS,5000+,50-200M,hot,conference,2025-12-26
+Aisha,Garcia,aisha.garcia8@bombora.com,Bombora,COO,MarTech,50-200,<1M,cold,outbound,2025-09-02
+Michael,Mitchell,michael.mitchell14@peakanalytics.com,PeakAnalytics,Solutions Engineer,SaaS,10-50,50-200M,cold,cold_email,2025-08-26
+Xin,Henderson,xin.henderson38@mongodb.com,MongoDB,Product Manager,Logistics,200-500,1B+,cold,inbound,2026-01-05
+Lei,Brown,lei.brown17@servicenow.com,ServiceNow,President,Consulting,1000-5000,1-10M,warm,referral,2025-10-31
+Andrew,Harris,andrew.harris7@autodesk.com,Autodesk,CMO,FinTech,1000-5000,10-50M,warm,partner,2026-02-10
+Linda,Cook,linda.cook49@clari.com,Clari,Co-Founder,HR Tech,1-10,50-200M,cold,outbound,2025-09-03
+Dorothy,Hernandez,dorothy.hernandez50@amplitude.com,Amplitude,VP Sales,HealthTech,5000+,1-10M,cold,webinar,2026-01-17
+Pooja,Ross,pooja.ross99@intercom.com,Intercom,Account Executive,Consulting,50-200,1-10M,hot,cold_email,2026-06-11
+Emily,Baker,emily.baker58@zerotoone.com,ZeroToOne,President,MarTech,1000-5000,200M-1B,hot,outbound,2025-08-11
+Steven,Nelson,steven.nelson21@mongodb.com,MongoDB,Product Manager,Real Estate,1000-5000,<1M,warm,organic,2025-12-23
+Joseph,Lopez,joseph.lopez90@demandbase.com,Demandbase,Head of Marketing,FinTech,1000-5000,1-10M,hot,cold_email,2026-05-16
+Yusuf,King,yusuf.king91@zscaler.com,Zscaler,Sales Manager,Manufacturing,200-500,1-10M,warm,inbound,2026-01-10
+Jennifer,Phillips,jennifer.phillips1@rollworks.com,RollWorks,CMO,HealthTech,1-10,10-50M,hot,referral,2026-03-01
+Joseph,Price,joseph.price4@veeva.com,Veeva,Head of Operations,DevTools,5000+,50-200M,cold,organic,2026-03-14
+Raj,Lopez,raj.lopez2@intuit.com,Intuit,Business Development Manager,HR Tech,200-500,<1M,warm,linkedin,2026-04-30
+Emily,Wright,emily.wright58@varonis.com,Varonis,Director of Operations,Consulting,200-500,1B+,cold,inbound,2026-05-22
+Jennifer,Ramirez,jennifer.ramirez2@zscaler.com,Zscaler,Head of Product,Data Analytics,5000+,1B+,hot,webinar,2026-04-21
+Sneha,Howard,sneha.howard85@zerotoone.com,ZeroToOne,Growth Manager,Real Estate,5000+,200M-1B,cold,referral,2026-05-29
+Joshua,Bell,joshua.bell36@drift.com,Drift,Head of Growth,FinTech,1000-5000,10-50M,hot,webinar,2026-05-14
+Maria,Gray,maria.gray90@pitchbook.com,PitchBook,Sales Manager,Cybersecurity,5000+,50-200M,cold,paid_ads,2026-01-11
+Yusuf,Kim,yusuf.kim59@pipelineai.com,PipelineAI,Growth Manager,Logistics,10-50,<1M,cold,paid_ads,2026-01-14
+Fatima,Parker,fatima.parker12@capterra.com,Capterra,Product Manager,EdTech,1-10,1B+,hot,cold_email,2025-08-21
+Kavya,Campbell,kavya.campbell47@orbitsaas.com,OrbitSaaS,Revenue Operations Manager,Consulting,1000-5000,1B+,cold,organic,2025-09-02
+Mia,Wright,mia.wright46@amplitude.com,Amplitude,Founder,FinTech,50-200,<1M,cold,conference,2025-08-24
+Alex,White,alex.white37@vaultai.com,VaultAI,VP Engineering,Consulting,500-1000,200M-1B,cold,conference,2025-12-08
+Charles,Butler,charles.butler45@autodesk.com,Autodesk,General Manager,MarTech,1000-5000,1-10M,warm,paid_ads,2026-02-09
+Anthony,Edwards,anthony.edwards69@apollo.com,Apollo,Head of Growth,AI/ML,10-50,1-10M,hot,partner,2025-12-03
+Charles,Watson,charles.watson45@datadog.com,Datadog,Account Executive,Cloud Infrastructure,50-200,200M-1B,hot,conference,2025-08-26
+Mei,Bailey,mei.bailey44@scalehq.com,ScaleHQ,Marketing Manager,Legal Tech,10-50,50-200M,hot,partner,2026-05-21
+Kenneth,Harris,kenneth.harris86@peakanalytics.com,PeakAnalytics,SDR Manager,DevTools,200-500,<1M,hot,linkedin,2026-06-01
+Matthew,Garcia,matthew.garcia44@cbinsights.com,CB Insights,Marketing Manager,SaaS,500-1000,50-200M,cold,conference,2026-03-14
+Thomas,Jenkins,thomas.jenkins96@demandbase.com,Demandbase,Director of Operations,FinTech,200-500,1-10M,warm,linkedin,2026-02-10
+Nadia,Wilson,nadia.wilson54@stripe.com,Stripe,Marketing Manager,Media,1000-5000,1-10M,hot,inbound,2026-03-06
+Steven,Simmons,steven.simmons59@fullstory.com,FullStory,CFO,Legal Tech,50-200,1B+,warm,outbound,2026-03-20
+Raj,Martin,raj.martin75@gong.com,Gong,Account Executive,Logistics,5000+,200M-1B,warm,outbound,2026-01-15
+Derek,Flores,derek.flores77@pitchbook.com,PitchBook,President,Consulting,10-50,50-200M,hot,inbound,2025-08-13
+Linda,Parker,linda.parker25@veeva.com,Veeva,CFO,Manufacturing,5000+,<1M,cold,outbound,2026-06-10
+Karen,Peterson,karen.peterson46@capterra.com,Capterra,Solutions Engineer,HR Tech,5000+,10-50M,hot,organic,2025-07-27
+Yang,Reed,yang.reed9@databricks.com,Databricks,Director of Sales,FinTech,1-10,1-10M,warm,inbound,2026-05-10
+Susan,Martin,susan.martin36@cbinsights.com,CB Insights,Growth Manager,Manufacturing,200-500,200M-1B,cold,organic,2026-03-02
+Tom,Allen,tom.allen80@bentley.com,Bentley,Sales Manager,Consulting,5000+,50-200M,warm,outbound,2026-04-13
+Fatima,Ramirez,fatima.ramirez1@notion.com,Notion,Co-Founder,E-commerce,5000+,10-50M,hot,cold_email,2025-08-03
+Nancy,Perry,nancy.perry41@qualified.com,Qualified,Product Manager,Manufacturing,5000+,50-200M,warm,webinar,2026-05-04
+Donald,Sanchez,donald.sanchez22@grafana.com,Grafana,GTM Engineer,E-commerce,10-50,10-50M,warm,outbound,2026-06-05
+Matthew,Cooper,matthew.cooper67@sprinklr.com,Sprinklr,Co-Founder,Consulting,500-1000,<1M,warm,paid_ads,2026-06-08
+William,Ramirez,william.ramirez7@freshworks.com,Freshworks,VP Engineering,Data Analytics,200-500,10-50M,hot,inbound,2025-08-31
+Lisa,Flores,lisa.flores44@tenable.com,Tenable,Revenue Operations Manager,Cloud Infrastructure,10-50,<1M,hot,webinar,2025-07-02
+Linda,Williams,linda.williams50@coupa.com,Coupa,VP Marketing,Manufacturing,200-500,1B+,hot,webinar,2025-11-30
+Emma,Rodriguez,emma.rodriguez43@gong.com,Gong,Director of Sales,Legal Tech,500-1000,50-200M,hot,cold_email,2025-08-16
+Priya,Carter,priya.carter67@capterra.com,Capterra,Engineering Manager,E-commerce,200-500,1-10M,hot,outbound,2026-05-15
+Ava,Bell,ava.bell44@fullstory.com,FullStory,CMO,MarTech,5000+,<1M,warm,partner,2026-03-08
+Pooja,Martin,pooja.martin68@grafana.com,Grafana,Head of Product,Manufacturing,10-50,1-10M,warm,conference,2026-05-19
+Carlos,Lopez,carlos.lopez3@mixpanel.com,Mixpanel,Director of Engineering,Legal Tech,50-200,10-50M,hot,organic,2025-08-28
+Donna,Sanders,donna.sanders78@iterable.com,Iterable,Head of Operations,Data Analytics,10-50,1B+,cold,cold_email,2025-08-30
+Ali,Mitchell,ali.mitchell99@outreach.com,Outreach,Engineering Manager,AI/ML,50-200,50-200M,cold,inbound,2025-12-22
+Kevin,Jenkins,kevin.jenkins95@zscaler.com,Zscaler,Revenue Operations Manager,Manufacturing,500-1000,50-200M,hot,paid_ads,2026-02-20
+Hassan,Howard,hassan.howard9@intercom.com,Intercom,Growth Manager,Logistics,1-10,10-50M,warm,paid_ads,2026-05-19
+Jing,Hill,jing.hill90@figma.com,Figma,Head of Sales,HealthTech,1-10,1-10M,cold,conference,2025-10-06
+Matthew,Rodriguez,matthew.rodriguez2@datadog.com,Datadog,Director of Sales,Legal Tech,1000-5000,<1M,cold,referral,2025-11-26
+Andrew,Hernandez,andrew.hernandez50@procore.com,Procore,Founder,Real Estate,5000+,<1M,cold,outbound,2025-07-13
+Ling,Roberts,ling.roberts23@snowflake.com,Snowflake,CEO,Real Estate,5000+,10-50M,cold,inbound,2025-08-25
+Amanda,Perry,amanda.perry85@clay.com,Clay,Head of Sales,Manufacturing,1-10,50-200M,cold,paid_ads,2025-09-14
+Jessica,Simmons,jessica.simmons40@ptc.com,PTC,Director of Engineering,Cloud Infrastructure,500-1000,<1M,hot,inbound,2025-09-03
+Yusuf,Clark,yusuf.clark62@revlane.com,RevLane,Business Development Manager,Media,1-10,1-10M,cold,referral,2026-05-12
+Nathan,Hughes,nathan.hughes99@ptc.com,PTC,Co-Founder,FinTech,50-200,<1M,warm,inbound,2025-10-24
+Ethan,Cook,ethan.cook24@veeva.com,Veeva,Director of Operations,Real Estate,500-1000,10-50M,hot,referral,2025-06-29
+Raj,Hernandez,raj.hernandez66@pipelineai.com,PipelineAI,Director of Engineering,Logistics,200-500,50-200M,warm,conference,2026-02-17
+Anita,Campbell,anita.campbell37@elastic.com,Elastic,VP Marketing,E-commerce,5000+,1-10M,cold,organic,2025-12-08
+Derek,James,derek.james12@gong.com,Gong,CEO,DevTools,50-200,10-50M,hot,linkedin,2025-07-10
+Amanda,Parker,amanda.parker1@adobe.com,Adobe,CEO,Cybersecurity,1-10,50-200M,cold,organic,2025-11-26
+Susan,Hill,susan.hill58@veeva.com,Veeva,Director of Operations,HR Tech,5000+,1-10M,cold,referral,2026-01-06
+Michael,Hernandez,michael.hernandez76@nexustech.com,NexusTech,Head of Marketing,DevTools,200-500,1-10M,cold,outbound,2025-11-02
+Rahul,Robinson,rahul.robinson99@rollworks.com,RollWorks,Growth Manager,Cloud Infrastructure,50-200,1B+,warm,paid_ads,2026-04-26
+Carlos,Henderson,carlos.henderson74@databricks.com,Databricks,Head of Sales,Legal Tech,1000-5000,200M-1B,hot,webinar,2026-02-13
+Fatou,Ward,fatou.ward98@coupa.com,Coupa,Founder,Cloud Infrastructure,10-50,50-200M,hot,conference,2025-07-07
+Christopher,Barnes,christopher.barnes69@outreach.com,Outreach,Director of Marketing,HealthTech,500-1000,<1M,cold,inbound,2026-05-17
+Hassan,Harris,hassan.harris71@pipelineai.com,PipelineAI,Head of Operations,HR Tech,200-500,1B+,cold,cold_email,2025-12-31
+Isabella,Sanders,isabella.sanders23@databricks.com,Databricks,Managing Director,Consulting,10-50,1B+,hot,linkedin,2025-07-24
+Maria,Barnes,maria.barnes40@nexustech.com,NexusTech,CEO,HealthTech,1-10,50-200M,cold,webinar,2026-04-11
+Vikram,Coleman,vikram.coleman88@paloaltonetworks.com,Palo Alto Networks,Founder,MarTech,5000+,50-200M,warm,organic,2025-09-06
+Betty,Chen,betty.chen50@fullstory.com,FullStory,Founder,AI/ML,1-10,10-50M,cold,organic,2026-06-10
+Ibrahim,Lopez,ibrahim.lopez41@cbinsights.com,CB Insights,Product Manager,Cloud Infrastructure,10-50,50-200M,warm,cold_email,2025-08-16
+Kevin,Rivera,kevin.rivera32@pitchbook.com,PitchBook,Managing Director,E-commerce,10-50,1B+,warm,linkedin,2025-11-10
+William,Anderson,william.anderson53@sendbird.com,Sendbird,VP Product,SaaS,50-200,1B+,cold,webinar,2025-09-28
+Aisha,Barnes,aisha.barnes85@trustpilot.com,Trustpilot,Account Executive,HR Tech,1000-5000,10-50M,warm,webinar,2025-07-18
+Michelle,Bailey,michelle.bailey93@shopify.com,Shopify,Head of Growth,Manufacturing,500-1000,<1M,hot,paid_ads,2025-11-19
+Nina,Mitchell,nina.mitchell41@trustpilot.com,Trustpilot,Sales Manager,Consulting,1-10,1B+,cold,paid_ads,2026-05-05
+Tom,Turner,tom.turner89@outreach.com,Outreach,Partnership Manager,Legal Tech,200-500,1B+,cold,outbound,2026-03-14
+Jing,Hall,jing.hall69@terminus.com,Terminus,Head of Operations,Media,5000+,10-50M,hot,cold_email,2026-02-06
+Matthew,Torres,matthew.torres16@hotjar.com,Hotjar,VP Sales,DevTools,5000+,1-10M,hot,partner,2025-12-21
+Nina,Phillips,nina.phillips52@rollworks.com,RollWorks,Co-Founder,Manufacturing,500-1000,10-50M,warm,referral,2025-11-11
+Sarah,Collins,sarah.collins54@nexustech.com,NexusTech,Solutions Engineer,SaaS,1000-5000,200M-1B,cold,partner,2025-10-09
+Logan,Parker,logan.parker15@terminus.com,Terminus,Partnership Manager,Media,500-1000,1B+,warm,conference,2026-04-14
+Michelle,Patterson,michelle.patterson36@crowdstrike.com,CrowdStrike,CFO,E-commerce,500-1000,<1M,warm,cold_email,2026-01-13
+Karen,Thomas,karen.thomas45@amplitude.com,Amplitude,Account Executive,MarTech,1-10,<1M,warm,referral,2026-02-28
+Yang,Torres,yang.torres26@hexagon.com,Hexagon,Managing Director,Data Analytics,50-200,10-50M,cold,cold_email,2025-08-25
+Omar,Wood,omar.wood3@hashicorp.com,HashiCorp,Head of Marketing,Logistics,50-200,1B+,cold,conference,2025-10-09
+Susan,Butler,susan.butler46@snowflake.com,Snowflake,Managing Director,FinTech,10-50,1-10M,warm,cold_email,2025-12-30
+Joshua,Collins,joshua.collins96@pipelineai.com,PipelineAI,Head of Product,Media,10-50,<1M,warm,webinar,2025-09-09
+Alex,Perez,alex.perez8@clarityhq.com,ClarityHQ,Account Executive,Data Analytics,200-500,200M-1B,cold,webinar,2026-06-15
+Liam,Chen,liam.chen71@mixpanel.com,Mixpanel,Growth Manager,HealthTech,10-50,10-50M,warm,linkedin,2025-07-13
+Michael,Bailey,michael.bailey94@apollo.com,Apollo,Director of Marketing,EdTech,500-1000,1B+,warm,outbound,2025-10-25
+Sarah,Bailey,sarah.bailey30@nexustech.com,NexusTech,Managing Director,MarTech,200-500,1B+,warm,linkedin,2026-06-07
+Michelle,Evans,michelle.evans88@techcorp.com,TechCorp,Founder,DevTools,1-10,1-10M,hot,referral,2025-12-21
+Dorothy,Hughes,dorothy.hughes15@demandbase.com,Demandbase,VP Marketing,Logistics,10-50,50-200M,hot,inbound,2025-09-22
+Brian,Reed,brian.reed79@hubspot.com,HubSpot,Customer Success Manager,FinTech,200-500,10-50M,warm,cold_email,2025-10-11
+Ahmed,Martin,ahmed.martin56@databricks.com,Databricks,Head of Marketing,HR Tech,500-1000,10-50M,hot,organic,2026-01-05
+Kavya,Murphy,kavya.murphy16@rollworks.com,RollWorks,Head of Operations,Media,500-1000,<1M,hot,inbound,2026-06-15
+Sneha,Collins,sneha.collins44@okta.com,Okta,Business Development Manager,Media,5000+,10-50M,warm,referral,2025-12-15
+Carlos,Turner,carlos.turner48@capterra.com,Capterra,SDR Manager,E-commerce,500-1000,1-10M,cold,organic,2025-08-15
+Carlos,Chen,carlos.chen13@figma.com,Figma,Head of Marketing,Legal Tech,10-50,50-200M,cold,outbound,2026-01-30
+Charlotte,Roberts,charlotte.roberts62@rollworks.com,RollWorks,COO,Legal Tech,50-200,<1M,cold,conference,2026-02-19
+Charlotte,Bell,charlotte.bell72@bombora.com,Bombora,Account Executive,MarTech,50-200,1B+,cold,referral,2025-07-09
+Ling,Campbell,ling.campbell22@growthsignal.com,GrowthSignal,Engineering Manager,Consulting,1-10,10-50M,cold,paid_ads,2025-08-25
+James,Wilson,james.wilson7@sendbird.com,Sendbird,President,Cloud Infrastructure,500-1000,1-10M,hot,webinar,2025-12-22
+James,Lopez,james.lopez19@hubspot.com,HubSpot,Growth Manager,Media,1000-5000,1-10M,warm,paid_ads,2026-03-20
+Mia,Ramirez,mia.ramirez78@shopify.com,Shopify,VP Marketing,Consulting,50-200,200M-1B,warm,outbound,2026-05-03
+Zoe,Baker,zoe.baker67@gong.com,Gong,Head of Product,EdTech,1000-5000,1B+,hot,partner,2026-01-08
+Jing,Ramirez,jing.ramirez34@qualys.com,Qualys,Director of Marketing,DevTools,1-10,10-50M,cold,paid_ads,2026-01-04
+Amina,Adams,amina.adams70@figma.com,Figma,Engineering Manager,Consulting,10-50,1B+,hot,webinar,2025-09-10
+Susan,Ross,susan.ross48@6sense.com,6sense,Sales Manager,Manufacturing,50-200,50-200M,hot,linkedin,2026-02-20
+Mark,Davis,mark.davis35@stripe.com,Stripe,Director of Engineering,Data Analytics,10-50,10-50M,warm,partner,2025-10-12
+Lisa,Murphy,lisa.murphy12@confluent.com,Confluent,Business Development Manager,Consulting,5000+,50-200M,warm,inbound,2026-06-15
+Betty,Patel,betty.patel6@intuit.com,Intuit,President,HR Tech,5000+,200M-1B,warm,organic,2025-10-13
+Fatima,Jackson,fatima.jackson41@cbinsights.com,CB Insights,Director of Sales,Consulting,500-1000,1-10M,hot,webinar,2026-02-09
+Andrew,Garcia,andrew.garcia34@sendbird.com,Sendbird,Co-Founder,Manufacturing,10-50,1-10M,cold,inbound,2025-11-13
+Priya,Johnson,priya.johnson71@lusha.com,Lusha,Founder,Legal Tech,1-10,1B+,cold,webinar,2026-06-15
+Mason,Reed,mason.reed5@fusioncrm.com,FusionCRM,Partnership Manager,Logistics,50-200,200M-1B,hot,cold_email,2026-03-25
+Emma,Walker,emma.walker22@adobe.com,Adobe,Growth Manager,SaaS,1000-5000,10-50M,hot,paid_ads,2026-06-25
+Susan,Harris,susan.harris93@salesforce.com,Salesforce,Product Manager,E-commerce,50-200,1B+,hot,outbound,2025-10-25
+Sneha,Stewart,sneha.stewart43@techcorp.com,TechCorp,VP Marketing,FinTech,1-10,1B+,warm,inbound,2025-12-08
+Fang,Roberts,fang.roberts13@pipelineai.com,PipelineAI,Head of Product,E-commerce,50-200,1-10M,warm,linkedin,2026-04-11
+Fang,Long,fang.long63@asana.com,Asana,CEO,E-commerce,10-50,10-50M,hot,cold_email,2025-09-21
+Carlos,James,carlos.james47@trimble.com,Trimble,Business Development Manager,MarTech,5000+,1B+,warm,paid_ads,2026-05-29
+Emily,Perez,emily.perez4@mongodb.com,MongoDB,COO,Real Estate,1000-5000,10-50M,cold,outbound,2025-12-27
+Wei,Davis,wei.davis49@pipelineai.com,PipelineAI,Head of Operations,E-commerce,1000-5000,50-200M,warm,linkedin,2026-02-04
+Lisa,Patel,lisa.patel57@growthco.com,GrowthCo,CFO,Consulting,10-50,10-50M,warm,referral,2025-12-02
+Joshua,Richardson,joshua.richardson61@braze.com,Braze,Account Executive,SaaS,5000+,<1M,warm,partner,2026-03-17
+Melissa,Lewis,melissa.lewis60@confluent.com,Confluent,Founder,SaaS,50-200,50-200M,cold,inbound,2025-10-12
+Michael,Taylor,michael.taylor28@scalehq.com,ScaleHQ,Head of Marketing,Media,1-10,10-50M,hot,organic,2026-02-25
+Carol,Robinson,carol.robinson90@6sense.com,6sense,Head of Product,EdTech,1000-5000,1B+,hot,outbound,2026-05-12
+Wei,Ward,wei.ward94@vaultai.com,VaultAI,SDR Manager,HealthTech,50-200,1-10M,hot,linkedin,2026-02-21
+Amanda,Young,amanda.young57@pipelineai.com,PipelineAI,SDR Manager,HealthTech,1000-5000,1-10M,cold,linkedin,2025-07-02
+Steven,Torres,steven.torres62@varonis.com,Varonis,VP Product,EdTech,10-50,1-10M,warm,cold_email,2026-03-31
+Pooja,Coleman,pooja.coleman7@launchpad.com,LaunchPad,Growth Manager,MarTech,1000-5000,10-50M,hot,webinar,2026-04-19
+Mia,Butler,mia.butler8@freshworks.com,Freshworks,Head of Marketing,HR Tech,500-1000,1B+,hot,paid_ads,2025-12-24
+Christopher,Gray,christopher.gray51@iterable.com,Iterable,President,SaaS,10-50,10-50M,warm,conference,2025-11-02
+Matthew,Perry,matthew.perry42@fusioncrm.com,FusionCRM,VP Product,EdTech,1-10,<1M,cold,conference,2025-09-07
+Hannah,Rogers,hannah.rogers97@crowdstrike.com,CrowdStrike,COO,FinTech,200-500,200M-1B,hot,referral,2026-04-02
+Emma,Nelson,emma.nelson39@crowdstrike.com,CrowdStrike,Revenue Operations Manager,EdTech,50-200,50-200M,hot,cold_email,2025-09-23
+Betty,King,betty.king75@klaviyo.com,Klaviyo,Sales Manager,Cloud Infrastructure,50-200,10-50M,hot,inbound,2026-05-27
+Paul,Young,paul.young43@freshworks.com,Freshworks,VP Product,Legal Tech,500-1000,50-200M,cold,outbound,2026-03-30
+Emily,Ross,emily.ross51@financeplus.com,FinancePlus,Partnership Manager,Manufacturing,10-50,1-10M,hot,outbound,2026-01-07
+Fatima,Wilson,fatima.wilson77@zoom.com,Zoom,Customer Success Manager,Media,1000-5000,50-200M,cold,inbound,2026-02-06
+Steven,Martin,steven.martin62@rapid7.com,Rapid7,Growth Manager,Data Analytics,10-50,50-200M,hot,webinar,2026-01-07
+Robert,Martin,robert.martin44@datadog.com,Datadog,Head of Growth,Consulting,5000+,<1M,hot,paid_ads,2026-04-15
+Paul,Kim,paul.kim38@iterable.com,Iterable,Head of Sales,Data Analytics,200-500,50-200M,warm,partner,2025-10-28
+Carol,Collins,carol.collins72@terminus.com,Terminus,Business Development Manager,Logistics,10-50,1B+,warm,referral,2025-12-13
+Xin,Carter,xin.carter53@bentley.com,Bentley,Business Development Manager,EdTech,5000+,<1M,cold,inbound,2026-02-13
+Kenneth,Anderson,kenneth.anderson94@rapid7.com,Rapid7,Engineering Manager,Manufacturing,10-50,<1M,cold,referral,2025-11-16
+Tom,Adams,tom.adams47@rapid7.com,Rapid7,Director of Operations,AI/ML,500-1000,10-50M,cold,referral,2025-08-20
+Betty,Campbell,betty.campbell59@nexustech.com,NexusTech,Growth Manager,Manufacturing,200-500,1B+,cold,organic,2025-12-12
+Melissa,Coleman,melissa.coleman61@attentive.com,Attentive,Head of Growth,Manufacturing,1-10,10-50M,hot,cold_email,2025-12-15
+Charlotte,Cook,charlotte.cook6@hexagon.com,Hexagon,Revenue Operations Manager,Consulting,500-1000,50-200M,hot,conference,2025-09-13
+Karen,Reed,karen.reed20@zscaler.com,Zscaler,Co-Founder,Real Estate,10-50,<1M,cold,paid_ads,2025-11-25
+Emily,Gray,emily.gray61@metadata.com,Metadata,President,Consulting,500-1000,<1M,warm,organic,2025-10-20
+Wei,Hughes,wei.hughes24@zscaler.com,Zscaler,VP Marketing,FinTech,5000+,1-10M,cold,referral,2025-07-25
+Susan,Scott,susan.scott8@peakanalytics.com,PeakAnalytics,Director of Operations,Consulting,5000+,50-200M,warm,cold_email,2025-11-13
+Alex,Sanchez,alex.sanchez75@demandbase.com,Demandbase,CEO,HealthTech,10-50,<1M,hot,conference,2026-05-18
+Rahul,Perez,rahul.perez73@clay.com,Clay,Revenue Operations Manager,Data Analytics,10-50,1-10M,cold,referral,2025-12-27
+Fatima,Walker,fatima.walker40@veeva.com,Veeva,GTM Engineer,Media,1000-5000,10-50M,warm,paid_ads,2025-11-11
+Lisa,Morris,lisa.morris4@capterra.com,Capterra,President,Data Analytics,500-1000,200M-1B,warm,cold_email,2026-02-06
+Margaret,Chen,margaret.chen67@revlane.com,RevLane,Growth Manager,Legal Tech,200-500,50-200M,warm,webinar,2025-12-02
+Dorothy,Simmons,dorothy.simmons32@lusha.com,Lusha,CTO,Manufacturing,5000+,200M-1B,hot,webinar,2026-05-12
+Michelle,Reed,michelle.reed46@datastream.com,DataStream,VP Product,HealthTech,5000+,1-10M,cold,conference,2025-12-05
+Sneha,Jenkins,sneha.jenkins98@glassdoor.com,Glassdoor,Co-Founder,Legal Tech,1000-5000,200M-1B,warm,organic,2025-08-13
+Joseph,Torres,joseph.torres32@nexgen.com,NexGen,Head of Product,HR Tech,1000-5000,<1M,hot,outbound,2025-08-21
+Amina,Kelly,amina.kelly67@fortinet.com,Fortinet,GTM Engineer,EdTech,1-10,1-10M,hot,outbound,2025-11-05
+Michelle,Harris,michelle.harris45@pipelineai.com,PipelineAI,Head of Operations,FinTech,500-1000,200M-1B,hot,linkedin,2026-04-12
+Kavya,Taylor,kavya.taylor52@drift.com,Drift,Director of Engineering,SaaS,1-10,10-50M,hot,conference,2026-02-07
+Steven,Hill,steven.hill41@pitchbook.com,PitchBook,Product Manager,HR Tech,500-1000,200M-1B,hot,webinar,2025-07-08
+Ali,Henderson,ali.henderson68@zerotoone.com,ZeroToOne,Founder,MarTech,200-500,200M-1B,hot,inbound,2026-06-11
+Wei,Price,wei.price73@intercom.com,Intercom,VP Marketing,Logistics,50-200,10-50M,cold,outbound,2025-09-07
+Noah,Jackson,noah.jackson88@mixpanel.com,Mixpanel,Director of Engineering,FinTech,5000+,50-200M,hot,cold_email,2025-11-02
+Isabella,Patterson,isabella.patterson70@intuit.com,Intuit,Marketing Manager,FinTech,5000+,10-50M,warm,conference,2025-08-24
+Ryan,Kelly,ryan.kelly70@braze.com,Braze,Account Executive,E-commerce,500-1000,1-10M,hot,partner,2026-06-26
+Derek,Wright,derek.wright1@confluent.com,Confluent,Business Development Manager,HealthTech,50-200,1B+,hot,outbound,2025-09-05
+Yusuf,Wood,yusuf.wood98@sentinelone.com,SentinelOne,Revenue Operations Manager,AI/ML,1000-5000,200M-1B,cold,cold_email,2025-08-30
+Amit,Watson,amit.watson96@techcorp.com,TechCorp,Business Development Manager,FinTech,1000-5000,1B+,cold,paid_ads,2026-01-08
+James,Nelson,james.nelson14@sprinklr.com,Sprinklr,General Manager,Legal Tech,1000-5000,1-10M,warm,outbound,2026-05-12
+Joshua,Coleman,joshua.coleman63@apollo.com,Apollo,Product Manager,Legal Tech,50-200,50-200M,warm,paid_ads,2026-03-16
+Anthony,Adams,anthony.adams35@cbinsights.com,CB Insights,Partnership Manager,E-commerce,1000-5000,1B+,cold,partner,2025-07-08
+Yang,Kim,yang.kim5@paloaltonetworks.com,Palo Alto Networks,GTM Engineer,Manufacturing,50-200,1B+,hot,cold_email,2026-02-17
+Sarah,Simmons,sarah.simmons94@okta.com,Okta,Head of Marketing,SaaS,50-200,<1M,cold,cold_email,2026-02-04
+Robert,Murphy,robert.murphy2@autodesk.com,Autodesk,Managing Director,HealthTech,200-500,1B+,warm,partner,2025-12-17
+Karen,White,karen.white8@rollworks.com,RollWorks,Growth Manager,Data Analytics,1-10,1B+,hot,partner,2025-10-24
+Ryan,Campbell,ryan.campbell69@growthco.com,GrowthCo,Co-Founder,HealthTech,1000-5000,10-50M,hot,cold_email,2026-03-17
+Deborah,Long,deborah.long99@rollworks.com,RollWorks,Co-Founder,EdTech,10-50,1B+,warm,referral,2026-01-11
+Melissa,Ross,melissa.ross91@attentive.com,Attentive,Co-Founder,E-commerce,50-200,1B+,cold,conference,2025-07-27
+Tom,Baker,tom.baker77@asana.com,Asana,Head of Growth,FinTech,5000+,1B+,hot,cold_email,2025-12-09
+Xin,Morris,xin.morris35@shopify.com,Shopify,Engineering Manager,Cloud Infrastructure,200-500,10-50M,cold,referral,2025-08-24
+Ashley,Flores,ashley.flores25@nexustech.com,NexusTech,Revenue Operations Manager,HR Tech,200-500,200M-1B,hot,conference,2025-12-31
+Hui,Ross,hui.ross77@stripe.com,Stripe,SDR Manager,DevTools,200-500,200M-1B,cold,inbound,2025-11-02
+Mark,Wilson,mark.wilson98@okta.com,Okta,CMO,Real Estate,500-1000,<1M,hot,paid_ads,2026-01-26
+Amit,Lopez,amit.lopez57@lusha.com,Lusha,CEO,FinTech,10-50,1B+,cold,conference,2025-08-06
+Zara,Martinez,zara.martinez28@amplitude.com,Amplitude,Account Executive,HealthTech,1-10,10-50M,warm,referral,2025-11-05
+Aisha,Lewis,aisha.lewis52@clari.com,Clari,CMO,Manufacturing,1000-5000,1-10M,warm,outbound,2025-10-22
+Pooja,Young,pooja.young65@adobe.com,Adobe,General Manager,E-commerce,1-10,1B+,cold,referral,2025-10-24
+Kenneth,Phillips,kenneth.phillips23@bentley.com,Bentley,GTM Engineer,AI/ML,10-50,200M-1B,cold,cold_email,2026-02-21
+Carlos,Roberts,carlos.roberts95@tenable.com,Tenable,GTM Engineer,Legal Tech,500-1000,1B+,hot,partner,2026-06-14
+Noah,Price,noah.price61@iterable.com,Iterable,Sales Manager,FinTech,10-50,<1M,cold,partner,2026-03-20
+Emma,Cox,emma.cox74@gong.com,Gong,CMO,Cloud Infrastructure,200-500,1-10M,hot,partner,2025-12-13
+Donna,Turner,donna.turner77@iterable.com,Iterable,Sales Manager,MarTech,200-500,<1M,cold,referral,2026-03-06
+Aisha,Robinson,aisha.robinson61@zscaler.com,Zscaler,Director of Operations,Consulting,1-10,<1M,hot,referral,2025-12-13
+Vikram,Jackson,vikram.jackson91@orbitsaas.com,OrbitSaaS,Head of Operations,E-commerce,5000+,1B+,warm,organic,2025-12-10
+Amina,Long,amina.long34@datastream.com,DataStream,VP Product,Cybersecurity,500-1000,200M-1B,warm,outbound,2026-04-30
+Karen,Nelson,karen.nelson45@hotjar.com,Hotjar,Head of Sales,Manufacturing,200-500,200M-1B,hot,inbound,2025-09-14
+David,Bailey,david.bailey22@twilio.com,Twilio,Business Development Manager,DevTools,10-50,1B+,warm,webinar,2025-07-07
+Steven,Perez,steven.perez61@trimble.com,Trimble,Head of Growth,DevTools,1000-5000,<1M,cold,webinar,2025-10-02
+Logan,Sanchez,logan.sanchez72@tenable.com,Tenable,Director of Sales,Data Analytics,50-200,<1M,cold,webinar,2026-01-19
+Lisa,Nelson,lisa.nelson14@hotjar.com,Hotjar,Product Manager,Manufacturing,1000-5000,<1M,warm,cold_email,2025-11-09
+Emily,Hernandez,emily.hernandez38@veeva.com,Veeva,CMO,HR Tech,1-10,1B+,warm,webinar,2025-11-08
+David,Kelly,david.kelly61@hubspot.com,HubSpot,CTO,Cybersecurity,200-500,1B+,warm,outbound,2026-06-03
+Ashley,Martin,ashley.martin46@attentive.com,Attentive,CMO,Cloud Infrastructure,50-200,1-10M,cold,partner,2025-10-19
+Amina,Hughes,amina.hughes99@sendbird.com,Sendbird,Managing Director,FinTech,500-1000,<1M,warm,partner,2026-03-26
+Deepa,Phillips,deepa.phillips57@elastic.com,Elastic,CEO,Cloud Infrastructure,500-1000,1-10M,warm,paid_ads,2026-05-29
+Michelle,Jackson,michelle.jackson75@sentinelone.com,SentinelOne,Marketing Manager,Media,50-200,1B+,hot,outbound,2026-03-16
+Deborah,Coleman,deborah.coleman52@crowdstrike.com,CrowdStrike,Solutions Engineer,FinTech,10-50,10-50M,cold,inbound,2026-06-28
+Liam,Henderson,liam.henderson75@apollo.com,Apollo,CTO,Legal Tech,10-50,<1M,warm,outbound,2026-06-03
+Amit,Phillips,amit.phillips66@trimble.com,Trimble,VP Product,Media,200-500,10-50M,hot,inbound,2025-10-24
+Rahul,Johnson,rahul.johnson88@chorus.com,Chorus,President,Manufacturing,500-1000,1-10M,hot,referral,2026-01-30
+Margaret,Gray,margaret.gray95@qualys.com,Qualys,VP Sales,Logistics,5000+,<1M,warm,referral,2025-11-15
+Lei,Simmons,lei.simmons60@paloaltonetworks.com,Palo Alto Networks,Solutions Engineer,Data Analytics,50-200,10-50M,hot,organic,2026-04-23
+Alex,Peterson,alex.peterson20@peakanalytics.com,PeakAnalytics,Co-Founder,EdTech,200-500,50-200M,hot,outbound,2025-12-29
+David,Butler,david.butler81@pipelineai.com,PipelineAI,Head of Sales,Consulting,200-500,1-10M,warm,outbound,2025-11-18
+Daniel,Perry,daniel.perry57@slack.com,Slack,VP Sales,Cloud Infrastructure,500-1000,1-10M,warm,webinar,2025-10-17
+Fatima,Cook,fatima.cook72@mongodb.com,MongoDB,CFO,Cloud Infrastructure,50-200,<1M,warm,referral,2025-08-05
+Pooja,Rivera,pooja.rivera94@revenuepro.com,RevenuePro,Director of Engineering,AI/ML,1-10,200M-1B,warm,outbound,2025-08-27
+Mia,Thompson,mia.thompson58@trimble.com,Trimble,Marketing Manager,Media,10-50,<1M,cold,paid_ads,2025-07-02
+Amit,Robinson,amit.robinson31@apollo.com,Apollo,Director of Sales,DevTools,500-1000,50-200M,cold,linkedin,2025-11-07
+Ling,Murphy,ling.murphy26@sendbird.com,Sendbird,Account Executive,AI/ML,1000-5000,1-10M,hot,cold_email,2026-03-21
+Xin,Taylor,xin.taylor83@drift.com,Drift,Customer Success Manager,HR Tech,500-1000,200M-1B,hot,conference,2025-10-01
+Ryan,Ward,ryan.ward2@demandbase.com,Demandbase,Head of Product,Cybersecurity,1-10,1B+,hot,referral,2025-09-26
+Susan,Kelly,susan.kelly45@freshworks.com,Freshworks,Solutions Engineer,HR Tech,200-500,50-200M,cold,inbound,2025-11-11
+Mason,Robinson,mason.robinson93@mongodb.com,MongoDB,Solutions Engineer,Legal Tech,1000-5000,<1M,warm,partner,2026-03-10
+Ryan,Washington,ryan.washington57@vaultai.com,VaultAI,General Manager,Legal Tech,200-500,200M-1B,cold,inbound,2026-05-26
+Joshua,Perez,joshua.perez99@zscaler.com,Zscaler,Head of Growth,Manufacturing,1-10,200M-1B,cold,referral,2026-02-22
+Paul,Bell,paul.bell26@snowflake.com,Snowflake,CMO,Legal Tech,5000+,1-10M,warm,conference,2026-01-14
+Pooja,Rivera,pooja.rivera11@paloaltonetworks.com,Palo Alto Networks,CEO,Legal Tech,200-500,50-200M,warm,cold_email,2025-10-15
+Yusuf,Ross,yusuf.ross77@klaviyo.com,Klaviyo,GTM Engineer,EdTech,500-1000,1-10M,warm,referral,2025-11-10
+Charlotte,Bell,charlotte.bell24@growthco.com,GrowthCo,CTO,SaaS,1-10,<1M,warm,inbound,2025-07-23
+Melissa,Flores,melissa.flores23@salesforce.com,Salesforce,Head of Growth,Consulting,50-200,200M-1B,cold,webinar,2026-03-14
+Isabella,Martinez,isabella.martinez26@freshworks.com,Freshworks,Head of Operations,EdTech,1000-5000,<1M,warm,referral,2025-09-01
+Margaret,Cooper,margaret.cooper1@financeplus.com,FinancePlus,Account Executive,Data Analytics,200-500,1B+,cold,conference,2026-06-04
+Vikram,King,vikram.king50@growthsignal.com,GrowthSignal,Director of Marketing,HealthTech,50-200,<1M,cold,linkedin,2026-05-26
+Joseph,Evans,joseph.evans79@figma.com,Figma,Growth Manager,E-commerce,200-500,1B+,cold,webinar,2025-12-04
+Carol,Nelson,carol.nelson38@crowdstrike.com,CrowdStrike,Director of Operations,FinTech,10-50,1-10M,hot,conference,2026-06-28
+Sandra,Kim,sandra.kim88@trustpilot.com,Trustpilot,SDR Manager,SaaS,1-10,200M-1B,hot,cold_email,2025-11-12
+Maria,Brooks,maria.brooks68@okta.com,Okta,CFO,Cloud Infrastructure,1-10,<1M,warm,inbound,2026-05-04
+Deepa,Evans,deepa.evans34@techtarget.com,TechTarget,Director of Sales,AI/ML,1-10,10-50M,hot,webinar,2026-06-07
+Susan,Wood,susan.wood83@drift.com,Drift,CFO,FinTech,1000-5000,10-50M,hot,referral,2025-12-20
