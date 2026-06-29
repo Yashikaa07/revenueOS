@@ -1,17 +1,3 @@
-import streamlit as st
-import plotly.express as px
-import pandas as pd
-import sys
-import os
-
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-
-from app.modules.enrichment import enrich_company
-from app.modules.icp_scoring import score_lead
-from app.modules.email_gen import generate_email
-from app.modules.chat_assistant import ask_pipeline
-from app.modules.gmail_sender import send_email
-
 @st.cache_data
 def load_data():
     try:
@@ -32,20 +18,31 @@ def load_data():
     except Exception as e:
         st.warning(f"HubSpot failed: {e}")
     import os
-    path = os.path.join(os.path.dirname(__file__), "leads_dataset.csv")
+    path = "leads_dataset.csv"
     if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
+import streamlit as st
+import plotly.express as px
+import pandas as pd
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+from app.modules.enrichment import enrich_company
+from app.modules.icp_scoring import score_lead
+from app.modules.email_gen import generate_email
+from app.modules.chat_assistant import ask_pipeline
+from app.modules.gmail_sender import send_email
 
 st.set_page_config(page_title="RevenueOS", layout="wide")
 st.title("RevenueOS")
 st.caption("AI-powered lead enrichment, scoring, and outreach automation")
 
+_data
 
 df = load_data()
-if df.empty:
-    st.warning("No data found. Check leads_dataset.csv")
-    st.stop()
 df["date_added"] = pd.to_datetime(df["date_added"])
 df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
 
@@ -121,7 +118,7 @@ with tab1:
             st.plotly_chart(fig1, use_container_width=True)
         with c2:
             if "industry" in df.columns:
-                    fig2 = px.bar(df["industry"].value_counts().reset_index(), x="industry", y="count", title="Leads by Industry", color_discrete_sequence=["#7c83fd"])
+                fig2 = px.bar(df["industry"].value_counts().reset_index(), x="industry", y="count", title="Leads by Industry", color_discrete_sequence=["#7c83fd"])
                 fig2.update_layout(paper_bgcolor="rgba(0,0,0,0)")
                 st.plotly_chart(fig2, use_container_width=True)
         c3, c4 = st.columns(2)
@@ -173,8 +170,7 @@ with tab3:
     else:
         col1, col2, col3 = st.columns(3)
         status_filter = col1.selectbox("Filter by Status", ["All", "hot", "warm", "cold"])
-        if "industry" in df.columns:
-            industry_filter = col2.selectbox("Filter by Industry", ["All"] + sorted(df["industry"].unique().tolist()))
+        industry_filter = col2.selectbox("Filter by Industry", ["All"] + sorted(df["industry"].unique().tolist()))
         source_filter = col3.selectbox("Filter by Source", ["All"] + sorted(df["source"].unique().tolist()))
         filtered = df.copy()
         if status_filter != "All":
