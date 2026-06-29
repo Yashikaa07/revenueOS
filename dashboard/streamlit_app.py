@@ -275,7 +275,7 @@ with tab4:
             # Avg ICP score by industry
             industry_score = df.groupby("industry") if "industry" in df.columns else df.groupby("status")["icp_score"].mean().reset_index()
             industry_score.columns = ["industry", "avg_score"]
-            industry_score = industry_score.sort_values("avg_score", ascending=False) if "avg_score" in industry_score.columns else industry_score
+            industry_score = industry_score.sort_values("avg_score", ascending=False) if len(industry_score) > 0 and "avg_score" in industry_score.columns else industry_score
             fig2 = px.bar(industry_score, x="industry", y="avg_score",
                 title="Avg ICP Score by Industry",
                 color="avg_score",
