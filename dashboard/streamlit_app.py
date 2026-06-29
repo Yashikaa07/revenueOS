@@ -41,7 +41,6 @@ st.set_page_config(page_title="RevenueOS", layout="wide")
 st.title("RevenueOS")
 st.caption("AI-powered lead enrichment, scoring, and outreach automation")
 
-_data
 
 df = load_data()
 if df.empty:
