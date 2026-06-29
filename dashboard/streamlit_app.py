@@ -1,17 +1,3 @@
-import streamlit as st
-import plotly.express as px
-import pandas as pd
-import sys
-import os
-
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-
-from app.modules.enrichment import enrich_company
-from app.modules.icp_scoring import score_lead
-from app.modules.email_gen import generate_email
-from app.modules.chat_assistant import ask_pipeline
-from app.modules.gmail_sender import send_email
-
 @st.cache_data
 def load_data():
     try:
@@ -36,16 +22,32 @@ def load_data():
     if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
+import streamlit as st
+import plotly.express as px
+import pandas as pd
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+from app.modules.enrichment import enrich_company
+from app.modules.icp_scoring import score_lead
+from app.modules.email_gen import generate_email
+from app.modules.chat_assistant import ask_pipeline
+from app.modules.gmail_sender import send_email
 
 st.set_page_config(page_title="RevenueOS", layout="wide")
 st.title("RevenueOS")
 st.caption("AI-powered lead enrichment, scoring, and outreach automation")
 
+_data
 
 df = load_data()
-if not df.empty and "date_added" in df.columns:
-    df["date_added"] = pd.to_datetime(df["date_added"])
-    df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
+if df.empty:
+    st.warning("No data found. Please check leads_dataset.csv")
+    st.stop()
+df["date_added"] = pd.to_datetime(df["date_added"])
+df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
 
 with st.sidebar:
     st.header("Add New Lead")
@@ -316,9 +318,8 @@ with tab_decay:
     st.header(" Lead Decay Alerts")
     st.caption("Leads going cold = revenue at risk. Act before they die.")
 
-    if "date_added" in df.columns:
-        df["date_added"] = pd.to_datetime(df["date_added"])
-        df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
+    df["date_added"] = pd.to_datetime(df["date_added"])
+    df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
 
     def decay_label(row):
         if row["status"] == "cold":
@@ -333,7 +334,7 @@ with tab_decay:
             return " Active"
 
     df = df.copy()
-df["decay_status"] = df.apply(decay_label, axis=1)
+    df["decay_status"] = df.apply(decay_label, axis=1)
 
     avg_deal_d = st.sidebar.number_input("Avg Deal Size ($)", value=5000, key="decay_deal")
     hot_conv_d = st.sidebar.number_input("Hot Close Rate (%)", value=40, key="decay_hot") / 100
@@ -399,9 +400,8 @@ with tab_brief:
             warm = len(df[df["status"] == "warm"])
             cold = len(df[df["status"] == "cold"])
 
-            if "date_added" in df.columns:
-                df["date_added"] = pd.to_datetime(df["date_added"])
-                df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
+            df["date_added"] = pd.to_datetime(df["date_added"])
+            df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
             critical = len(df[(df["days_inactive"] > 90) & (df["status"] != "cold")])
             high_risk = len(df[(df["days_inactive"] > 60) & (df["status"] != "cold")])
 
