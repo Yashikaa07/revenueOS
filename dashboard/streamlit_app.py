@@ -51,6 +51,10 @@ if df.empty:
 for col, default in [('industry', 'Unknown'), ('jobtitle', 'Unknown'), ('source', 'Unknown'), ('status', 'warm'), ('icp_score', 50), ('days_inactive', 0), ('decay_status', 'Watch'), ('num_employees', 'Unknown'), ('annualrevenue', 'Unknown')]:
     if col not in df.columns:
         df[col] = default
+if "date_added" not in df.columns and "createdate" in df.columns:
+    df["date_added"] = df["createdate"]
+elif "date_added" not in df.columns:
+    df["date_added"] = pd.Timestamp.today()
 df["date_added"] = pd.to_datetime(df["date_added"])
 df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
 
@@ -324,6 +328,10 @@ with tab_decay:
     st.header(" Lead Decay Alerts")
     st.caption("Leads going cold = revenue at risk. Act before they die.")
 
+    if "date_added" not in df.columns and "createdate" in df.columns:
+        df["date_added"] = df["createdate"]
+    elif "date_added" not in df.columns:
+        df["date_added"] = pd.Timestamp.today()
     df["date_added"] = pd.to_datetime(df["date_added"])
     df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
 
@@ -406,6 +414,10 @@ with tab_brief:
             warm = len(df[df["status"] == "warm"])
             cold = len(df[df["status"] == "cold"])
 
+            if "date_added" not in df.columns and "createdate" in df.columns:
+                df["date_added"] = df["createdate"]
+            elif "date_added" not in df.columns:
+                df["date_added"] = pd.Timestamp.today()
             df["date_added"] = pd.to_datetime(df["date_added"])
             df["days_inactive"] = (datetime.today() - df["date_added"]).dt.days
             critical = len(df[(df["days_inactive"] > 90) & (df["status"] != "cold")])
