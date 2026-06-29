@@ -46,6 +46,11 @@ df = load_data()
 if df.empty:
     st.warning("No data found. Check leads_dataset.csv")
     st.stop()
+
+# Add missing columns with defaults if not present
+for col, default in [('industry', 'Unknown'), ('jobtitle', 'Unknown'), ('source', 'Unknown'), ('status', 'warm'), ('icp_score', 50), ('days_inactive', 0), ('decay_status', 'Watch'), ('num_employees', 'Unknown'), ('annualrevenue', 'Unknown')]:
+    if col not in df.columns:
+        df[col] = default
 df["date_added"] = pd.to_datetime(df["date_added"])
 df["days_inactive"] = (pd.Timestamp.today() - df["date_added"]).dt.days
 
