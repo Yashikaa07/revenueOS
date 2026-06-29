@@ -121,9 +121,9 @@ with tab1:
             st.plotly_chart(fig1, use_container_width=True)
         with c2:
             if "industry" in df.columns:
-                fig2 = px.bar(df["industry"].value_counts().reset_index(), x="industry", y="count", title="Leads by Industry", color_discrete_sequence=["#7c83fd"])
-            fig2.update_layout(paper_bgcolor="rgba(0,0,0,0)")
-            st.plotly_chart(fig2, use_container_width=True)
+                    fig2 = px.bar(df["industry"].value_counts().reset_index(), x="industry", y="count", title="Leads by Industry", color_discrete_sequence=["#7c83fd"])
+                fig2.update_layout(paper_bgcolor="rgba(0,0,0,0)")
+                st.plotly_chart(fig2, use_container_width=True)
         c3, c4 = st.columns(2)
         with c3:
             fig3 = px.pie(df, names="source", title="Lead Sources")
