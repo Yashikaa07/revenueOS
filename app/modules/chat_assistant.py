@@ -28,7 +28,7 @@ Pipeline Data Summary:
 {summary}
 
 Sample of top 10 leads by ICP score:
-{df.nlargest(10, 'icp_score')[['first_name','last_name','company','title','industry','icp_score','status','source']].to_string()}
+{df.nlargest(10, 'icp_score')[['first_name','last_name','company','jobtitle','industry','icp_score','status','source']].to_string()}
 
 Answer this question about the pipeline data:
 {question}
