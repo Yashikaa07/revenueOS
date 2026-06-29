@@ -32,7 +32,7 @@ def load_data():
     except Exception as e:
         st.warning(f"HubSpot failed: {e}")
     import os
-    path = "leads_dataset.csv"
+    path = os.path.join(os.path.dirname(__file__), "leads_dataset.csv")
     if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
