@@ -516,3 +516,4 @@ Be specific, direct, and concise. No emojis. No fluff.
         st.subheader(f"Account Brief — Lead #{selected_lead}")
         st.markdown(intel)
         st.caption(f"ICP Score: {lead['icp_score']} | Status: {lead['status']} | Source: {lead['source']}")
+# force redeploy
