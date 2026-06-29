@@ -297,9 +297,9 @@ with tab4:
 
         with c4:
             # Hot leads by title
-            title_hot = df[df["status"]=="hot"].groupby("jobtitle").size().reset_index(name="hot_leads")
+            title_hot = df[df["status"]=="hot"].groupby("jobtitle").size().reset_index(name="hot_leads").rename(columns={"jobtitle": "jobtitle"})
             title_hot = title_hot.sort_values("hot_leads", ascending=False).head(8)
-            fig4 = px.bar(title_hot, x="hot_leads", y="title",
+            fig4 = px.bar(title_hot, x="hot_leads", y="jobtitle",
                 orientation="h",
                 title="Hot Leads by Job Title",
                 color_discrete_sequence=["#00C48C"])
