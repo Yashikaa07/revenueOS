@@ -20,14 +20,14 @@ def load_data():
         if api_key:
             headers = {"Authorization": f"Bearer {api_key}"}
             url = "https://api.hubapi.com/crm/v3/objects/contacts"
-            params = {"limit": 100, "properties": "firstname,email,hs_lead_status,createdate,num_employees,annualrevenue,hs_analytics_source"}
+            params = {"limit": 1000, "properties": "firstname,email,hs_lead_status,createdate,num_employees,annualrevenue,hs_analytics_source"}
             response = requests.get(url, headers=headers, params=params)
             data = response.json()
             if "results" in data and len(data["results"]) > 0:
                 contacts = []
                 for result in data["results"]:
                     props = result.get("properties", {})
-                    contacts.append({"employees": props.get("num_employees") or "10-50", "revenue": props.get("annualrevenue") or "1-10M", "source": props.get("hs_analytics_source") or "website", "icp_score": min(100, max(40, len(props.get("email","x") or "x") * 3 + 40)), "status": (props.get("hs_lead_status") or "warm").lower(), "date_added": (props.get("createdate") or "2024-01-01")[:10]})
+                    contacts.append({"employees": props.get("num_employees") or "10-50", "revenue": props.get("annualrevenue") or "1-10M", "source": props.get("hs_analytics_source") or "website", "icp_score": min(100, max(40, len(props.get("email","x") or "x") * 3 + 40)), "status": (props.get("hs_lead_status") or props.get("status") or "warm").lower(), "date_added": (props.get("createdate") or "2024-01-01")[:10]})
                 return pd.DataFrame(contacts)
     except Exception as e:
         st.warning(f"HubSpot failed: {e}")
