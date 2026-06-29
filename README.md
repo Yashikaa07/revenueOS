@@ -1,7 +1,7 @@
 # RevenueOS 🚀
 ### AI-Powered GTM Intelligence Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?style=for-the-badge&logo=streamlit)](https://revenueos-fsnkmufxqfrcunkokyaree.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?style=for-the-badge&logo=streamlit)](https://bit.ly/4f8G22J)
 [![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)](https://python.org)
 [![HubSpot](https://img.shields.io/badge/HubSpot-CRM-orange?style=for-the-badge&logo=hubspot)](https://hubspot.com)
 [![Slack](https://img.shields.io/badge/Slack-Alerts-purple?style=for-the-badge&logo=slack)](https://slack.com)
@@ -168,7 +168,7 @@ revenueOS/
 
 ## Live Demo
 
-🔗 **[revenueos-fsnkmufxqfrcunkokyaree.streamlit.app](https://revenueos-fsnkmufxqfrcunkokyaree.streamlit.app)**
+🔗 **[revenueos-fsnkmufxqfrcunkokyaree.streamlit.app](https://bit.ly/4f8G22J)**
 
 ---
 
