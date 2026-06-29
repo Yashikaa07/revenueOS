@@ -173,13 +173,13 @@ with tab3:
     else:
         col1, col2, col3 = st.columns(3)
         status_filter = col1.selectbox("Filter by Status", ["All", "hot", "warm", "cold"])
-        industry_filter = col2.selectbox("Filter by Industry", ["All"] + sorted(df["industry"].unique().tolist()))
+        industry_filter = col2.selectbox("Filter by Industry", ["All"] + sorted(df["industry"].unique().tolist() if "industry" in df.columns else []))
         source_filter = col3.selectbox("Filter by Source", ["All"] + sorted(df["source"].unique().tolist()))
         filtered = df.copy()
         if status_filter != "All":
             filtered = filtered[filtered["status"] == status_filter]
         if industry_filter != "All":
-            filtered = filtered[filtered["industry"] == industry_filter]
+            filtered = filtered["industry" in filtered.columns and filtered["industry"] == industry_filter]
         if source_filter != "All":
             filtered = filtered[filtered["source"] == source_filter]
         st.write(f"Showing **{len(filtered)}** leads")
@@ -268,7 +268,7 @@ with tab4:
 
         with c2:
             # Avg ICP score by industry
-            industry_score = df.groupby("industry")["icp_score"].mean().reset_index()
+            industry_score = df.groupby("industry") if "industry" in df.columns else df.groupby("status")["icp_score"].mean().reset_index()
             industry_score.columns = ["industry", "avg_score"]
             industry_score = industry_score.sort_values("avg_score", ascending=False)
             fig2 = px.bar(industry_score, x="industry", y="avg_score",
